@@ -1,0 +1,11 @@
+﻿Feature: OpenInsertDialog
+	In order to avoid silly mistakes
+	As a math idiot
+	I want to be told the sum of two numbers
+
+@mytag
+Scenario: Click on InsertRibbon
+	Given a user opens SAM
+	When the warning message is displayed
+	Then the user can click on the OK button
+	And the user clicks on the Insert button
