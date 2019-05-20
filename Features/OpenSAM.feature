@@ -1,7 +1,6 @@
 ﻿Feature: OpenSAM
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+	In order to Open SAM software
+	And perform operation on it
 
 @mytag
 Scenario: Opening SAM

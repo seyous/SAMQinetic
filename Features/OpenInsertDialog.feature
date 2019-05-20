@@ -1,7 +1,7 @@
 ﻿Feature: OpenInsertDialog
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+	In order to Open the Insert
+	Dialog Box and I click on the Ribbon
+
 
 @mytag
 Scenario: Click on InsertRibbon

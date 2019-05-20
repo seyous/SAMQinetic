@@ -52,7 +52,7 @@ namespace SAM.Utilities
         public WindowsDriver<WindowsElement> Calc
         {
             get
-            {
+          {
                 if (_driver != null)
                 {
                     return _driver;

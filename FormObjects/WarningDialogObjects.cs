@@ -22,14 +22,14 @@ namespace SAM.Helper
         public bool IsSAMOpened()
         {
 
-            Thread.Sleep(TimeSpan.FromSeconds(10));
+            Thread.Sleep(TimeSpan.FromSeconds(3));
             return _driver.Current.SessionId != null;
         }
 
         public bool IsWarningDialogDisplayed()
         {
             var currentWindowHandle = _driver.Current.CurrentWindowHandle;
-            Thread.Sleep(TimeSpan.FromSeconds(10));
+            Thread.Sleep(TimeSpan.FromSeconds(5));
             return _driver.Current.FindElementByName("OK").Displayed;
 
         }

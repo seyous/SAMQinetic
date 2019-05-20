@@ -31,6 +31,6 @@ namespace SAM.Steps
         {
             _warningDialog.OKButtonIsClickedOnWarningDialog();
         }
-
+      
     }
 }

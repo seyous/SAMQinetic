@@ -111,10 +111,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\CancelButtonAvailable.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CancelButtonAvailable.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\InsertableObjectDescription.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertableObjectDescription.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\InsertRibbonIsEnabled.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertRibbonIsEnabled.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\OKbuttonEnabled.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OKbuttonEnabled.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\OpenInsertDialog.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OpenInsertDialog.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\SelectingObject.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SelectingObject.feature</DependentUpon>
     </Compile>
     <Compile Include="Steps\RibbonSteps.cs" />
     <Compile Include="Utilities\Driver.cs" />
@@ -153,13 +178,33 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>calcs1.feature.cs</LastGenOutput>
     </None>
+    <None Include="Features\CancelButtonAvailable.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CancelButtonAvailable.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\InsertableObjectDescription.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>InsertableObjectDescription.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\InsertRibbonIsEnabled.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>InsertRibbonIsEnabled.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\OKbuttonEnabled.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>OKbuttonEnabled.feature.cs</LastGenOutput>
+    </None>
     <None Include="Features\OpenInsertDialog.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>OpenInsertDialog.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\OpenSAM.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>OpenSAM.feature.cs</LastGenOutput>
+      <LastGenOutput>OpenSAM1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\SelectingObject.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SelectingObject.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

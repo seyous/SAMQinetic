@@ -18,20 +18,20 @@ namespace SAM.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("OpenSAM")]
-    public partial class OpenSAMFeature
+    [NUnit.Framework.DescriptionAttribute("InsertRibbonIsEnabled")]
+    public partial class InsertRibbonIsEnabledFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "OpenSAM.feature"
+#line 1 "InsertRibbonIsEnabled.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "OpenSAM", "\tIn order to Open SAM software\r\n\tAnd perform operation on it", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "InsertRibbonIsEnabled", "\tIn order to validate that the insert Ribbon\r\n\tIs enabled", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -70,21 +70,27 @@ namespace SAM.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Opening SAM")]
+        [NUnit.Framework.DescriptionAttribute("Insert Ribbon Enabled")]
         [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void OpeningSAM()
+        public virtual void InsertRibbonEnabled()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Opening SAM", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Insert Ribbon Enabled", null, new string[] {
                         "mytag"});
 #line 6
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
- testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
- testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
- testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 10
+testRunner.And("the user place the mouse over the insert button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 11
+testRunner.Then("the ribbon should be enabled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 12
+testRunner.And("the user press the \"insert key\" to open insert button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
