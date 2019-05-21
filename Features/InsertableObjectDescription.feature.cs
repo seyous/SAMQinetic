@@ -91,7 +91,7 @@ testRunner.And("the user clicks on the Insert button", ((string)(null)), ((TechT
 #line 12
 testRunner.And("the user click an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 13
-testRunner.And("the object will have the following <description>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("the object will have the following \"description\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 14
 testRunner.And("the user click the ok button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 15

@@ -111,20 +111,45 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\AppendNumbertoMutipleObject.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppendNumbertoMutipleObject.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\CancelButtonAvailable.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CancelButtonAvailable.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\DeSelectingObject.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeSelectingObject.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\EditingAnObject.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditingAnObject.feature</DependentUpon>
     </Compile>
     <Compile Include="Features\InsertableObjectDescription.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InsertableObjectDescription.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\InsertMutipleObject.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertMutipleObject.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\InsertRibbonIsEnabled.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InsertRibbonIsEnabled.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\NavigatingbetweenObject.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NavigatingbetweenObject.feature</DependentUpon>
     </Compile>
     <Compile Include="Features\OKbuttonEnabled.feature.cs">
       <AutoGen>True</AutoGen>
@@ -174,6 +199,10 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Features\AppendNumbertoMutipleObject.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AppendNumbertoMutipleObject.feature.cs</LastGenOutput>
+    </None>
     <None Include="Features\calcs1.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>calcs1.feature.cs</LastGenOutput>
@@ -182,13 +211,29 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CancelButtonAvailable.feature.cs</LastGenOutput>
     </None>
+    <None Include="Features\DeSelectingObject.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DeSelectingObject.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\EditingAnObject.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>EditingAnObject.feature.cs</LastGenOutput>
+    </None>
     <None Include="Features\InsertableObjectDescription.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>InsertableObjectDescription.feature.cs</LastGenOutput>
     </None>
+    <None Include="Features\InsertMutipleObject.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>InsertMutipleObject.feature.cs</LastGenOutput>
+    </None>
     <None Include="Features\InsertRibbonIsEnabled.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>InsertRibbonIsEnabled.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\NavigatingbetweenObject.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>NavigatingbetweenObject.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\OKbuttonEnabled.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

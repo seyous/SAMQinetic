@@ -1,7 +1,5 @@
 ﻿Feature: OKbuttonEnabled
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+	
 
 
 	Background: 
@@ -16,7 +14,7 @@ Scenario: OK Button Enabled
 	
 	| objects 1 | objects 2 | objects 3 | objects 4 |
 	
-	And the Ok button is enabled
+	Then the Ok button is enabled
 
 
 	@mytag
@@ -27,4 +25,14 @@ Scenario: OK Button Enabled
 	
 	And the Ok button is enabled
 	And the user click the ok button
+    Then the <object> should be inserted in the design explorer
+
+	@mytag
+	Scenario: Enter Key on Keyboard insert Objects
+	When the user click on the list of <objects>
+	
+	| objects 1 | objects 2 | objects 3 | objects 4 |
+	
+	Then the Ok button is enabled
+	And the user press the enter key on the keyboard
     Then the <object> should be inserted in the design explorer

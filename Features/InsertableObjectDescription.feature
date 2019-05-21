@@ -10,7 +10,7 @@ When the warning message is displayed
 Then the user can click on the OK button
 And the user clicks on the Insert button
 And the user click an object 
-And the object will have the following <description>
+And the object will have the following "description"
 And the user click the ok button
 And the object should be inserted in the design explorer
 
