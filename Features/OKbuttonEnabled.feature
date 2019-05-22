@@ -1,4 +1,5 @@
-﻿Feature: OKbuttonEnabled
+﻿Feature: Validating the OK button Enabled
+Using the Ok button and the Enter button to Insert object
 	
 
 
@@ -10,29 +11,21 @@
 
 @mytag
 Scenario: OK Button Enabled
-	When the user click on the list of <objects>
-	
-	| objects 1 | objects 2 | objects 3 | objects 4 |
-	
+	Given the user click on 4 parent objects
 	Then the Ok button is enabled
+	And the user click the ok button
 
 
 	@mytag
 	Scenario: OK Buttton insert Objects
-	When the user click on the list of <objects>
-	
-	| objects 1 | objects 2 | objects 3 | objects 4 |
-	
-	And the Ok button is enabled
+	Given the user click on 4 parent objects
+	Then the Ok button is enabled
 	And the user click the ok button
-    Then the <object> should be inserted in the design explorer
+    Then the object should be inserted in the design explorer
 
 	@mytag
 	Scenario: Enter Key on Keyboard insert Objects
-	When the user click on the list of <objects>
-	
-	| objects 1 | objects 2 | objects 3 | objects 4 |
-	
+	Given the user click on 4 parent objects	
 	Then the Ok button is enabled
 	And the user press the enter key on the keyboard
-    Then the <object> should be inserted in the design explorer
+    Then the object should be inserted in the design explorer

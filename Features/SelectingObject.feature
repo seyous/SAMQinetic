@@ -8,25 +8,25 @@ And the user clicks on the Insert button
 
 @mytag
 Scenario: Hovering mouse on an Object
-And the user hover the mouse on an <object>
+And the user hover the mouse on an object
 Then the user confirms the displayed buttons
 
 @mytag
 Scenario: Select an Object On Click
-And the user click the <object>
+And the user click the object
 Then the object is bold font
 And the user click the ok button
 
 @mytag
 Scenario:Select an Object On Spacebar key
-And the user hover the mouse on an <object>
+And the user hover the mouse on an object
 And the user press the "spacebar" on the keyboard
 Then the object is bold font
 And the user click the ok button
 
 @mytag
 Scenario:Select an Object On Plus key
-And the user hover the mouse on an <object>
+And the user hover the mouse on an object
 And the user press the "plus Key" on the keyboard
 Then the object is bold font
 And the user click the ok button

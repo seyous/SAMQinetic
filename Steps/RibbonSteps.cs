@@ -5,6 +5,7 @@ using TechTalk.SpecFlow;
 namespace SAM
 {
     [Binding]
+    
     public class OpenInsertDialogSteps
     {
         private readonly RibbonObjects _ribbon;

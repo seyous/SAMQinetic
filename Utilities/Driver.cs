@@ -16,7 +16,7 @@ namespace SAM.Utilities
 
         string appLocation = @"C:\Program Files\QinetiQ\SAM V2.1\bin\SAM.exe";
 
-        public WindowsDriver<WindowsElement> Current
+                public WindowsDriver<WindowsElement> Current
         {
 
             get

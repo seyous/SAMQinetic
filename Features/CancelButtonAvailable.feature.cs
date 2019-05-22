@@ -31,8 +31,8 @@ namespace SAM.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Cancel Button Available", "\tIn order test the Validate that the cancel button is\r\n\tAvailable and can be clos" +
-                    "ed clicking with mouse and using the Esc key \r\n\ton the Keyboard", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Cancel Button Available", "\tIn order to Validate that the cancel button is\r\n\tAvailable and can be closed by " +
+                    "clicking with mouse and using the Esc key \r\n\ton the Keyboard", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -85,11 +85,11 @@ namespace SAM.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("CancelButtonAvailable")]
+        [NUnit.Framework.DescriptionAttribute("Cancel Button Available")]
         [NUnit.Framework.CategoryAttribute("mytag")]
         public virtual void CancelButtonAvailable()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CancelButtonAvailable", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Cancel Button Available", null, new string[] {
                         "mytag"});
 #line 13
 this.ScenarioInitialize(scenarioInfo);
@@ -105,11 +105,11 @@ testRunner.And("the user confirms the cancel button is available", ((string)(nul
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("CancelButtonClosesOnEscape")]
+        [NUnit.Framework.DescriptionAttribute("Cancel Button Closes On Escape")]
         [NUnit.Framework.CategoryAttribute("mytag")]
         public virtual void CancelButtonClosesOnEscape()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CancelButtonClosesOnEscape", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Cancel Button Closes On Escape", null, new string[] {
                         "mytag"});
 #line 18
 this.ScenarioInitialize(scenarioInfo);
@@ -127,11 +127,11 @@ testRunner.Then("the insert dialog closes", ((string)(null)), ((TechTalk.SpecFlo
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("CancelButtonClosesOnClick")]
+        [NUnit.Framework.DescriptionAttribute("Cancel Button Closes On Click")]
         [NUnit.Framework.CategoryAttribute("mytag")]
         public virtual void CancelButtonClosesOnClick()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CancelButtonClosesOnClick", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Cancel Button Closes On Click", null, new string[] {
                         "mytag"});
 #line 24
 this.ScenarioInitialize(scenarioInfo);

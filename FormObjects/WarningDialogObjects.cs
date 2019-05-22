@@ -1,4 +1,5 @@
 ﻿using FluentAssertions;
+using SAM.Base;
 using SAM.Utilities;
 using System;
 using System.Collections.Generic;
@@ -9,21 +10,20 @@ using System.Threading.Tasks;
 
 namespace SAM.Helper
 {
-    public class WarningDialogObjects
+    public class WarningDialogObjects : BasePage
     {
-        private readonly Driver _driver;
+        //private readonly Driver _driver;
 
-        public WarningDialogObjects(Driver driver)
+        public WarningDialogObjects(Driver driver):base(driver)
         {
             _driver = driver;
 
         }
-
         public bool IsSAMOpened()
         {
 
             Thread.Sleep(TimeSpan.FromSeconds(3));
-            return _driver.Current.SessionId != null;
+            return  _driver.Current.SessionId != null;
         }
 
         public bool IsWarningDialogDisplayed()
