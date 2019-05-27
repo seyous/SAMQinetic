@@ -1,10 +1,5 @@
 ﻿using FluentAssertions;
-using SAM.Helper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SAM.WinFormObjects;
 using TechTalk.SpecFlow;
 
 namespace SAM.Steps

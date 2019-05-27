@@ -1,10 +1,6 @@
-﻿using System;
-using System.Configuration;
-using System.Diagnostics;
-using System.IO;
-using SAM.Helper;
+﻿using System.Diagnostics;
+using SAM.WinFormObjects;
 using FluentAssertions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechTalk.SpecFlow;
 
 namespace SAM.Steps
@@ -14,31 +10,6 @@ namespace SAM.Steps
     {
         private readonly Calculator _calculator;
         private static Process _driver;
-
-        public CalculatorFeatureSteps(Calculator calculator)
-        {
-            _calculator = calculator;
-        }
-
-        [BeforeTestRun]
-        public static void StartWinAppDriver()
-        {
-            try
-            {
-                _driver = Process.Start(ConfigurationManager.AppSettings["winAppPath"]);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Could not locate WinAppDriver.exe, get it from https://github.com/Microsoft/WinAppDriver/releases and change the winAppPath in app.settings accordingly");
-                throw new FileNotFoundException("Could not locate File WinAppDriver.exe", e);
-            }
-        }
-
-        [AfterTestRun]
-        public static void KillWinAppDriver()
-        {
-            _driver.Kill();
-        }
 
         
         [Given(@"I navigated to Standard Calculator")]

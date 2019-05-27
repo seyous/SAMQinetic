@@ -6,17 +6,20 @@ When the warning message is displayed
 Then the user can click on the OK button
 And the user clicks on the Insert button	
 
-@mytag
-Scenario:Insert mutiple object
-And the user hover the mouse on an object
+@insert
+Scenario Outline:Insert mutiple object Using Comma
+Given the user clicks on an "<Object>"
 And the user click on the pencil button on the object
-And the user type b1, b2, b3, b4
+And the user type "<Text>"
 And the user press the enter key on the keyboard
 And the user click the ok button
 Then the object should be inserted in the design explorer
 
+Examples: 
+| Object           | Text           |
+| geom placeholder | b1, b2, b3, b4 |
 
-@mytag
+@insert
 Scenario:Insert mutiple object Using Colon
 And the user hover the mouse on an object
 And the user click on the pencil button on the object

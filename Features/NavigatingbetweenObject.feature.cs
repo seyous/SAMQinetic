@@ -19,6 +19,7 @@ namespace SAM.Features
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
     [NUnit.Framework.DescriptionAttribute("Navigating between Object")]
+    [NUnit.Framework.CategoryAttribute("Navigate")]
     public partial class NavigatingBetweenObjectFeature
     {
         
@@ -32,7 +33,8 @@ namespace SAM.Features
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Navigating between Object", "Clicking the play button and Validating \r\nWhen the play button is enabled and dis" +
-                    "abled", ProgrammingLanguage.CSharp, ((string[])(null)));
+                    "abled", ProgrammingLanguage.CSharp, new string[] {
+                        "Navigate"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -72,14 +74,14 @@ namespace SAM.Features
         
         public virtual void FeatureBackground()
         {
-#line 6
 #line 7
-testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
-testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
-testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
+testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 11
 testRunner.And("the user clicks on the Insert button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
         }
@@ -91,20 +93,20 @@ testRunner.And("the user clicks on the Insert button", ((string)(null)), ((TechT
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Navigate between object", null, new string[] {
                         "mytag"});
-#line 13
+#line 14
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 6
+#line 7
 this.FeatureBackground();
-#line 14
-testRunner.And("the user hover the mouse on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 15
-testRunner.And("the user press the down arrow on the keyboard 3 times", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("the user hover the mouse on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 16
-testRunner.And("the user press the up arrow on the keyboard 3 times", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("the user press the down arrow on the keyboard 3 times", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 17
-testRunner.Then("the Positon of the object is reverted to object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("the user press the up arrow on the keyboard 3 times", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 18
+testRunner.Then("the Positon of the object is reverted to object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 19
 testRunner.And("the user click the cancel button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -117,24 +119,24 @@ testRunner.And("the user click the cancel button", ((string)(null)), ((TechTalk.
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Clicking the play button", null, new string[] {
                         "mytag"});
-#line 22
+#line 23
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 6
+#line 7
 this.FeatureBackground();
-#line 23
-testRunner.And("the user hover the mouse on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 24
-testRunner.And("the user click on the play button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("the user hover the mouse on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 25
-testRunner.Then("the object should be inserted in the design explorer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("the user click on the play button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 26
-testRunner.And("the a new dialog appears", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("the object should be inserted in the design explorer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 27
-testRunner.And("the user  double click the object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("the a new dialog appears", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 28
-testRunner.And("the user click on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("the user  double click the object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 29
+testRunner.And("the user click on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 30
 testRunner.Then("the object should be inserted in the design explorer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -147,14 +149,14 @@ testRunner.Then("the object should be inserted in the design explorer", ((string
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Play button is enabled", null, new string[] {
                         "mytag"});
-#line 32
+#line 33
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 6
+#line 7
 this.FeatureBackground();
-#line 33
-testRunner.And("the user hover the mouse on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 34
+testRunner.And("the user hover the mouse on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 35
 testRunner.Then("the play button is enabled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -167,18 +169,18 @@ testRunner.Then("the play button is enabled", ((string)(null)), ((TechTalk.SpecF
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Play button is disabled", null, new string[] {
                         "mytag"});
-#line 37
+#line 38
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 6
+#line 7
 this.FeatureBackground();
-#line 38
-testRunner.And("the user hover the mouse on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 39
-testRunner.Then("the play button is enabled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("the user hover the mouse on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 40
-testRunner.And("the user takes the mouse away from the focus", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("the play button is enabled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 41
+testRunner.And("the user takes the mouse away from the focus", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 42
 testRunner.Then("the play button is disabled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

@@ -1,8 +1,8 @@
-﻿using SAM.FormObjects;
+﻿using SAM.WinFormObjects;
 using System;
 using TechTalk.SpecFlow;
 
-namespace SAM
+namespace SAM.Steps
 {
     [Binding]
     

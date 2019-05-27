@@ -1,4 +1,5 @@
 ﻿using FluentAssertions;
+using OpenQA.Selenium.Appium.Windows;
 using SAM.Base;
 using SAM.Utilities;
 using System;
@@ -8,7 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SAM.Helper
+namespace SAM.WinFormObjects
 {
     public class WarningDialogObjects : BasePage
     {
@@ -19,6 +20,10 @@ namespace SAM.Helper
             _driver = driver;
 
         }
+
+        WindowsElement OKbutton => _driver.Current.FindElementByName("OK");
+
+
         public bool IsSAMOpened()
         {
 
@@ -30,14 +35,14 @@ namespace SAM.Helper
         {
             var currentWindowHandle = _driver.Current.CurrentWindowHandle;
             Thread.Sleep(TimeSpan.FromSeconds(5));
-            return _driver.Current.FindElementByName("OK").Displayed;
+            return OKbutton.Displayed;
 
         }
 
 
         public void OKButtonIsClickedOnWarningDialog()
         {
-             _driver.Current.FindElementByName("OK").Click();
+             OKbutton.Click();
         }
     }
 }

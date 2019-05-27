@@ -84,23 +84,29 @@ testRunner.And("the user clicks on the Insert button", ((string)(null)), ((TechT
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Insert mutiple object")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void InsertMutipleObject()
+        [NUnit.Framework.DescriptionAttribute("Insert mutiple object Using Comma")]
+        [NUnit.Framework.CategoryAttribute("insert")]
+        [NUnit.Framework.TestCaseAttribute("geom placeholder", "b1, b2, b3, b4", null)]
+        public virtual void InsertMutipleObjectUsingComma(string @object, string text, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Insert mutiple object", null, new string[] {
-                        "mytag"});
+            string[] @__tags = new string[] {
+                    "insert"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Insert mutiple object Using Comma", null, @__tags);
 #line 10
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
 this.FeatureBackground();
 #line 11
-testRunner.And("the user hover the mouse on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Given(string.Format("the user clicks on an \"{0}\"", @object), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 12
 testRunner.And("the user click on the pencil button on the object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 13
-testRunner.And("the user type b1, b2, b3, b4", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And(string.Format("the user type \"{0}\"", text), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 14
 testRunner.And("the user press the enter key on the keyboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 15
@@ -113,27 +119,27 @@ testRunner.Then("the object should be inserted in the design explorer", ((string
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Insert mutiple object Using Colon")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
+        [NUnit.Framework.CategoryAttribute("insert")]
         public virtual void InsertMutipleObjectUsingColon()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Insert mutiple object Using Colon", null, new string[] {
-                        "mytag"});
-#line 20
+                        "insert"});
+#line 23
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
 this.FeatureBackground();
-#line 21
-testRunner.And("the user hover the mouse on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 22
-testRunner.And("the user click on the pencil button on the object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 23
-testRunner.And("the user type b1; b2; b3; b4", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 24
-testRunner.And("the user press the enter key on the keyboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("the user hover the mouse on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 25
-testRunner.And("the user click the ok button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("the user click on the pencil button on the object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 26
+testRunner.And("the user type b1; b2; b3; b4", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 27
+testRunner.And("the user press the enter key on the keyboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 28
+testRunner.And("the user click the ok button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 29
 testRunner.Then("the object should be inserted in the design explorer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -146,18 +152,18 @@ testRunner.Then("the object should be inserted in the design explorer", ((string
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Insert mutiple object using plus button", null, new string[] {
                         "mytag"});
-#line 29
+#line 32
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
 this.FeatureBackground();
-#line 30
-testRunner.And("the user hover the mouse on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 31
-testRunner.And("the user click on the plus button 3 times on the pane", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 32
-testRunner.And("the user click the ok button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 33
+testRunner.And("the user hover the mouse on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 34
+testRunner.And("the user click on the plus button 3 times on the pane", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 35
+testRunner.And("the user click the ok button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 36
 testRunner.Then("the object should be inserted in the design explorer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -170,18 +176,18 @@ testRunner.Then("the object should be inserted in the design explorer", ((string
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Insert object Using the Right Arrow key on Keyboard", null, new string[] {
                         "mytag"});
-#line 37
+#line 40
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
 this.FeatureBackground();
-#line 38
-testRunner.And("the user hover the mouse on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 39
-testRunner.And("the user click on the \"Right Arrow\" key twice on the keyboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 40
-testRunner.And("the user click the ok button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 41
+testRunner.And("the user hover the mouse on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 42
+testRunner.And("the user click on the \"Right Arrow\" key twice on the keyboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 43
+testRunner.And("the user click the ok button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 44
 testRunner.Then("the object should be inserted in the design explorer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -194,20 +200,20 @@ testRunner.Then("the object should be inserted in the design explorer", ((string
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Insert object Using the plus button on the pane", null, new string[] {
                         "mytag"});
-#line 44
+#line 47
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
 this.FeatureBackground();
-#line 45
-testRunner.And("the user hover the mouse on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 46
-testRunner.And("the user click on the plus button 3 times on the pane", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 47
-testRunner.Then("the user will see 3 object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 48
-testRunner.And("the user click the ok button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("the user hover the mouse on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 49
+testRunner.And("the user click on the plus button 3 times on the pane", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 50
+testRunner.Then("the user will see 3 object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 51
+testRunner.And("the user click the ok button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 52
 testRunner.Then("the object should be inserted in the design explorer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

@@ -1,10 +1,5 @@
 ﻿using FluentAssertions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium.Appium.Windows;
-using OpenQA.Selenium.Remote;
-using SAM.Helper;
-using System;
-using System.Threading;
+using SAM.WinFormObjects;
 using TechTalk.SpecFlow;
 
 namespace SAM.Steps

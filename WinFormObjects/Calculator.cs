@@ -1,6 +1,6 @@
 ﻿using SAM.Utilities;
 
-namespace SAM.Helper
+namespace SAM.WinFormObjects
 {
     // ReSharper disable once ClassNeverInstantiated.Global
     public class Calculator

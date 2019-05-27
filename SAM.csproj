@@ -167,6 +167,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SelectingObject.feature</DependentUpon>
     </Compile>
+    <Compile Include="Hooks\AfterTestsHooks.cs" />
+    <Compile Include="Hooks\BeforeTestsHooks.cs" />
+    <Compile Include="Steps\InsertSteps.cs" />
     <Compile Include="Steps\RibbonSteps.cs" />
     <Compile Include="Utilities\Driver.cs" />
     <Compile Include="Features\calcs1.feature.cs">
@@ -179,6 +182,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OpenSAM.feature</DependentUpon>
     </Compile>
+    <Compile Include="Utilities\WaitForElement.cs" />
     <!--
     <Compile Include="Features\Calculator.feature.cs">
       <DesignTime>True</DesignTime>
@@ -186,19 +190,18 @@
       <DependentUpon>Calculator.feature</DependentUpon>
     </Compile>
 	-->
-    <Compile Include="FormObjects\Calculator.cs" />
-    <Compile Include="FormObjects\RibbonObjects.cs" />
-    <Compile Include="FormObjects\WarningDialogObjects.cs" />
+    <Compile Include="WinFormObjects\Calculator.cs" />
+    <Compile Include="WinFormObjects\DesignExplorerObjects.cs" />
+    <Compile Include="WinFormObjects\InsertFormObject.cs" />
+    <Compile Include="WinFormObjects\RibbonObjects.cs" />
+    <Compile Include="WinFormObjects\WarningDialogObjects.cs" />
     <Compile Include="Steps\CalculatorSteps.cs" />
     <Compile Include="Steps\OpenSAMSteps.cs" />
     <Compile Include="Steps\WarningDialogSteps.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Extension\" />
-    <Folder Include="Hooks\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
@@ -256,6 +259,7 @@
       <LastGenOutput>SelectingObject.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
+    <None Include="Reports\ReportGenerator.bat" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

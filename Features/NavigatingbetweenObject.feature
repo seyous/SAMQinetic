@@ -1,4 +1,5 @@
-﻿Feature: Navigating between Object
+﻿@Navigate
+Feature: Navigating between Object
 Clicking the play button and Validating 
 When the play button is enabled and disabled
 	
