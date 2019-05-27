@@ -21,6 +21,7 @@ namespace SAM.Steps
             _warningDialog.IsWarningDialogDisplayed().Should().BeTrue("The message is not displayed");
         }
 
+        [When(@"the user can click on the OK button")]
         [Then(@"the user can click on the OK button")]
         public void ThenTheUserCanClickOnTheOKButton()
         {

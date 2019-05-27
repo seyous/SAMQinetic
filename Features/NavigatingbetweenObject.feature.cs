@@ -19,7 +19,7 @@ namespace SAM.Features
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
     [NUnit.Framework.DescriptionAttribute("Navigating between Object")]
-    [NUnit.Framework.CategoryAttribute("Navigate")]
+    [NUnit.Framework.CategoryAttribute("navigation")]
     public partial class NavigatingBetweenObjectFeature
     {
         
@@ -34,7 +34,7 @@ namespace SAM.Features
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Navigating between Object", "Clicking the play button and Validating \r\nWhen the play button is enabled and dis" +
                     "abled", ProgrammingLanguage.CSharp, new string[] {
-                        "Navigate"});
+                        "navigation"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -75,14 +75,6 @@ namespace SAM.Features
         public virtual void FeatureBackground()
         {
 #line 7
-#line 8
-testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
-testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
-testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 11
-testRunner.And("the user clicks on the Insert button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
         }
         
@@ -99,15 +91,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
 this.FeatureBackground();
 #line 15
-testRunner.And("the user hover the mouse on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 16
-testRunner.And("the user press the down arrow on the keyboard 3 times", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 17
-testRunner.And("the user press the up arrow on the keyboard 3 times", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 18
-testRunner.Then("the Positon of the object is reverted to object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 19
-testRunner.And("the user click the cancel button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -119,69 +103,13 @@ testRunner.And("the user click the cancel button", ((string)(null)), ((TechTalk.
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Clicking the play button", null, new string[] {
                         "mytag"});
-#line 23
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 7
-this.FeatureBackground();
 #line 24
-testRunner.And("the user hover the mouse on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
 #line 25
-testRunner.And("the user click on the play button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 26
-testRunner.Then("the object should be inserted in the design explorer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 27
-testRunner.And("the a new dialog appears", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 28
-testRunner.And("the user  double click the object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 29
-testRunner.And("the user click on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 30
-testRunner.Then("the object should be inserted in the design explorer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Play button is enabled")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void PlayButtonIsEnabled()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Play button is enabled", null, new string[] {
-                        "mytag"});
-#line 33
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 7
-this.FeatureBackground();
-#line 34
-testRunner.And("the user hover the mouse on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 35
-testRunner.Then("the play button is enabled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Play button is disabled")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void PlayButtonIsDisabled()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Play button is disabled", null, new string[] {
-                        "mytag"});
-#line 38
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 7
-this.FeatureBackground();
-#line 39
-testRunner.And("the user hover the mouse on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 40
-testRunner.Then("the play button is enabled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 41
-testRunner.And("the user takes the mouse away from the focus", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 42
-testRunner.Then("the play button is disabled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             this.ScenarioCleanup();
         }

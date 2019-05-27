@@ -1,4 +1,5 @@
-﻿using SAM.WinFormObjects;
+﻿using FluentAssertions;
+using SAM.WinFormObjects;
 using System;
 using TechTalk.SpecFlow;
 
@@ -15,10 +16,17 @@ namespace SAM.Steps
             _ribbon = ribbon;
         }
 
+        [When(@"the user clicks on the Insert button")]
         [Then(@"the user clicks on the Insert button")]
         public void ThenTheUserClicksOnTheInsertButton()
         {
             _ribbon.ClickInsertButton();
+        }
+
+        [Then(@"the ribbon ""(.*)"" is displayed")]
+        public void ThenTheRibbonIsDisplayed(string ribbonName)
+        {
+            _ribbon.IsRibbonButtonDisplayed(ribbonName).Should().BeTrue();
         }
 
     }

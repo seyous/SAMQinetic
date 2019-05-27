@@ -137,6 +137,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>InsertableObjectDescription.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\InsertObjectDisplayed.feature.cs">
+      <DependentUpon>InsertObjectDisplayed.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Features\InsertMutipleObject.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -162,6 +167,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OpenInsertDialog.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\RibbonValidations.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RibbonValidations.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\SelectingObject.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -183,6 +193,7 @@
       <DependentUpon>OpenSAM.feature</DependentUpon>
     </Compile>
     <Compile Include="Utilities\WaitForElement.cs" />
+    <Compile Include="Utilities\WinDriver.cs" />
     <!--
     <Compile Include="Features\Calculator.feature.cs">
       <DesignTime>True</DesignTime>
@@ -230,6 +241,10 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>InsertableObjectDescription.feature.cs</LastGenOutput>
     </None>
+    <None Include="Features\InsertObjectDisplayed.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>InsertObjectDisplayed.feature.cs</LastGenOutput>
+    </None>
     <None Include="Features\InsertMutipleObject.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>InsertMutipleObject.feature.cs</LastGenOutput>
@@ -253,6 +268,10 @@
     <None Include="Features\OpenSAM.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>OpenSAM1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\RibbonValidations.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>RibbonValidations.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\SelectingObject.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

@@ -18,20 +18,20 @@ namespace SAM.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Inserting Mutiple Object")]
-    public partial class InsertingMutipleObjectFeature
+    [NUnit.Framework.DescriptionAttribute("RibbonValidations")]
+    public partial class RibbonValidationsFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "InsertMutipleObject.feature"
+#line 1 "RibbonValidations.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Inserting Mutiple Object", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "RibbonValidations", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -70,101 +70,122 @@ namespace SAM.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Insert mutiple object Using Comma")]
-        [NUnit.Framework.CategoryAttribute("insert")]
-        [NUnit.Framework.TestCaseAttribute("geom placeholder", "b1, b2, b3, b4", null)]
-        public virtual void InsertMutipleObjectUsingComma(string @object, string text, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("Home Ribbon is Displayed")]
+        [NUnit.Framework.CategoryAttribute("Ribbon")]
+        [NUnit.Framework.TestCaseAttribute("Paste", null)]
+        [NUnit.Framework.TestCaseAttribute("Undo", null)]
+        [NUnit.Framework.TestCaseAttribute("Redo", null)]
+        [NUnit.Framework.TestCaseAttribute("Cut", null)]
+        [NUnit.Framework.TestCaseAttribute("Delete", null)]
+        [NUnit.Framework.TestCaseAttribute("Rename", null)]
+        public virtual void HomeRibbonIsDisplayed(string ribbon, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "insert"};
+                    "Ribbon"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Insert mutiple object Using Comma", null, @__tags);
-#line 10
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Home Ribbon is Displayed", null, @__tags);
+#line 4
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 11
+#line 5
 testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 12
+#line 6
 testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 13
-testRunner.And("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 14
-testRunner.And("the user clicks on the Insert button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 15
-testRunner.And(string.Format("the user clicks on an \"{0}\"", @object), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 16
-testRunner.And("the user click on the pencil button on the object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 17
-testRunner.And(string.Format("the user type \"{0}\"", text), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 7
+testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 8
+testRunner.And(string.Format("the ribbon \"{0}\" is displayed", ribbon), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Insert mutiple object Using Colon")]
-        [NUnit.Framework.CategoryAttribute("insert")]
-        public virtual void InsertMutipleObjectUsingColon()
+        [NUnit.Framework.DescriptionAttribute("Home Ribbon AutoRecal is Displayed")]
+        [NUnit.Framework.TestCaseAttribute("Auto Recalculate", null)]
+        public virtual void HomeRibbonAutoRecalIsDisplayed(string ribbon, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Insert mutiple object Using Colon", null, new string[] {
-                        "insert"});
-#line 27
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Home Ribbon AutoRecal is Displayed", null, exampleTags);
+#line 20
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 28
+#line 21
 testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 29
+#line 22
 testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 30
+#line 23
 testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 31
-testRunner.And("the user clicks on the Insert button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 24
+testRunner.And(string.Format("the ribbon \"{0}\" is displayed", ribbon), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Insert mutiple object using plus button")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void InsertMutipleObjectUsingPlusButton()
+        [NUnit.Framework.DescriptionAttribute("Home Ribbon Block Action is Displayed")]
+        [NUnit.Framework.CategoryAttribute("Ribbon")]
+        [NUnit.Framework.TestCaseAttribute("Insert", null)]
+        [NUnit.Framework.TestCaseAttribute("Find", null)]
+        [NUnit.Framework.TestCaseAttribute("Properties", null)]
+        [NUnit.Framework.TestCaseAttribute("Tabular View", null)]
+        [NUnit.Framework.TestCaseAttribute("Object Setup", null)]
+        [NUnit.Framework.TestCaseAttribute("Move Up", null)]
+        [NUnit.Framework.TestCaseAttribute("Move Down", null)]
+        [NUnit.Framework.TestCaseAttribute("Force Recalculate", null)]
+        [NUnit.Framework.TestCaseAttribute("Protect", null)]
+        [NUnit.Framework.TestCaseAttribute("Units", null)]
+        [NUnit.Framework.TestCaseAttribute("Show Ancestry", null)]
+        [NUnit.Framework.TestCaseAttribute("Level", null)]
+        public virtual void HomeRibbonBlockActionIsDisplayed(string ribbon, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Insert mutiple object using plus button", null, new string[] {
-                        "mytag"});
-#line 40
+            string[] @__tags = new string[] {
+                    "Ribbon"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Home Ribbon Block Action is Displayed", null, @__tags);
+#line 32
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 41
+#line 33
 testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 42
+#line 34
 testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 43
+#line 35
 testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 44
-testRunner.And("the user clicks on the Insert button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 36
+testRunner.And(string.Format("the ribbon \"{0}\" is displayed", ribbon), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Insert object Using the Right Arrow key on Keyboard")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void InsertObjectUsingTheRightArrowKeyOnKeyboard()
+        [NUnit.Framework.DescriptionAttribute("Home Ribbon Block Macro is Displayed")]
+        [NUnit.Framework.CategoryAttribute("Ribbon")]
+        [NUnit.Framework.TestCaseAttribute("Macro", null)]
+        public virtual void HomeRibbonBlockMacroIsDisplayed(string ribbon, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Insert object Using the Right Arrow key on Keyboard", null, new string[] {
-                        "mytag"});
-#line 52
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 53
-testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 54
-testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 55
-testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+            string[] @__tags = new string[] {
+                    "Ribbon"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Home Ribbon Block Macro is Displayed", null, @__tags);
 #line 56
-testRunner.And("the user clicks on the Insert button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 57
+testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 58
+testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 59
+testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 60
+testRunner.And(string.Format("the ribbon \"{0}\" is displayed", ribbon), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

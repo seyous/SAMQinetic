@@ -9,14 +9,14 @@ using TechTalk.SpecFlow.Configuration;
 
 namespace SAM.Utilities
 {
-    public class Driver : IDisposable
+    public class Driver// : IDisposable
     {
         private WindowsDriver<WindowsElement> _driver;
         private const int implicitTimeoutMs = 120000;
 
         string appLocation = @"C:\Program Files\QinetiQ\SAM V2.1\bin\SAM.exe";
 
-                public WindowsDriver<WindowsElement> Current
+        public WindowsDriver<WindowsElement> Current
         {
 
             get
@@ -31,15 +31,15 @@ namespace SAM.Utilities
                  try
                  {
                  _driver = new WindowsDriver<WindowsElement>(new Uri(ConfigurationManager.AppSettings["winAppUri"]), capabilities, TimeSpan.FromMinutes(2));
-                     Thread.Sleep(TimeSpan.FromSeconds(10));
+                     Thread.Sleep(TimeSpan.FromSeconds(1));
 
                  }
                  catch (Exception)
                  {
-                     Thread.Sleep(TimeSpan.FromSeconds(10));
+                     Thread.Sleep(TimeSpan.FromSeconds(1));
 
                     _driver = new WindowsDriver<WindowsElement>(new Uri(ConfigurationManager.AppSettings["winAppUri"]), capabilities, TimeSpan.FromMinutes(2));
-                    Thread.Sleep(TimeSpan.FromSeconds(10));
+                    Thread.Sleep(TimeSpan.FromSeconds(1));
 
                  }
                 _driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromMilliseconds(Convert.ToDouble(implicitTimeoutMs)));
@@ -66,10 +66,10 @@ namespace SAM.Utilities
             }
         }
 
-        public void Dispose()
-        {
-            _driver?.Dispose();
-        }
+        //public void Dispose()
+        //{
+        //    _driver?.Dispose();
+        //}
     }
 }
 

@@ -18,7 +18,8 @@ namespace SAM.Steps
         [Given(@"a user opens SAM")]
         public void GivenAUserOpensSAM()
         {
-            _warningDialog.IsSAMOpened().Should().BeTrue("SAM is not opened");
+          //  _warningDialog.IsSAMOpened().Should().BeTrue("SAM is not opened");
+
         }
 
 

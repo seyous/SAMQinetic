@@ -16,18 +16,40 @@ namespace SAM.WinFormObjects
         public RibbonObjects(Driver driver):base(driver)
         {
             _driver = driver;
-
         }
 
+        
         WindowsElement insertRibbonButton => _driver.Current.FindElementByName("Insert");
 
+        WindowsElement helpRibbonButton => _driver.Current.FindElementByName("Help");
+
+        WindowsElement propertiesRibbonButton => _driver.Current.FindElementByName("Properties");
+
+
+        public WindowsElement GetRibbon(string ribbonName)
+        {
+            return _driver.Current.FindElementByName(ribbonName);
+        }
 
         public void ClickInsertButton()
         {
-            Thread.Sleep(TimeSpan.FromSeconds(3));
+            Thread.Sleep(TimeSpan.FromSeconds(1));
             var allWindowHandles = _driver.Current.WindowHandles;
             _driver.Current.SwitchTo().Window(allWindowHandles[0]);
+
             insertRibbonButton.Click();
+
+        }
+
+
+
+
+        public bool IsRibbonButtonDisplayed(string ribbonText)
+        {
+            Thread.Sleep(TimeSpan.FromSeconds(1));
+            var allWindowHandles = _driver.Current.WindowHandles;
+            _driver.Current.SwitchTo().Window(allWindowHandles[0]);
+            return GetRibbon(ribbonText).Displayed;
 
         }
     }

@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using FluentAssertions;
+using OpenQA.Selenium;
 using SAM.WinFormObjects;
 using TechTalk.SpecFlow;
 
@@ -18,23 +19,42 @@ namespace SAM.Steps
 
         }
 
-
         [Given(@"the user clicks on an ""(.*)""")]
+        [When(@"the user clicks on an ""(.*)""")]
         public void GivenTheUserClicksOnAnObject(string objectText)
         {
             _insertFormObject.ClickOnObject(objectText);
+
         }
 
+        [Then(@"the insert object ""(.*)"" is displayed")]
+        public void ThenTheInsertObjectIsDisplayed(string objectText)
+        {
+            _insertFormObject.InsertObjectIsDisplayed(objectText)
+                .Should().BeTrue("Insert Object is not displayed");
+
+        }
+
+        [When(@"the user type ""(.*)""")]
         [Given(@"the user type ""(.*)""")]
         public void GivenTheUserTypeAText(string text)
         {
             _insertFormObject.ChangeObjectText(text);
         }
 
+        [When(@"the user click on the pencil button on the object")]
         [Given(@"the user click on the pencil button on the object")]
         public void GivenTheUserClickOnThePencilButtonOnTheObject()
         {
             _insertFormObject.ClickPencil();
+
+            _insertFormObject.ClickPencil();
+
+            _insertFormObject.ClickPencil();
+
+            _insertFormObject.ClickPencil();
+
+
         }
 
         [Given(@"the user press the enter key on the keyboard")]

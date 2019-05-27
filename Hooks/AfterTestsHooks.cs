@@ -15,7 +15,7 @@ namespace SAM.Hooks
         [AfterTestRun]
         public static void KillWinAppDriver()
         {
-            _driver.Kill();
+         //   _driver.Kill();
         }
 
     }

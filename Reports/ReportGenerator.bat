@@ -8,11 +8,12 @@ echo report_xml
 set report_html=htmlreport_%date:~-4,4%_%date:~-7,2%_%date:~-10,2%_%time:~1,1%%time:~3,2%%time:~6,2%.html
 echo report_html
 
+rem ..\packages\NUnit.ConsoleRunner.3.10.0\tools\nunit3-console.exe --labels=All  --where "cat == insert || cat == navigation" --out=..\ReportFiles\%report_txt% "--result=..\ReportFiles\%report_xml%;format=nunit2" ..\bin\Debug\SAM.dll
 
-..\packages\NUnit.ConsoleRunner.3.10.0\tools\nunit3-console.exe --labels=All  --where "cat == insert || cat = navigation" --out=..\TestResults\ReportFiles\%report_txt% "--result=..\TestResults\ReportFiles\%report_xml%;format=nunit2" ..\bin\Debug\SAM.dll
+..\packages\NUnit.ConsoleRunner.3.10.0\tools\nunit3-console.exe --labels=All  --out=..\ReportFiles\%report_txt% "--result=..\ReportFiles\%report_xml%;format=nunit2" ..\bin\Debug\SAM.dll
 
 
-..\packages\SpecFlow.2.4.1\tools\specflow.exe nunitexecutionreport --ProjectFile ..\SAM.csproj --xmlTestResult ..\TestResults\ReportFiles\%report_xml% --testOutput ..\TestResults\ReportFiles\%report_txt% --OutputFile ..\TestResults\ReportFiles\%report_html%
+..\packages\SpecFlow.2.4.1\tools\specflow.exe nunitexecutionreport --ProjectFile ..\SAM.csproj --xmlTestResult ..\ReportFiles\%report_xml% --testOutput ..\ReportFiles\%report_txt% --OutputFile ..\ReportFiles\%report_html%
 
 
 
