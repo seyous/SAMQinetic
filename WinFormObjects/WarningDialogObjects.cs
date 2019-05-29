@@ -27,7 +27,7 @@ namespace SAM.WinFormObjects
         public bool IsSAMOpened()
         {
 
-            Thread.Sleep(TimeSpan.FromSeconds(3));
+            Thread.Sleep(TimeSpan.FromSeconds(5));
             return  _driver.Current.SessionId != null;
         }
 

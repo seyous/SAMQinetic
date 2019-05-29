@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace SAM.Utilities
 {
-    public class WaitForElement
+    public static class WaitForElement
     {
-        public bool WaitForElementToLoad(WindowsElement element)
+        public static bool WaitForElementToLoad(WindowsElement element)
         {
 
             for (int i = 1; i <= 20; i++)
@@ -19,14 +19,16 @@ namespace SAM.Utilities
                 {
                     return true;
                 }
-                Thread.Sleep(500);
+                WaitForElement.Wait();
+
+                //Thread.Sleep(500);
             }
 
             return false;
 
         }
 
-        public bool IsElementDisplayed(WindowsElement element)
+        public static bool IsElementDisplayed(WindowsElement element)
         {
             try
             {
@@ -39,7 +41,11 @@ namespace SAM.Utilities
 
         }
 
+        public static void Wait()
+        {
+            Thread.Sleep(TimeSpan.FromSeconds(10));
 
+        }
 
     }
 }

@@ -13,9 +13,21 @@ namespace SAM.Hooks
         private static Process _driver;
 
         [AfterTestRun]
+        [AfterScenario]
         public static void KillWinAppDriver()
         {
-         //   _driver.Kill();
+//            _driver.Kill();
+
+            try
+            {
+                foreach (Process proc in Process.GetProcessesByName("SAM"))
+                {
+                    //proc.Kill();
+                }
+            }
+            catch (Exception ex)
+            {
+            }
         }
 
     }

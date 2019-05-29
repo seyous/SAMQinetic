@@ -16,6 +16,13 @@ namespace SAM.Steps
             _ribbon = ribbon;
         }
 
+        [Then(@"the only object ""(.*)"" is displayed")]
+        public void ThenTheOnlyObjectIsDisplayed(string p0)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+
         [When(@"the user clicks on the Insert button")]
         [Then(@"the user clicks on the Insert button")]
         public void ThenTheUserClicksOnTheInsertButton()

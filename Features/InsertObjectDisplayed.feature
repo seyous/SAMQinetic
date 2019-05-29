@@ -78,3 +78,10 @@ Examples:
 | weight summary          |
 
 
+
+Scenario: Object in the list not correct
+Given a user opens SAM
+When the warning message is displayed
+Then the user can click on the OK button
+And the user clicks on the Insert button
+#And the only  object "<Object>" is displayed

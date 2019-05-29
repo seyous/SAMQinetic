@@ -46,7 +46,14 @@ namespace SAM.Steps
         [Given(@"the user click on the pencil button on the object")]
         public void GivenTheUserClickOnThePencilButtonOnTheObject()
         {
+
+
+
             _insertFormObject.ClickPencil();
+            _insertFormObject.ClickPencil();
+
+            _insertFormObject.ClickPencil();
+
 
             _insertFormObject.ClickPencil();
 
@@ -54,6 +61,9 @@ namespace SAM.Steps
 
             _insertFormObject.ClickPencil();
 
+            _insertFormObject.ClickPencil();
+
+            _insertFormObject.ClickPencil();
 
         }
 

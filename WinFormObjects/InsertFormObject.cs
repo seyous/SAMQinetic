@@ -42,6 +42,11 @@ namespace SAM.WinFormObjects
         {
             try
             {
+
+
+                UIGridPattern.FindRows();
+
+
                 // var item1 = _driver.Current.FindElements(By.Name("repositoryItemButtonEdit1"));
                 // var item2 = _driver.Current.FindElementsByName("repositoryItemButtonEdit1");
                 //var item3 = _driver.Current.FindElementsByXPath("//button");
@@ -111,7 +116,9 @@ An extra tip: If you're automating for iOS, I assume that means you have access 
                         try
                         {
                             element.Click();
-                            break;
+                            WaitForElement.Wait();
+
+                            //System.Threading.Thread.Sleep(10000);
                         }
                         catch { }
 
