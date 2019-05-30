@@ -33,7 +33,7 @@ namespace SAM.WinFormObjects
 
         public void ClickInsertButton()
         {
-            Thread.Sleep(TimeSpan.FromSeconds(1));
+            WaitForElement.Wait();
             var allWindowHandles = _driver.Current.WindowHandles;
             _driver.Current.SwitchTo().Window(allWindowHandles[0]);
 
@@ -46,7 +46,7 @@ namespace SAM.WinFormObjects
 
         public bool IsRibbonButtonDisplayed(string ribbonText)
         {
-            Thread.Sleep(TimeSpan.FromSeconds(1));
+            WaitForElement.Wait();
             var allWindowHandles = _driver.Current.WindowHandles;
             _driver.Current.SwitchTo().Window(allWindowHandles[0]);
             return GetRibbon(ribbonText).Displayed;

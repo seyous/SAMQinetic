@@ -8,7 +8,7 @@ When the warning message is displayed
 And the user can click on the OK button
 And the user clicks on the Insert button
 And the user clicks on an "<Object>"
-#And the user click on the pencil button on the object
+And the user click on the pencil button on the object
 #And the user type "<Text>"
 #And the user press the enter key on the keyboard
 #And the user click the ok button

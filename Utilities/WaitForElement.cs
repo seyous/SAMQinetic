@@ -21,7 +21,6 @@ namespace SAM.Utilities
                 }
                 WaitForElement.Wait();
 
-                //Thread.Sleep(500);
             }
 
             return false;

@@ -28,20 +28,20 @@ namespace SAM.Utilities
 
                 var capabilities = new DesiredCapabilities();
                 capabilities.SetCapability("app", appLocation);
-                 try
-                 {
+
+                //capabilities.SetCapability("deviceName", "WindowsPC");
+
+                try
+                {
                  _driver = new WindowsDriver<WindowsElement>(new Uri(ConfigurationManager.AppSettings["winAppUri"]), capabilities, TimeSpan.FromMinutes(2));
-                    // Thread.Sleep(TimeSpan.FromSeconds(3));
                     WaitForElement.Wait();
                  }
                  catch (Exception)
                  {
-                    // Thread.Sleep(TimeSpan.FromSeconds(3));
                     WaitForElement.Wait();
 
                     _driver = new WindowsDriver<WindowsElement>(new Uri(ConfigurationManager.AppSettings["winAppUri"]), capabilities, TimeSpan.FromMinutes(2));
-                    Thread.Sleep(TimeSpan.FromSeconds(3));
-                                        WaitForElement.Wait();
+                    WaitForElement.Wait();
 
                  }
                 _driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromMilliseconds(Convert.ToDouble(implicitTimeoutMs)));

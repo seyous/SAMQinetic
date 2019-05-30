@@ -27,14 +27,14 @@ namespace SAM.WinFormObjects
         public bool IsSAMOpened()
         {
 
-            Thread.Sleep(TimeSpan.FromSeconds(5));
-            return  _driver.Current.SessionId != null;
+            WaitForElement.Wait();
+            return _driver.Current.SessionId != null;
         }
 
         public bool IsWarningDialogDisplayed()
         {
             var currentWindowHandle = _driver.Current.CurrentWindowHandle;
-            Thread.Sleep(TimeSpan.FromSeconds(5));
+            WaitForElement.Wait();
             return OKbutton.Displayed;
 
         }

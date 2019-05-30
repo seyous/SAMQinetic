@@ -44,6 +44,71 @@ namespace SAM.WinFormObjects
             {
 
 
+
+
+                try
+                {
+
+                    var form8 = _driver.Current.FindElementByXPath("//Window[@AutomationId=\"MainWindow\"]");
+
+                    var form9 = form8.FindElementByXPath("//Window[@AutomationId=\"InsertObjectView\"]");
+
+                    var grid1 = form9.FindElementByAccessibilityId("treeList");
+
+                    var editor = grid1.FindElementByName("Editing control");
+                    var buttons = editor.FindElementsByTagName("Button");
+
+                }
+                catch (Exception)
+                {
+
+
+
+                }
+
+                try
+                {
+
+                    var form8 = _driver.Current.FindElementByXPath("//Window[@AutomationId=\"MainWindow\"]");
+
+                    var form9 = form8.FindElementByXPath("//Window[@AutomationId=\"InsertObjectView\"]");
+
+                    var grid1 = form9.FindElementByAccessibilityId("treeList");
+
+                    var editor = grid1.FindElementByName("Editing control");
+                    //var buttons = editor.FindElementsByTagName("Button");
+                    var buttons2 = editor.FindElementByXPath("//Button");
+
+                }
+                catch (Exception)
+                {
+
+
+
+                }
+
+
+                try
+                {
+
+                    var form8 = _driver.Current.FindElementByXPath("//Window[@AutomationId=\"MainWindow\"]");
+
+                    var form9 = form8.FindElementByXPath("//Window[@AutomationId=\"InsertObjectView\"]");
+
+                    var grid1 = form9.FindElementByAccessibilityId("treeList");
+
+                    var editor = grid1.FindElementByName("Editing control");
+                    var buttons = editor.FindElementsByTagName("Button");
+                    var buttons2 = editor.FindElementByXPath("//Button");
+
+                }
+                catch (Exception)
+                {
+
+
+
+                }
+
                 UIGridPattern.FindRows();
 
 
@@ -118,7 +183,6 @@ An extra tip: If you're automating for iOS, I assume that means you have access 
                             element.Click();
                             WaitForElement.Wait();
 
-                            //System.Threading.Thread.Sleep(10000);
                         }
                         catch { }
 
@@ -197,6 +261,11 @@ An extra tip: If you're automating for iOS, I assume that means you have access 
 
 
             }
+            try
+            {
+                var form1 = _driver.Current.FindElementByXPath("/Pane[@Name=\"Desktop 1\"]/Window[@AutomationId=\"MainWindow\"]");
+            }
+            catch { }
         }
 
 

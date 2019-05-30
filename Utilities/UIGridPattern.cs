@@ -24,8 +24,28 @@ namespace SAM.Utilities
 
             //}
             string text = "";
+            var elem2 = AutomationElement.RootElement.FindAll(TreeScope.Descendants, new PropertyCondition(AutomationElement.LocalizedControlTypeProperty, "edit"));
+
+
             int i = 0;
+            var elem3 = AutomationElement.RootElement.FindAll(TreeScope.Descendants, new PropertyCondition(AutomationElement.LocalizedControlTypeProperty, "button"));
+
             foreach (AutomationElement el in elem)
+            {
+                //++i;
+                //var name = el.Current.Name;
+                //var type = el.Current.LocalizedControlType;
+                //Console.WriteLine(i);
+
+                //Console.WriteLine(type.ToString());
+                //Console.WriteLine(name.ToString());
+                //text += " \n name: " + name.ToString() + " type: " + type.ToString();
+
+                ////el.SetFocus();
+
+            }
+
+            foreach (AutomationElement el in elem3)
             {
                 ++i;
                 var name = el.Current.Name;
@@ -37,7 +57,6 @@ namespace SAM.Utilities
                 text += " \n name: " + name.ToString() + " type: " + type.ToString();
 
                 //el.SetFocus();
-             //   System.Threading.Thread.Sleep(10000);
 
             }
             Console.WriteLine(text);

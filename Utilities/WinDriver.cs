@@ -10,15 +10,15 @@ using System.Threading.Tasks;
 
 namespace SAM.Utilities
 {
-    public class WinDriver
+    public static class WinDriver
     {
-        private WindowsDriver<WindowsElement> _driver;
+        private static  WindowsDriver<WindowsElement> _driver;
 
         private const int implicitTimeoutMs = 120000;
 
-        string appLocation = @"C:\Program Files\QinetiQ\SAM V2.1\bin\SAM.exe";
+        static string appLocation = @"C:\Program Files\QinetiQ\SAM V2.1\bin\SAM.exe";
 
-        public WindowsDriver<WindowsElement> OpenDriver()
+        public static WindowsDriver<WindowsElement> OpenDriver()
         {
 
  
@@ -32,18 +32,18 @@ namespace SAM.Utilities
                 try
                 {
                     _driver = new WindowsDriver<WindowsElement>(new Uri(ConfigurationManager.AppSettings["winAppUri"]), capabilities, TimeSpan.FromMinutes(2));
-                    Thread.Sleep(TimeSpan.FromSeconds(1));
+                WaitForElement.Wait();
 
-                }
-                catch (Exception)
+            }
+            catch (Exception)
                 {
-                    Thread.Sleep(TimeSpan.FromSeconds(1));
+                WaitForElement.Wait();
 
-                    _driver = new WindowsDriver<WindowsElement>(new Uri(ConfigurationManager.AppSettings["winAppUri"]), capabilities, TimeSpan.FromMinutes(2));
-                    Thread.Sleep(TimeSpan.FromSeconds(1));
+                _driver = new WindowsDriver<WindowsElement>(new Uri(ConfigurationManager.AppSettings["winAppUri"]), capabilities, TimeSpan.FromMinutes(2));
+                WaitForElement.Wait();
 
-                }
-                _driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromMilliseconds(Convert.ToDouble(implicitTimeoutMs)));
+            }
+            _driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromMilliseconds(Convert.ToDouble(implicitTimeoutMs)));
 
 
                 return _driver;

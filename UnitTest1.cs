@@ -7,6 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Windows;
 using OpenQA.Selenium.Remote;
+using SAM.Utilities;
 
 namespace SAM
 {
@@ -47,30 +48,31 @@ namespace SAM
             try
             {
                 session = new WindowsDriver<WindowsElement>(new Uri("http://127.0.0.1:4723"), appCapabilities, TimeSpan.FromMinutes(3));
-                Thread.Sleep(TimeSpan.FromSeconds(10));
+                WaitForElement.Wait();
 
             }
             catch (Exception)
             {
-                Thread.Sleep(TimeSpan.FromSeconds(10));
+                WaitForElement.Wait();
 
                 session = new WindowsDriver<WindowsElement>(new Uri("http://127.0.0.1:4723"), appCapabilities, TimeSpan.FromMinutes(3));
-                Thread.Sleep(TimeSpan.FromSeconds(10));
+                WaitForElement.Wait();
 
             }
 
 
             session.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromMilliseconds(Convert.ToDouble(implicitTimeoutMs)));
 
-            Thread.Sleep(TimeSpan.FromSeconds(10));
+            WaitForElement.Wait();
             Assert.IsNotNull(session);
 
             var currentWindowHandle = session.CurrentWindowHandle;
-            Thread.Sleep(TimeSpan.FromSeconds(7));
+            WaitForElement.Wait();
+
             session.FindElementByName("OK").Click();
 
             // Wait for 5 seconds or however long it is needed for the right window to appear/for the splash screen to be dismissed
-            Thread.Sleep(TimeSpan.FromSeconds(5));
+            WaitForElement.Wait();
             var allWindowHandles = session.WindowHandles;
             session.SwitchTo().Window(allWindowHandles[0]);
             session.FindElementByName("Insert").Click();
@@ -106,14 +108,14 @@ namespace SAM
             }
             catch (Exception)
             {
-                Thread.Sleep(TimeSpan.FromSeconds(10));
+                WaitForElement.Wait();
 
                 session = new WindowsDriver<WindowsElement>(new Uri(WindowsApplicationDriverUrl), desktopCapabilities);
 
             }
             Assert.IsNotNull(session);
 
-           
+
             /*
 
 
@@ -151,7 +153,7 @@ namespace SAM
                          //DesktopSession.Keyboard.SendKeys(OpenQA.Selenium.Keys.Meta + "s" + OpenQA.Selenium.Keys.Meta);
                          DesktopSession.Keyboard.SendKeys("{TestedApp}");
                          DesktopSession.FindElementByName("{TestedApp}, Windows app").Click();
-                         Thread.Sleep(TimeSpan.FromSeconds(1));
+            WaitForElement.Wait();
                          WindowsElement TestedAppWindow = DesktopSession.FindElementByName("{TestedApp}");
                          String TestedAppTopLevelWindowHandle = TestedAppWindow.GetAttribute("NativeWindowHandle");
                          TestedAppTopLevelWindowHandle = (int.Parse(TestedAppTopLevelWindowHandle)).ToString("x");
@@ -187,7 +189,7 @@ namespace SAM
             desktopCapabilities.SetCapability("deviceName", "WindowsPC");
             AppiumDriver<WindowsElement> DesktopSession = new WindowsDriver<WindowsElement>(new Uri("http://127.0.0.1:4723/wd/hub"), desktopCapabilities);
             
-            //Thread.sleep(3000);
+            WaitForElement.Wait();
             WebElement XXXWindow = DesktopSession.findElementByName("XXX XXX");
 
             //2. Attaching to existing XXX XXX Window
