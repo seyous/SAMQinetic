@@ -22,7 +22,7 @@ namespace SAM.Hooks
             {
                 foreach (Process proc in Process.GetProcessesByName("SAM"))
                 {
-                    //proc.Kill();
+                    proc.Kill();
                 }
             }
             catch (Exception ex)
