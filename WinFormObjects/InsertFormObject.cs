@@ -21,17 +21,17 @@ namespace SAM.WinFormObjects
 
         string geomplaceholder => "geom placeholder";
 
-        WindowsElement insertWindow => _driver.Current.FindElementByName("Insert Object");
-        WindowsElement editingControl => _driver.Current.FindElementByName("Editing control");
-        WindowsElement row1Element => _driver.Current.FindElementByName("Name row 1");
-        WindowsElement OKButton => _driver.Current.FindElementById("m_btn_ok");
-        WindowsElement Node1 => _driver.Current.FindElementByName("Node 1");
+        WindowsElement insertWindow => WinDriver.driver.FindElementByName("Insert Object");
+        WindowsElement editingControl => WinDriver.driver.FindElementByName("Editing control");
+        WindowsElement row1Element => WinDriver.driver.FindElementByName("Name row 1");
+        WindowsElement OKButton => WinDriver.driver.FindElementById("m_btn_ok");
+        WindowsElement Node1 => WinDriver.driver.FindElementByName("Node 1");
         //.item2;
         
-        //WindowsElement item2 => _driver.Current.FindElementByName("repositoryItemButtonEdit1");
-        //WindowsElement pencil => _driver.Current.FindElementByName("repositoryItemButtonEdit1.Buttons[0]");
-        //WindowsElement row2Element => _driver.Current.FindElementByName("Name row 2");
-        //WindowsElement cancelButton => _driver.Current.FindElementById("m_btn_cancel");
+        //WindowsElement item2 => WinDriver.driver.FindElementByName("repositoryItemButtonEdit1");
+        //WindowsElement pencil => WinDriver.driver.FindElementByName("repositoryItemButtonEdit1.Buttons[0]");
+        //WindowsElement row2Element => WinDriver.driver.FindElementByName("Name row 2");
+        //WindowsElement cancelButton => WinDriver.driver.FindElementById("m_btn_cancel");
 
 
 
@@ -49,7 +49,7 @@ namespace SAM.WinFormObjects
                 try
                 {
 
-                    var form8 = _driver.Current.FindElementByXPath("//Window[@AutomationId=\"MainWindow\"]");
+                    var form8 = WinDriver.driver.FindElementByXPath("//Window[@AutomationId=\"MainWindow\"]");
 
                     var form9 = form8.FindElementByXPath("//Window[@AutomationId=\"InsertObjectView\"]");
 
@@ -69,7 +69,7 @@ namespace SAM.WinFormObjects
                 try
                 {
 
-                    var form8 = _driver.Current.FindElementByXPath("//Window[@AutomationId=\"MainWindow\"]");
+                    var form8 = WinDriver.driver.FindElementByXPath("//Window[@AutomationId=\"MainWindow\"]");
 
                     var form9 = form8.FindElementByXPath("//Window[@AutomationId=\"InsertObjectView\"]");
 
@@ -91,7 +91,7 @@ namespace SAM.WinFormObjects
                 try
                 {
 
-                    var form8 = _driver.Current.FindElementByXPath("//Window[@AutomationId=\"MainWindow\"]");
+                    var form8 = WinDriver.driver.FindElementByXPath("//Window[@AutomationId=\"MainWindow\"]");
 
                     var form9 = form8.FindElementByXPath("//Window[@AutomationId=\"InsertObjectView\"]");
 
@@ -112,9 +112,9 @@ namespace SAM.WinFormObjects
                 UIGridPattern.FindRows();
 
 
-                // var item1 = _driver.Current.FindElements(By.Name("repositoryItemButtonEdit1"));
-                // var item2 = _driver.Current.FindElementsByName("repositoryItemButtonEdit1");
-                //var item3 = _driver.Current.FindElementsByXPath("//button");
+                // var item1 = WinDriver.driver.FindElements(By.Name("repositoryItemButtonEdit1"));
+                // var item2 = WinDriver.driver.FindElementsByName("repositoryItemButtonEdit1");
+                //var item3 = WinDriver.driver.FindElementsByXPath("//button");
 
                 //("//UIAWindow[1]//*"
 
@@ -131,44 +131,44 @@ An extra tip: If you're automating for iOS, I assume that means you have access 
 
 
 
-                //var edititem1 = _driver.Current.FindElementByXPath("//Edit[@Name='Editing control']//*");
+                //var edititem1 = WinDriver.driver.FindElementByXPath("//Edit[@Name='Editing control']//*");
 
 
                 /*
-                var item14 = _driver.Current.FindElementsByName("Name row 1");
-               var    itemn2 = _driver.Current.FindElementsByXPath("//Window[@Name=\"Insert Object\"]");
+                var item14 = WinDriver.driver.FindElementsByName("Name row 1");
+               var    itemn2 = WinDriver.driver.FindElementsByXPath("//Window[@Name=\"Insert Object\"]");
 
-                var edititem2 = _driver.Current.FindElementsByXPath("//Edit[@Name='Editing control']//*");
+                var edititem2 = WinDriver.driver.FindElementsByXPath("//Edit[@Name='Editing control']//*");
 
-                var edititem3 = _driver.Current.FindElementsByXPath("//Edit[@Name='Editing control']/*");
+                var edititem3 = WinDriver.driver.FindElementsByXPath("//Edit[@Name='Editing control']/*");
 
-                var edititem4 = _driver.Current.FindElementsByXPath("//Button[@Name='']/*");
+                var edititem4 = WinDriver.driver.FindElementsByXPath("//Button[@Name='']/*");
 
-                var edititem5 = _driver.Current.FindElementsByXPath("//Button[@Name='']//*");
+                var edititem5 = WinDriver.driver.FindElementsByXPath("//Button[@Name='']//*");
 
-                //var edititem6 = _driver.Current.FindElementByXPath("//Button[@Name='']/*");
+                //var edititem6 = WinDriver.driver.FindElementByXPath("//Button[@Name='']/*");
 
-                var edititem7 = _driver.Current.FindElementsByXPath("//Button[@Name=''][0]/*");
-                var  item12 = _driver.Current.FindElementsByXPath("//Window[@Name='Editing control']");
+                var edititem7 = WinDriver.driver.FindElementsByXPath("//Button[@Name=''][0]/*");
+                var  item12 = WinDriver.driver.FindElementsByXPath("//Window[@Name='Editing control']");
 
-                var     nitem2 = _driver.Current.FindElementsByXPath("//Window[@Name=\"Insert Object\"]/*");
+                var     nitem2 = WinDriver.driver.FindElementsByXPath("//Window[@Name=\"Insert Object\"]/*");
 
-              //      var  titem2 = _driver.Current.FindElementsByXPath("//Window[@Name=\"Insert Object\"]//*");
-                var edititem8 = _driver.Current.FindElementsByXPath("//Button[@Name='']");
+              //      var  titem2 = WinDriver.driver.FindElementsByXPath("//Window[@Name=\"Insert Object\"]//*");
+                var edititem8 = WinDriver.driver.FindElementsByXPath("//Button[@Name='']");
                 */
-                var edititem9 = _driver.Current.FindElementsByXPath("//Button");
+                var edititem9 = WinDriver.driver.FindElementsByXPath("//Button");
 
 
-                //var node1 = _driver.Current.FindElementsByXPath("//TreeItem[@Name='Node1']/*");
+                //var node1 = WinDriver.driver.FindElementsByXPath("//TreeItem[@Name='Node1']/*");
 
-                //var node1a = _driver.Current.FindElementsByXPath("//TreeItem[@Name='Node1']//*");
+                //var node1a = WinDriver.driver.FindElementsByXPath("//TreeItem[@Name='Node1']//*");
 
-                //var node1b = _driver.Current.FindElementsByXPath("//TreeItem[@Name='Node1']//*");
+                //var node1b = WinDriver.driver.FindElementsByXPath("//TreeItem[@Name='Node1']//*");
                 /*
 
-                var treeList1 = _driver.Current.FindElementsByXPath("//Tree[@AutomationId='treeList']//*");
-                var treeList2 = _driver.Current.FindElementsByXPath("//Tree[@AutomationId='treeList']/*");
-                var treeList3 = _driver.Current.FindElementsByXPath("//Tree[@AutomationId='treeList']");
+                var treeList1 = WinDriver.driver.FindElementsByXPath("//Tree[@AutomationId='treeList']//*");
+                var treeList2 = WinDriver.driver.FindElementsByXPath("//Tree[@AutomationId='treeList']/*");
+                var treeList3 = WinDriver.driver.FindElementsByXPath("//Tree[@AutomationId='treeList']");
                 */
                 int i = 0;
                 
@@ -190,68 +190,68 @@ An extra tip: If you're automating for iOS, I assume that means you have access 
                 }
 
                 /*
-                    var item5 = _driver.Current.FindElementsByXPath("//Edit[@Name='Editing control']");
+                    var item5 = WinDriver.driver.FindElementsByXPath("//Edit[@Name='Editing control']");
 
                 //This
 
-                var node1 = _driver.Current.FindElementsByXPath("//TreeItem[@Name='Node1']/*"); //4 items OK
+                var node1 = WinDriver.driver.FindElementsByXPath("//TreeItem[@Name='Node1']/*"); //4 items OK
 
-                var node1a = _driver.Current.FindElementsByXPath("//TreeItem[@Name='Node1']//*"); //4 items OK
+                var node1a = WinDriver.driver.FindElementsByXPath("//TreeItem[@Name='Node1']//*"); //4 items OK
 
-                var node1b = _driver.Current.FindElementsByXPath("//TreeItem[@Name='Node1']//*"); //4 items OK
+                var node1b = WinDriver.driver.FindElementsByXPath("//TreeItem[@Name='Node1']//*"); //4 items OK
 
-                var data = _driver.Current.FindElementsByXPath("//DataItem[@Name='row 1']/*"); //0 items
+                var data = WinDriver.driver.FindElementsByXPath("//DataItem[@Name='row 1']/*"); //0 items
 
-                var node2 = _driver.Current.FindElementsByXPath("//Group[@Name='Data Panel']/*"); //21 items
+                var node2 = WinDriver.driver.FindElementsByXPath("//Group[@Name='Data Panel']/*"); //21 items
 
-                var data2 = _driver.Current.FindElementsByXPath("//DataItem[@Name='row 1']//*"); //0
+                var data2 = WinDriver.driver.FindElementsByXPath("//DataItem[@Name='row 1']//*"); //0
 
-                var node2a = _driver.Current.FindElementsByXPath("//Group[@Name='Node1']//*");
+                var node2a = WinDriver.driver.FindElementsByXPath("//Group[@Name='Node1']//*");
 
-                var data3 = _driver.Current.FindElementsByXPath("//DataItem[@Name='row 1']//*");
-
-
-                var node2b = _driver.Current.FindElementsByXPath("//Group[@Name='Node1']//*");
-
-                 treeList1 = _driver.Current.FindElementsByXPath("//Tree[@AutomationId='treeList']//*"); //112 items
-                 treeList2 = _driver.Current.FindElementsByXPath("//Tree[@AutomationId='treeList']/*"); //3 item
-                 treeList3 = _driver.Current.FindElementsByXPath("//Tree[@AutomationId='treeList']");
+                var data3 = WinDriver.driver.FindElementsByXPath("//DataItem[@Name='row 1']//*");
 
 
-                var item6 = _driver.Current.FindElementsByXPath("//Edit[@Name='Editing control']/*");
+                var node2b = WinDriver.driver.FindElementsByXPath("//Group[@Name='Node1']//*");
+
+                 treeList1 = WinDriver.driver.FindElementsByXPath("//Tree[@AutomationId='treeList']//*"); //112 items
+                 treeList2 = WinDriver.driver.FindElementsByXPath("//Tree[@AutomationId='treeList']/*"); //3 item
+                 treeList3 = WinDriver.driver.FindElementsByXPath("//Tree[@AutomationId='treeList']");
+
+
+                var item6 = WinDriver.driver.FindElementsByXPath("//Edit[@Name='Editing control']/*");
 
                // pencil.Click();
 
-                var item7 = _driver.Current.FindElementsByXPath("//Edit[@Name='Editing control']//*");
-                item6 = _driver.Current.FindElementsByXPath("//Edit[@Name='Editing control']/*");
+                var item7 = WinDriver.driver.FindElementsByXPath("//Edit[@Name='Editing control']//*");
+                item6 = WinDriver.driver.FindElementsByXPath("//Edit[@Name='Editing control']/*");
 
-                var data4 = _driver.Current.FindElementsByXPath("//DataItem[@Name='  row 1'][0]//*"); //0
+                var data4 = WinDriver.driver.FindElementsByXPath("//DataItem[@Name='  row 1'][0]//*"); //0
 
-                var data5 = _driver.Current.FindElementsByXPath("//DataItem[@Name='  row 1'][1]//*"); //0
+                var data5 = WinDriver.driver.FindElementsByXPath("//DataItem[@Name='  row 1'][1]//*"); //0
 
-                var data6 = _driver.Current.FindElementsByXPath("//DataItem[@Name='  row 1'][0]//*"); 
+                var data6 = WinDriver.driver.FindElementsByXPath("//DataItem[@Name='  row 1'][0]//*"); 
 
-                var treeList = _driver.Current.FindElementsByXPath("//Window[@AutomationId='treeList']//*");
+                var treeList = WinDriver.driver.FindElementsByXPath("//Window[@AutomationId='treeList']//*");
 
-                data4 = _driver.Current.FindElementsByXPath("//DataItem[@Name='  row 1']//*"); //0
+                data4 = WinDriver.driver.FindElementsByXPath("//DataItem[@Name='  row 1']//*"); //0
 
-                data5 = _driver.Current.FindElementsByXPath("//DataItem[@Name='  row 1']/*"); //0
-
-
-                data4 = _driver.Current.FindElementsByXPath("//DataItem[@Name='  row 1'][0]//*"); //0
-
-                data5 = _driver.Current.FindElementsByXPath("//DataItem[@Name='  row 1'][1]//*"); //0
-
-                data6 = _driver.Current.FindElementsByXPath("//DataItem[@Name='  row 1'][0]//*");
+                data5 = WinDriver.driver.FindElementsByXPath("//DataItem[@Name='  row 1']/*"); //0
 
 
-                var item9 = _driver.Current.FindElementsByXPath("//Window[@Name='Editing control']/*");
+                data4 = WinDriver.driver.FindElementsByXPath("//DataItem[@Name='  row 1'][0]//*"); //0
+
+                data5 = WinDriver.driver.FindElementsByXPath("//DataItem[@Name='  row 1'][1]//*"); //0
+
+                data6 = WinDriver.driver.FindElementsByXPath("//DataItem[@Name='  row 1'][0]//*");
+
+
+                var item9 = WinDriver.driver.FindElementsByXPath("//Window[@Name='Editing control']/*");
                 //Node1
 
-                var treeList4 = _driver.Current.FindElementByXPath("//tree[@AutomationId='treeList']");
-                var treeList5 = _driver.Current.FindElementsByXPath("//tree[@AutomationId='treeList']");
-                var treeList6 = _driver.Current.FindElementByXPath("//tree[@AutomationId='treeList']/*");
-                var treeList7 = _driver.Current.FindElementByXPath("//tree[@AutomationId='treeList']/*");
+                var treeList4 = WinDriver.driver.FindElementByXPath("//tree[@AutomationId='treeList']");
+                var treeList5 = WinDriver.driver.FindElementsByXPath("//tree[@AutomationId='treeList']");
+                var treeList6 = WinDriver.driver.FindElementByXPath("//tree[@AutomationId='treeList']/*");
+                var treeList7 = WinDriver.driver.FindElementByXPath("//tree[@AutomationId='treeList']/*");
                 */
 
 
@@ -263,7 +263,7 @@ An extra tip: If you're automating for iOS, I assume that means you have access 
             }
             try
             {
-                var form1 = _driver.Current.FindElementByXPath("/Pane[@Name=\"Desktop 1\"]/Window[@AutomationId=\"MainWindow\"]");
+                var form1 = WinDriver.driver.FindElementByXPath("/Pane[@Name=\"Desktop 1\"]/Window[@AutomationId=\"MainWindow\"]");
             }
             catch { }
         }
@@ -312,10 +312,10 @@ An extra tip: If you're automating for iOS, I assume that means you have access 
                 try
                 {
 
-                    element = _driver.Current.FindElementByName(nameOfObject);
+                    element = WinDriver.driver.FindElementByName(nameOfObject);
                     if (element.Text == objectText)
                     {
-                        bool test = _driver.Current.SessionId != null;
+                        bool test = WinDriver.driver.SessionId != null;
 
                         return true;
                     }

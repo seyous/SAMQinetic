@@ -11,30 +11,31 @@ using System.Threading.Tasks;
 
 namespace SAM.WinFormObjects
 {
-    public class WarningDialogObjects : BasePage
+    public class WarningDialogObjects
     {
         //private readonly Driver _driver;
 
-        public WarningDialogObjects(Driver driver):base(driver)
-        {
-            _driver = driver;
+        //public WarningDialogObjects(Driver driver):base(driver)
+        //{
+        //    _driver = driver;
 
-        }
+        //}
 
-        WindowsElement OKbutton => _driver.Current.FindElementByName("OK");
+        WindowsElement OKbutton => WinDriver.driver.FindElementByName("OK");
 
 
         public bool IsSAMOpened()
         {
 
             WaitForElement.Wait();
-            return _driver.Current.SessionId != null;
+            return WinDriver.driver.SessionId != null;
         }
 
         public bool IsWarningDialogDisplayed()
         {
-            var currentWindowHandle = _driver.Current.CurrentWindowHandle;
             WaitForElement.Wait();
+
+            var currentWindowHandle = WinDriver.driver.CurrentWindowHandle;
             return OKbutton.Displayed;
 
         }

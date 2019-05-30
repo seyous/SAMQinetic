@@ -17,10 +17,10 @@ namespace SAM.WinFormObjects
 
         }
 
-        WindowsElement OKButton => _driver.Current.FindElementByName("OK");
+        WindowsElement OKButton => WinDriver.driver.FindElementByName("OK");
         public WindowsElement GetWindowsElementByName(string name)
         {
-            return _driver.Current.FindElementByName(name);
+            return WinDriver.driver.FindElementByName(name);
         }
     }
 }

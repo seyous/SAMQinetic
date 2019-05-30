@@ -11,31 +11,31 @@ using System.Threading.Tasks;
 
 namespace SAM.WinFormObjects
 {
-    public class RibbonObjects :BasePage
+    public class RibbonObjects 
     {
-        public RibbonObjects(Driver driver):base(driver)
-        {
-            _driver = driver;
-        }
+        //public RibbonObjects(Driver driver):base(driver)
+        //{
+        //    _driver = driver;
+        //}
 
         
-        WindowsElement insertRibbonButton => _driver.Current.FindElementByName("Insert");
+        WindowsElement insertRibbonButton => WinDriver.driver.FindElementByName("Insert");
 
-        WindowsElement helpRibbonButton => _driver.Current.FindElementByName("Help");
+        WindowsElement helpRibbonButton => WinDriver.driver.FindElementByName("Help");
 
-        WindowsElement propertiesRibbonButton => _driver.Current.FindElementByName("Properties");
+        WindowsElement propertiesRibbonButton => WinDriver.driver.FindElementByName("Properties");
 
 
         public WindowsElement GetRibbon(string ribbonName)
         {
-            return _driver.Current.FindElementByName(ribbonName);
+            return WinDriver.driver.FindElementByName(ribbonName);
         }
 
         public void ClickInsertButton()
         {
             WaitForElement.Wait();
-            var allWindowHandles = _driver.Current.WindowHandles;
-            _driver.Current.SwitchTo().Window(allWindowHandles[0]);
+            var allWindowHandles = WinDriver.driver.WindowHandles;
+            WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
 
             insertRibbonButton.Click();
 
@@ -47,8 +47,8 @@ namespace SAM.WinFormObjects
         public bool IsRibbonButtonDisplayed(string ribbonText)
         {
             WaitForElement.Wait();
-            var allWindowHandles = _driver.Current.WindowHandles;
-            _driver.Current.SwitchTo().Window(allWindowHandles[0]);
+            var allWindowHandles = WinDriver.driver.WindowHandles;
+            WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
             return GetRibbon(ribbonText).Displayed;
 
         }

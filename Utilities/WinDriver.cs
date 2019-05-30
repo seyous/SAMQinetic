@@ -12,7 +12,7 @@ namespace SAM.Utilities
 {
     public static class WinDriver
     {
-        private static  WindowsDriver<WindowsElement> _driver;
+        public static  WindowsDriver<WindowsElement> driver;
 
         private const int implicitTimeoutMs = 120000;
 
@@ -22,31 +22,33 @@ namespace SAM.Utilities
         {
 
  
-                if (_driver != null)
+                if (driver != null)
                 {
-                    return _driver;
+                    return driver;
                 }
 
                 var capabilities = new DesiredCapabilities();
                 capabilities.SetCapability("app", appLocation);
                 try
                 {
-                    _driver = new WindowsDriver<WindowsElement>(new Uri(ConfigurationManager.AppSettings["winAppUri"]), capabilities, TimeSpan.FromMinutes(2));
+                    driver = new WindowsDriver<WindowsElement>(new Uri(ConfigurationManager.AppSettings["winAppUri"]), capabilities, TimeSpan.FromMinutes(2));
                 WaitForElement.Wait();
+                driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromMilliseconds(Convert.ToDouble(implicitTimeoutMs)));
+
 
             }
             catch (Exception)
                 {
                 WaitForElement.Wait();
 
-                _driver = new WindowsDriver<WindowsElement>(new Uri(ConfigurationManager.AppSettings["winAppUri"]), capabilities, TimeSpan.FromMinutes(2));
+                driver = new WindowsDriver<WindowsElement>(new Uri(ConfigurationManager.AppSettings["winAppUri"]), capabilities, TimeSpan.FromMinutes(2));
                 WaitForElement.Wait();
+                driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromMilliseconds(Convert.ToDouble(implicitTimeoutMs)));
 
             }
-            _driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromMilliseconds(Convert.ToDouble(implicitTimeoutMs)));
 
 
-                return _driver;
+            return driver;
             
         }
     }

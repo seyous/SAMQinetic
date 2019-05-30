@@ -1,4 +1,5 @@
 ﻿using FluentAssertions;
+using SAM.Utilities;
 using SAM.WinFormObjects;
 using TechTalk.SpecFlow;
 
@@ -18,6 +19,7 @@ namespace SAM.Steps
         [Given(@"a user opens SAM")]
         public void GivenAUserOpensSAM()
         {
+            WinDriver.OpenDriver();
           //  _warningDialog.IsSAMOpened().Should().BeTrue("SAM is not opened");
 
         }
