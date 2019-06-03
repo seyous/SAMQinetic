@@ -87,10 +87,8 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 7
-testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 8
-testRunner.And("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
 testRunner.And("the user clicks on the Insert button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10

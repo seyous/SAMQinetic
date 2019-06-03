@@ -33,7 +33,7 @@ namespace SAM.Utilities
 
                 try
                 {
-                 _driver = new WindowsDriver<WindowsElement>(new Uri(ConfigurationManager.AppSettings["winAppUri"]), capabilities, TimeSpan.FromMinutes(2));
+                 _driver = new WindowsDriver<WindowsElement>(new Uri(ConfigurationManager.AppSettings["winAppUri"]), capabilities, TimeSpan.FromMinutes(5));
                     WaitForElement.Wait();
                  }
                  catch (Exception)

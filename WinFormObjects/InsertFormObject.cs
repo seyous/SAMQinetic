@@ -49,14 +49,31 @@ namespace SAM.WinFormObjects
                 try
                 {
 
-                    var form8 = WinDriver.driver.FindElementByXPath("//Window[@AutomationId=\"MainWindow\"]");
+                    var form8 = WinDriver.driver.FindElementsByXPath("//Window[@AutomationId=\"MainWindow\"]");
 
-                    var form9 = form8.FindElementByXPath("//Window[@AutomationId=\"InsertObjectView\"]");
+                    var form9 = form8[0].FindElementsByXPath("//Window[@AutomationId=\"InsertObjectView\"]");
 
-                    var grid1 = form9.FindElementByAccessibilityId("treeList");
+                    var grid1 = form9[0].FindElementsByAccessibilityId("treeList");
 
-                    var editor = grid1.FindElementByName("Editing control");
-                    var buttons = editor.FindElementsByTagName("Button");
+                    WaitForElement.Wait();
+
+                    grid1[0].Click();
+                    grid1[0].Click();
+
+
+                    var editor = grid1[0].FindElementsByName("Editing control");
+
+                    WaitForElement.Wait();
+                    editor[0].Click();
+                    WaitForElement.Wait();
+
+                    var buttons = editor[0].FindElementsByTagName("Button");
+                    //var buttons2 = editor.FindElementByXPath("//Button");
+
+                    buttons[0].Click();
+                    buttons[1].Click();
+                    buttons[2].Click();
+
 
                 }
                 catch (Exception)
@@ -65,6 +82,8 @@ namespace SAM.WinFormObjects
 
 
                 }
+
+                //UIGridPattern.FindRows();
 
                 try
                 {
@@ -76,31 +95,17 @@ namespace SAM.WinFormObjects
                     var grid1 = form9.FindElementByAccessibilityId("treeList");
 
                     var editor = grid1.FindElementByName("Editing control");
-                    //var buttons = editor.FindElementsByTagName("Button");
-                    var buttons2 = editor.FindElementByXPath("//Button");
 
-                }
-                catch (Exception)
-                {
+                    WaitForElement.Wait();
+                    editor.Click();
+                    WaitForElement.Wait();
 
-
-
-                }
-
-
-                try
-                {
-
-                    var form8 = WinDriver.driver.FindElementByXPath("//Window[@AutomationId=\"MainWindow\"]");
-
-                    var form9 = form8.FindElementByXPath("//Window[@AutomationId=\"InsertObjectView\"]");
-
-                    var grid1 = form9.FindElementByAccessibilityId("treeList");
-
-                    var editor = grid1.FindElementByName("Editing control");
                     var buttons = editor.FindElementsByTagName("Button");
-                    var buttons2 = editor.FindElementByXPath("//Button");
+                    //var buttons2 = editor.FindElementByXPath("//Button");
 
+                    buttons[0].Click();
+                    buttons[1].Click();
+                    buttons[2].Click();
                 }
                 catch (Exception)
                 {
@@ -108,10 +113,6 @@ namespace SAM.WinFormObjects
 
 
                 }
-
-                UIGridPattern.FindRows();
-
-
                 // var item1 = WinDriver.driver.FindElements(By.Name("repositoryItemButtonEdit1"));
                 // var item2 = WinDriver.driver.FindElementsByName("repositoryItemButtonEdit1");
                 //var item3 = WinDriver.driver.FindElementsByXPath("//button");
@@ -156,7 +157,7 @@ An extra tip: If you're automating for iOS, I assume that means you have access 
               //      var  titem2 = WinDriver.driver.FindElementsByXPath("//Window[@Name=\"Insert Object\"]//*");
                 var edititem8 = WinDriver.driver.FindElementsByXPath("//Button[@Name='']");
                 */
-                var edititem9 = WinDriver.driver.FindElementsByXPath("//Button");
+                //var edititem9 = WinDriver.driver.FindElementsByXPath("//Button");
 
 
                 //var node1 = WinDriver.driver.FindElementsByXPath("//TreeItem[@Name='Node1']/*");
@@ -171,7 +172,7 @@ An extra tip: If you're automating for iOS, I assume that means you have access 
                 var treeList3 = WinDriver.driver.FindElementsByXPath("//Tree[@AutomationId='treeList']");
                 */
                 int i = 0;
-                
+                /*
                 
                 foreach (WindowsElement element in edititem9)
                 {
@@ -188,7 +189,7 @@ An extra tip: If you're automating for iOS, I assume that means you have access 
 
                     }
                 }
-
+                */
                 /*
                     var item5 = WinDriver.driver.FindElementsByXPath("//Edit[@Name='Editing control']");
 

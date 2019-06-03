@@ -1,8 +1,8 @@
 ﻿using OpenQA.Selenium.Appium.Windows;
 using OpenQA.Selenium.Remote;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -17,7 +17,7 @@ namespace SAM.Utilities
         private const int implicitTimeoutMs = 120000;
 
         static string appLocation = @"C:\Program Files\QinetiQ\SAM V2.1\bin\SAM.exe";
-
+        
         public static WindowsDriver<WindowsElement> OpenDriver()
         {
 
@@ -31,17 +31,27 @@ namespace SAM.Utilities
                 capabilities.SetCapability("app", appLocation);
                 try
                 {
-                    driver = new WindowsDriver<WindowsElement>(new Uri(ConfigurationManager.AppSettings["winAppUri"]), capabilities, TimeSpan.FromMinutes(2));
-                WaitForElement.Wait();
-                driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromMilliseconds(Convert.ToDouble(implicitTimeoutMs)));
+                    driver = new WindowsDriver<WindowsElement>(new Uri("http://127.0.0.1:4723"), capabilities, TimeSpan.FromMinutes(10));
+                    WaitForElement.Wait();
+                Thread.Sleep(15000);
+                    driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromMilliseconds(Convert.ToDouble(implicitTimeoutMs)));
 
 
-            }
-            catch (Exception)
+                }
+                catch (Exception)
                 {
                 WaitForElement.Wait();
+                WaitForElement.Wait();
 
-                driver = new WindowsDriver<WindowsElement>(new Uri(ConfigurationManager.AppSettings["winAppUri"]), capabilities, TimeSpan.FromMinutes(2));
+
+                if (driver != null)
+                {
+                    return driver;
+                }
+
+
+                WaitForElement.Wait();
+                driver = new WindowsDriver<WindowsElement>(new Uri(ConfigurationManager.AppSettings["winAppUri"]), capabilities, TimeSpan.FromMinutes(15));
                 WaitForElement.Wait();
                 driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromMilliseconds(Convert.ToDouble(implicitTimeoutMs)));
 
