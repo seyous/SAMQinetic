@@ -24,7 +24,7 @@ And the user click on the "left Arrow" key on the keyboard
 Then the object is deselected
 And the user click the cancel button
 
-@mytag
+@mytag 
 Scenario:DeSelect an Object Using Spacebar key
 And the user hover the mouse on an object
 And the user press the spacebar on the keyboard

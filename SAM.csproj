@@ -171,6 +171,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OpenInsertDialog.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\RibbonEnableDisable.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RibbonEnableDisable.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\RibbonValidations.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -184,6 +189,7 @@
     <Compile Include="Hooks\AfterTestsHooks.cs" />
     <Compile Include="Hooks\BeforeTestsHooks.cs" />
     <Compile Include="Steps\InsertSteps.cs" />
+    <Compile Include="Steps\RibbonEnableDisableSteps.cs" />
     <Compile Include="Steps\RibbonSteps.cs" />
     <Compile Include="Utilities\Driver.cs" />
     <Compile Include="Features\calcs1.feature.cs">
@@ -273,6 +279,10 @@
     <None Include="Features\OpenSAM.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>OpenSAM1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\RibbonEnableDisable.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>RibbonEnableDisable.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\RibbonValidations.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

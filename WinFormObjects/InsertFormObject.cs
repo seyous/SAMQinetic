@@ -57,8 +57,8 @@ namespace SAM.WinFormObjects
 
                     WaitForElement.Wait();
 
-                    grid1[0].Click();
-                    grid1[0].Click();
+                    //grid1[0].Click();
+                    //grid1[0].Click();
 
 
                     var editor = grid1[0].FindElementsByName("Editing control");
@@ -113,6 +113,38 @@ namespace SAM.WinFormObjects
 
 
                 }
+
+
+                try
+                {
+
+                    var form8 = WinDriver.driver.FindElementByXPath("//Window[@AutomationId=\"MainWindow\"]");
+
+                    var form9 = form8.FindElementByXPath("//Window[@AutomationId=\"InsertObjectView\"]");
+
+                    var grid1 = form9.FindElementByAccessibilityId("treeList");
+
+                    var editor = grid1.FindElementByName("Editing control");
+
+                    WaitForElement.Wait();
+                    editor.Click();
+                    WaitForElement.Wait();
+
+                    var buttons = editor.FindElementsByTagName("Button");
+                    //var buttons2 = editor.FindElementByXPath("//Button");
+
+                    buttons[0].Click();
+                    buttons[1].Click();
+                    buttons[2].Click();
+                }
+                catch (Exception)
+                {
+
+
+
+                }
+
+
                 // var item1 = WinDriver.driver.FindElements(By.Name("repositoryItemButtonEdit1"));
                 // var item2 = WinDriver.driver.FindElementsByName("repositoryItemButtonEdit1");
                 //var item3 = WinDriver.driver.FindElementsByXPath("//button");
