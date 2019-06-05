@@ -1,4 +1,5 @@
-﻿using SAM.WinFormObjects;
+﻿using FluentAssertions;
+using SAM.WinFormObjects;
 using System;
 using TechTalk.SpecFlow;
 
@@ -16,9 +17,9 @@ namespace SAM.Steps
 
 
         [Then(@"the ribbon ""(.*)"" has a ""(.*)""")]
-        public void ThenTheRibbonHasA(string ribbonObject, string visible)
+        public void ThenTheRibbonHasA(string ribbonName, string visibility)
         {
-            _ribbon.IsRibbonButtonEnabled(ribbonObject, visible);
+            _ribbon.IsRibbonButtonEnabled(ribbonName, visibility).Should().BeTrue("The object "+ ribbonName +" is not "+visibility);
         }
     }
 }
