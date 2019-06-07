@@ -1,5 +1,7 @@
-﻿using OpenQA.Selenium.Appium.Windows;
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Appium.Windows;
 using OpenQA.Selenium.Remote;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Configuration;
 using System.Diagnostics;
@@ -60,6 +62,16 @@ namespace SAM.Utilities
 
             return driver;
             
+        }
+
+
+
+        public static void WaitForElements(By by)
+        {
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromMinutes(2));
+
+            wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(by));
+
         }
     }
 }
