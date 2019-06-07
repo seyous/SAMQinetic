@@ -20,9 +20,6 @@ namespace SAM.WinFormObjects
 
         
         WindowsElement insertRibbonButton => WinDriver.driver.FindElementByName("Insert");
-
-        WindowsElement helpRibbonButton => WinDriver.driver.FindElementByName("Help");
-
         WindowsElement propertiesRibbonButton => WinDriver.driver.FindElementByName("Properties");
 
 
@@ -38,10 +35,7 @@ namespace SAM.WinFormObjects
             WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
 
             insertRibbonButton.Click();
-
         }
-
-
 
 
         public bool IsRibbonButtonDisplayed(string ribbonText)
@@ -50,7 +44,41 @@ namespace SAM.WinFormObjects
             var allWindowHandles = WinDriver.driver.WindowHandles;
             WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
             return GetRibbon(ribbonText).Displayed;
+        }
 
+        public bool IsRibbonButtonEnabled(string ribbonObject, string visible)
+        {
+            WaitForElement.Wait();
+            var allWindowHandles = WinDriver.driver.WindowHandles;
+            WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
+
+            var objectstatus = GetRibbon(ribbonObject);
+
+            try
+            {
+                if (visible == "Enabled")
+                {
+
+                    return objectstatus.Enabled;
+                }
+                else if (visible=="Disabled")
+                {
+                    return !objectstatus.Enabled;
+                }
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+            return false;
+            //switch (objectstatus)
+            //{
+            //    case 1:
+            //        return 
+
+
+        
         }
     }
 }

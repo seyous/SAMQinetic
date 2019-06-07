@@ -42,7 +42,7 @@ namespace SAM.Utilities
 
         public static void Wait()
         {
-            Thread.Sleep(TimeSpan.FromSeconds(10));
+            Thread.Sleep(TimeSpan.FromSeconds(5));
 
         }
 
