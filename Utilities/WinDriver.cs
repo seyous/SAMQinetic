@@ -1,5 +1,7 @@
-﻿using OpenQA.Selenium.Appium.Windows;
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Appium.Windows;
 using OpenQA.Selenium.Remote;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Configuration;
 using System.Diagnostics;
@@ -61,5 +63,44 @@ namespace SAM.Utilities
             return driver;
             
         }
+
+
+
+        public static void WaitForElements(By by)
+        {
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromMinutes(2));
+
+            wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(by));
+
+        }
+
+        /*
+
+        private ExpectedCondition<Boolean> elementFoundAndClicked(By locator)
+        {
+            return new ExpectedCondition<Boolean>() {
+        @Override
+        
+        public Boolean apply(WebDriver driver)
+            {
+                WebElement el = driver.findElement(locator);
+                el.click();
+                return true;
+            }
+        };
     }
+    
+    public void testLogin_CustomWait()
+    {
+        WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromMinutes(2));
+
+        wait.Until(ElementFoundAndClicked(loginScreen));
+        wait.until(ExpectedConditions.presenceOfElementLocated(username)).sendKeys(AUTH_USER);
+        wait.until(ExpectedConditions.presenceOfElementLocated(password)).sendKeys(AUTH_PASS);
+        wait.until(elementFoundAndClicked(loginBtn));
+        wait.until(ExpectedConditions.presenceOfElementLocated(getLoggedInBy(AUTH_USER)));
+    }
+    */
+
+}
 }
