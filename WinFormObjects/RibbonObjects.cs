@@ -25,6 +25,7 @@ namespace SAM.WinFormObjects
 
         public WindowsElement GetRibbon(string ribbonName)
         {
+
             return WinDriver.driver.FindElementByName(ribbonName);
         }
 
@@ -46,22 +47,22 @@ namespace SAM.WinFormObjects
             return GetRibbon(ribbonText).Displayed;
         }
 
-        public bool IsRibbonButtonEnabled(string ribbonObject, string visible)
+        public bool IsRibbonButtonEnabled(string ribbonName, string visibility)
         {
-            WaitForElement.Wait();
+           
             var allWindowHandles = WinDriver.driver.WindowHandles;
             WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
 
-            var objectstatus = GetRibbon(ribbonObject);
+            var objectstatus = GetRibbon(ribbonName);
 
             try
             {
-                if (visible == "Enabled")
+                if (visibility == "Enabled")
                 {
 
                     return objectstatus.Enabled;
                 }
-                else if (visible=="Disabled")
+                else if (visibility=="Disabled")
                 {
                     return !objectstatus.Enabled;
                 }
@@ -72,13 +73,14 @@ namespace SAM.WinFormObjects
                 return false;
             }
             return false;
-            //switch (objectstatus)
-            //{
-            //    case 1:
-            //        return 
-
-
-        
+                  
         }
+
+        //public static int boundaryvalue (string ribbonName, int minimumvalue, int maximumvalue)
+        //{
+        //    var ribbon = WinDriver.driver.FindElementByName(ribbonName);
+        //    ribbon.SendKeys("maximumvalue");
+            
+        //} 
     }
 }

@@ -72,13 +72,13 @@ namespace SAM.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Home Ribbon Enabled and Disabled")]
         [NUnit.Framework.CategoryAttribute("Ribbon")]
-        [NUnit.Framework.TestCaseAttribute("Paste", "disabled", null)]
-        [NUnit.Framework.TestCaseAttribute("Copy", "disabled", null)]
-        [NUnit.Framework.TestCaseAttribute("Undo", "disabled", null)]
-        [NUnit.Framework.TestCaseAttribute("Redo", "disabled", null)]
-        [NUnit.Framework.TestCaseAttribute("Cut", "disabled", null)]
-        [NUnit.Framework.TestCaseAttribute("Delete", "disabled", null)]
-        [NUnit.Framework.TestCaseAttribute("Rename", "disabled", null)]
+        [NUnit.Framework.TestCaseAttribute("Paste", "Disabled", null)]
+        [NUnit.Framework.TestCaseAttribute("Copy", "Disabled", null)]
+        [NUnit.Framework.TestCaseAttribute("Undo", "Disabled", null)]
+        [NUnit.Framework.TestCaseAttribute("Redo", "Disabled", null)]
+        [NUnit.Framework.TestCaseAttribute("Cut", "Disabled", null)]
+        [NUnit.Framework.TestCaseAttribute("Delete", "Disabled", null)]
+        [NUnit.Framework.TestCaseAttribute("Rename", "Disabled", null)]
         [NUnit.Framework.TestCaseAttribute("Auto Recalculate", "Enabled", null)]
         [NUnit.Framework.TestCaseAttribute("Insert", "Enabled", null)]
         [NUnit.Framework.TestCaseAttribute("Find", "Enabled", null)]
@@ -109,24 +109,31 @@ testRunner.And(string.Format("the ribbon \"{0}\" has a \"{1}\"", ribbon, visibil
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Layout Ribbon Enabled and Disabled")]
+        [NUnit.Framework.CategoryAttribute("Ribbon")]
         [NUnit.Framework.TestCaseAttribute("Design Explorer", "Enabled", null)]
         [NUnit.Framework.TestCaseAttribute("Graphics", "Enabled", null)]
         [NUnit.Framework.TestCaseAttribute("Message panel", "Enabled", null)]
         [NUnit.Framework.TestCaseAttribute("kcl panel", "Enabled", null)]
-        public virtual void LayoutRibbonEnabledAndDisabled(string ribbon, string visibilty, string[] exampleTags)
+        public virtual void LayoutRibbonEnabledAndDisabled(string ribbon, string visibility, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Layout Ribbon Enabled and Disabled", null, exampleTags);
-#line 26
+            string[] @__tags = new string[] {
+                    "Ribbon"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Layout Ribbon Enabled and Disabled", null, @__tags);
+#line 27
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 27
-testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 28
-testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 29
-testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 30
-testRunner.And(string.Format("the ribbon \"{0}\" has a \"<visibility>\"", ribbon), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 31
+testRunner.And(string.Format("the ribbon \"{0}\" has a \"{1}\"", ribbon, visibility), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -138,7 +145,7 @@ testRunner.And(string.Format("the ribbon \"{0}\" has a \"<visibility>\"", ribbon
         [NUnit.Framework.TestCaseAttribute("Link to Excel", "Disabled", null)]
         [NUnit.Framework.TestCaseAttribute("Trace Anscestor", "Enabled", null)]
         [NUnit.Framework.TestCaseAttribute("Trace Descendents", "Enabled", null)]
-        public virtual void TempLocationEnabledAndDisabled(string ribbon, string visibilty, string[] exampleTags)
+        public virtual void TempLocationEnabledAndDisabled(string ribbon, string visibility, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "Ribbon"};
@@ -147,17 +154,17 @@ testRunner.And(string.Format("the ribbon \"{0}\" has a \"<visibility>\"", ribbon
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Temp Location Enabled and Disabled", null, @__tags);
-#line 41
+#line 42
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 42
-testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 43
-testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 44
-testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 45
-testRunner.And(string.Format("the ribbon \"{0}\" has a \"<visibility>\"", ribbon), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 46
+testRunner.And(string.Format("the ribbon \"{0}\" has a \"{1}\"", ribbon, visibility), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -169,7 +176,7 @@ testRunner.And(string.Format("the ribbon \"{0}\" has a \"<visibility>\"", ribbon
         [NUnit.Framework.TestCaseAttribute("Additional Scenarios", "Disabled", null)]
         [NUnit.Framework.TestCaseAttribute("Random Scenario", "Disabled", null)]
         [NUnit.Framework.TestCaseAttribute("Update Results", "Disabled", null)]
-        public virtual void SAMRibbonEnabledAndDisabled(string ribbon, string visibilty, string[] exampleTags)
+        public virtual void SAMRibbonEnabledAndDisabled(string ribbon, string visibility, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "Ribbon"};
@@ -178,17 +185,48 @@ testRunner.And(string.Format("the ribbon \"{0}\" has a \"<visibility>\"", ribbon
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("SAM Ribbon enabled and disabled", null, @__tags);
-#line 56
+#line 57
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 57
-testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 58
-testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 59
-testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 60
-testRunner.And(string.Format("the ribbon \"{0}\" has a \"<visibility>\"", ribbon), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 61
+testRunner.And(string.Format("the ribbon \"{0}\" has a \"{1}\"", ribbon, visibility), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Settings Ribbon enabled and disabled")]
+        [NUnit.Framework.CategoryAttribute("Ribbon")]
+        [NUnit.Framework.TestCaseAttribute("Text", "Enabled", null)]
+        [NUnit.Framework.TestCaseAttribute("Graphs", "Enabled", null)]
+        [NUnit.Framework.TestCaseAttribute("Excel", "Enabled", null)]
+        [NUnit.Framework.TestCaseAttribute("Messages", "Enabled", null)]
+        public virtual void SettingsRibbonEnabledAndDisabled(string ribbon, string visibility, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "Ribbon"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Settings Ribbon enabled and disabled", null, @__tags);
+#line 72
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 73
+testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 74
+testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 75
+testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 76
+testRunner.And(string.Format("the ribbon \"{0}\" has a \"{1}\"", ribbon, visibility), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -186,6 +186,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SelectingObject.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\ValidateNumberBoundary.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidateNumberBoundary.feature</DependentUpon>
+    </Compile>
     <Compile Include="Hooks\AfterTestsHooks.cs" />
     <Compile Include="Hooks\BeforeTestsHooks.cs" />
     <Compile Include="Steps\InsertSteps.cs" />
@@ -205,6 +210,7 @@
     <Compile Include="Utilities\UIGridPattern.cs" />
     <Compile Include="Utilities\WaitForElement.cs" />
     <Compile Include="Utilities\WinDriver.cs" />
+    <Compile Include="Steps\ValidateNumberBoundarySteps.cs" />
     <!--
     <Compile Include="Features\Calculator.feature.cs">
       <DesignTime>True</DesignTime>
@@ -291,6 +297,10 @@
     <None Include="Features\SelectingObject.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SelectingObject.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\ValidateNumberBoundary.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ValidateNumberBoundary.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
     <None Include="Reports\ReportGenerator.bat" />
