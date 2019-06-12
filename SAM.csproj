@@ -131,10 +131,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DeSelectingObject.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\EditingAnObject.feature.cs">
+    <Compile Include="Features\EditObjectUsingDigitandLetters.feature.cs">
+      <DependentUpon>EditObjectUsingDigitandLetters.feature</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EditingAnObject.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\EditObjectUsingSpecialCharacter.feature.cs">
+      <DependentUpon>EditObjectUsingSpecialCharacter.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\EditObjectUsingFunctionkey.feature.cs">
+      <DependentUpon>EditObjectUsingFunctionkey.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\EditObjectUsingEnterKey.feature.cs">
+      <DependentUpon>EditObjectUsingEnterKey.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\EditObjectUsingEscapeKey.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditObjectUsingEscapeKey.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\EditObjectUsingPencil.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditObjectUsingPencil.feature</DependentUpon>
     </Compile>
     <Compile Include="Features\InsertableObjectDescription.feature.cs">
       <AutoGen>True</AutoGen>
@@ -171,6 +196,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OpenInsertDialog.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\PlotGraphObject.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlotGraphObject.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\RibbonEnableDisable.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -193,6 +223,7 @@
     </Compile>
     <Compile Include="Hooks\AfterTestsHooks.cs" />
     <Compile Include="Hooks\BeforeTestsHooks.cs" />
+    <Compile Include="Steps\EditingAnObjectSteps.cs" />
     <Compile Include="Steps\InsertSteps.cs" />
     <Compile Include="Steps\RibbonEnableDisableSteps.cs" />
     <Compile Include="Steps\RibbonSteps.cs" />
@@ -250,9 +281,29 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DeSelectingObject.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\EditingAnObject.feature">
+    <None Include="Features\EditObjectUsingDigitandLetters.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>EditingAnObject.feature.cs</LastGenOutput>
+      <LastGenOutput>EditObjectUsingDigitandLetters.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\EditObjectUsingSpecialCharacter.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>EditObjectUsingSpecialCharacter.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\EditObjectUsingFunctionkey.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>EditObjectUsingFunctionkey.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\EditObjectUsingEnterKey.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>EditObjectUsingEnterKey.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\EditObjectUsingEscapeKey.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>EditObjectUsingEscapeKey.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\EditObjectUsingPencil.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>EditObjectUsingPencil.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\InsertableObjectDescription.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
@@ -285,6 +336,10 @@
     <None Include="Features\OpenSAM.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>OpenSAM1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\PlotGraphObject.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PlotGraphObject.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\RibbonEnableDisable.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

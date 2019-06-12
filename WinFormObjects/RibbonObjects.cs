@@ -76,7 +76,7 @@ namespace SAM.WinFormObjects
                   
         }
 
-        //public static int boundaryvalue (string ribbonName, int minimumvalue, int maximumvalue)
+       // public int boundaryvalue (string ribbonName, int minimumvalue, int maximumvalue)
         //{
         //    var ribbon = WinDriver.driver.FindElementByName(ribbonName);
         //    ribbon.SendKeys("maximumvalue");

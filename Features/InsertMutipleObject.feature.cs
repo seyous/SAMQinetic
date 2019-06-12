@@ -95,6 +95,8 @@ testRunner.And("the user clicks on the Insert button", ((string)(null)), ((TechT
 testRunner.And(string.Format("the user clicks on an \"{0}\"", @object), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
 testRunner.And("the user click on the pencil button on the object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 12
+testRunner.And(string.Format("the user rename the object with \"{0}\"", text), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

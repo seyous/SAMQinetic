@@ -18,20 +18,20 @@ namespace SAM.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("ValidateNumberBoundary")]
-    public partial class ValidateNumberBoundaryFeature
+    [NUnit.Framework.DescriptionAttribute("Editing Object Using Special Character")]
+    public partial class EditingObjectUsingSpecialCharacterFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "ValidateNumberBoundary.feature"
+#line 1 "EditObjectUsingSpecialCharacter.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ValidateNumberBoundary", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Editing Object Using Special Character", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -70,33 +70,41 @@ namespace SAM.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Settings Ribbon for boundary values")]
-        [NUnit.Framework.CategoryAttribute("boundaryValue")]
-        [NUnit.Framework.TestCaseAttribute("Max. number of columns", "4", "200", null)]
-        [NUnit.Framework.TestCaseAttribute("Prompt user if rows exceed", "0", "1000000", null)]
-        [NUnit.Framework.TestCaseAttribute("Max. number of messages", "0", "10000", null)]
-        [NUnit.Framework.TestCaseAttribute("Min. width", "150", "500", null)]
-        [NUnit.Framework.TestCaseAttribute("Max. width", "300", "1000", null)]
-        public virtual void SettingsRibbonForBoundaryValues(string ribbon, string minimumvalue, string maximumvalue, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("Editing object Using Special Character")]
+        [NUnit.Framework.CategoryAttribute("editobject")]
+        [NUnit.Framework.TestCaseAttribute("geom placeholder", "@#$^1234", null)]
+        public virtual void EditingObjectUsingSpecialCharacter(string @object, string text, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "boundaryValue"};
+                    "editobject"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Settings Ribbon for boundary values", null, @__tags);
-#line 5
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Editing object Using Special Character", null, @__tags);
+#line 6
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 6
-testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 7
-testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
-testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
-testRunner.And(string.Format("the ribbon \"{0}\" value is \'{1}\' and  \'{2}\'", ribbon, minimumvalue, maximumvalue), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 10
+testRunner.And("the user clicks on the Insert button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 11
+testRunner.When(string.Format("the user clicks on an \"{0}\"", @object), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 12
+testRunner.And("the user press function key on the keyboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 13
+testRunner.And(string.Format("the user rename the object with \"{0}\"", text), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 14
+testRunner.When(string.Format("the user clicks on an \"{0}\"", @object), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 15
+testRunner.And("the user click the ok button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 16
+testRunner.And("the user press the enter key on the keyboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

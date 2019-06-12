@@ -33,7 +33,7 @@ namespace SAM.Steps
         [Then(@"the ribbon ""(.*)"" is displayed")]
         public void ThenTheRibbonIsDisplayed(string ribbonName)
         {
-            _ribbon.IsRibbonButtonDisplayed(ribbonName).Should().BeTrue();
+            _ribbon.IsRibbonButtonDisplayed(ribbonName).Should().BeTrue("The object " + ribbonName + " is not disaplyed");
         }
 
     }

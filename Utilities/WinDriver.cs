@@ -35,7 +35,7 @@ namespace SAM.Utilities
                 {
                     driver = new WindowsDriver<WindowsElement>(new Uri("http://127.0.0.1:4723"), capabilities, TimeSpan.FromMinutes(10));
                     WaitForElement.Wait();
-                Thread.Sleep(15000);
+                //Thread.Sleep(15000);
                     driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromMilliseconds(Convert.ToDouble(implicitTimeoutMs)));
 
 
@@ -43,7 +43,7 @@ namespace SAM.Utilities
                 catch (Exception)
                 {
                 WaitForElement.Wait();
-                WaitForElement.Wait();
+                //WaitForElement.Wait();
 
 
                 if (driver != null)
@@ -53,7 +53,7 @@ namespace SAM.Utilities
 
 
                 WaitForElement.Wait();
-                driver = new WindowsDriver<WindowsElement>(new Uri(ConfigurationManager.AppSettings["winAppUri"]), capabilities, TimeSpan.FromMinutes(15));
+                driver = new WindowsDriver<WindowsElement>(new Uri(ConfigurationManager.AppSettings["winAppUri"]), capabilities, TimeSpan.FromMinutes(5));
                 WaitForElement.Wait();
                 driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromMilliseconds(Convert.ToDouble(implicitTimeoutMs)));
 

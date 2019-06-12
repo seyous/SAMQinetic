@@ -14,7 +14,7 @@ namespace SAM.Steps
 
         public InsertSteps(InsertFormObject insertFormObject)
         {
-            
+
             _insertFormObject = insertFormObject;
 
         }
@@ -23,8 +23,10 @@ namespace SAM.Steps
         [When(@"the user clicks on an ""(.*)""")]
         public void GivenTheUserClicksOnAnObject(string objectText)
         {
-            _insertFormObject.ClickOnObject(objectText);
-
+            if (objectText != null)
+            {
+                _insertFormObject.ClickOnObject(objectText);
+            }
         }
 
         [Then(@"the insert object ""(.*)"" is displayed")]
@@ -35,12 +37,14 @@ namespace SAM.Steps
 
         }
 
-        [When(@"the user type ""(.*)""")]
-        [Given(@"the user type ""(.*)""")]
+        [When(@"the user rename the object with ""(.*)""")]
+        [Given(@"the user rename the object with ""(.*)""")]
         public void GivenTheUserTypeAText(string text)
         {
             _insertFormObject.ChangeObjectText(text);
         }
+
+
 
         [When(@"the user click on the pencil button on the object")]
         [Given(@"the user click on the pencil button on the object")]
@@ -68,24 +72,31 @@ namespace SAM.Steps
         }
 
         [Given(@"the user press the enter key on the keyboard")]
+        [When(@"the user press the enter key on the keyboard")]
         public void GivenTheUserPressTheEnterKeyOnTheKeyboard()
         {
-            _insertFormObject.ChangeObjectText(Keys.Enter);
+            _insertFormObject.ChangeObjectText(Keys.Return);
+
         }
 
+
+
         [Given(@"the user click the ok button")]
+        [When(@"the user click the ok button")]
+
         public void GivenTheUserClickTheOkButton()
         {
             _insertFormObject.ClickOKButton();
         }
 
 
-        [Then(@"the object should be inserted in the design explorer")]
-        public void ThenTheObjectShouldBeInsertedInTheDesignExplorer()
+
+        [Then(@"the ""(.*)"" should be inserted in the design explorer")]
+        public void ThenTheShouldBeInsertedInTheDesignExplorer(string objectText)
         {
-
+            _insertFormObject.DesignObjectIsDisplayed(objectText).Should().BeTrue("The Object is not Displayed");
         }
-
-
+        
     }
+
 }

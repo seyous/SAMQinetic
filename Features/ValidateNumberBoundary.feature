@@ -10,7 +10,7 @@ And the ribbon "<Ribbon>" value is '<minimumvalue>' and  '<maximumvalue>'
 
 Examples: 
 | Ribbon                     | minimumvalue | maximumvalue |
-| Max. number of columns     | 6           | 200          |
+| Max. number of columns     | 4          | 200          |
 | Prompt user if rows exceed | 0           | 1000000      |
 | Max. number of messages    | 0           | 10000        |
 | Min. width                 | 150         | 500          |
