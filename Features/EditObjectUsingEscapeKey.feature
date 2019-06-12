@@ -3,7 +3,7 @@
 	
 
 @editobject
-Scenario Outline:Editing object Using Enter Key
+Scenario Outline:Editing object Using the Escape Key
 Given a user opens SAM
 When the warning message is displayed
 Then the user can click on the OK button
