@@ -12,9 +12,7 @@ When the user clicks on an "<Object>"
 And the user press function key on the keyboard
 And the user rename the object with "<Text>"
 When the user clicks on an "<Object>"
-And the user click the ok button
-And the user press the enter key on the keyboard
-#Then the error message should appear on the button
+Then the "Invalid object name" should appear on the button
 
 
 Examples: 

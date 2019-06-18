@@ -74,7 +74,6 @@ namespace SAM.WinFormObjects
 
         public void ChangeObjectText(string text)
         {
-            WinDriver.driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
             editingControl.SendKeys(text);
         }
 
@@ -83,6 +82,10 @@ namespace SAM.WinFormObjects
             row1Element.SendKeys(Keys.F2);
         }
 
+        public void PressEscapeKeyOnKeyboard()
+        {
+            row1Element.SendKeys(Keys.Escape);
+        }
         public void ClearText()
         {
             editingControl.Clear();
@@ -102,6 +105,38 @@ namespace SAM.WinFormObjects
         public bool IsTextDisplayedForGeomCorrect()
         {
             return GetTextOnInsertObject() == geomplaceholder;
+        }
+
+        public bool IsTextRevertedCorectly(string TextOnInsertObject)
+        {
+            TextOnInsertObject = GetTextOnInsertObject();
+
+            if(TextOnInsertObject  =="geom placeholder")
+
+            try
+            {
+                    return true;
+            }
+            catch (Exception e)
+            {
+
+                    return false;
+            }
+            return false;
+        }
+
+        public bool IserrorMessage(string errorMessage)
+        {
+            WindowsElement errormessageName = WinDriver.driver.FindElementByAccessibilityId("labelControl_nameErrorsFound");
+
+            if (errormessageName.Text == errorMessage)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public void ClickOnObject(string objectText)

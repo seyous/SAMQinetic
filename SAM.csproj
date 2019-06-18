@@ -136,6 +136,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Features\EditObjectUsingEscape.feature.cs">
+      <DependentUpon>EditObjectUsingEscape.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Features\EditObjectUsingSpecialCharacter.feature.cs">
       <DependentUpon>EditObjectUsingSpecialCharacter.feature</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -150,11 +155,6 @@
       <DependentUpon>EditObjectUsingEnterKey.feature</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Features\EditObjectUsingEscapeKey.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EditObjectUsingEscapeKey.feature</DependentUpon>
     </Compile>
     <Compile Include="Features\EditObjectUsingPencil.feature.cs">
       <AutoGen>True</AutoGen>
@@ -224,6 +224,7 @@
     <Compile Include="Hooks\AfterTestsHooks.cs" />
     <Compile Include="Hooks\BeforeTestsHooks.cs" />
     <Compile Include="Steps\EditingAnObjectSteps.cs" />
+    <Compile Include="Steps\EditingObjectUsingSpecialCharacterSteps.cs" />
     <Compile Include="Steps\InsertSteps.cs" />
     <Compile Include="Steps\RibbonEnableDisableSteps.cs" />
     <Compile Include="Steps\RibbonSteps.cs" />
@@ -285,6 +286,10 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>EditObjectUsingDigitandLetters.feature.cs</LastGenOutput>
     </None>
+    <None Include="Features\EditObjectUsingEscape.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>EditObjectUsingEscape.feature.cs</LastGenOutput>
+    </None>
     <None Include="Features\EditObjectUsingSpecialCharacter.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>EditObjectUsingSpecialCharacter.feature.cs</LastGenOutput>
@@ -296,10 +301,6 @@
     <None Include="Features\EditObjectUsingEnterKey.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>EditObjectUsingEnterKey.feature.cs</LastGenOutput>
-    </None>
-    <None Include="Features\EditObjectUsingEscapeKey.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>EditObjectUsingEscapeKey.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\EditObjectUsingPencil.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

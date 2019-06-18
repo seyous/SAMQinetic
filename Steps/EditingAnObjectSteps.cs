@@ -1,4 +1,5 @@
 ﻿using FluentAssertions;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using SAM.WinFormObjects;
 using System;
@@ -43,24 +44,33 @@ namespace SAM.Steps
         [When(@"the user press the escape key")]
         public void GivenTheUserPressTheEscapeKey()
         {
-            _insertFormObject.ChangeObjectText(Keys.Escape);
+            _insertFormObject.PressEscapeKeyOnKeyboard();
+                
         }
         
         [Then(@"the name of the object is reverted to object")]
-        public string ThenTheNameOfTheObjectIsRevertedToObject(string text)
-        {
-            text = _insertFormObject.GetTextOnInsertObject();
+        //public string ThenTheNameOfTheObjectIsRevertedToObject(string text)
+        //{
+        //    text = _insertFormObject.GetTextOnInsertObject();
+        //    Assert.
+        //    //if(text =="geom placeholder")
+        //    //{
+        //    //    return text;
+        //    //}
+        //    //else
+        //    //{
+        //    //    return null;
+        //    //}
+        //}
 
-            if(text =="geom placeholder")
-            {
-                return text;
-            }
-            else
-            {
-                return null;
-            }
+        [Then(@"the object is reverted to ""(.*)""")]
+        public void ThenTheObjectIsRevertedTo(string TextOnInsertObject)
+        {
+            _insertFormObject.IsTextRevertedCorectly(TextOnInsertObject).Should().BeTrue("Text Displaced is not geom placeholder");
+            
         }
-        
+
+
         [Then(@"the user click the cancel button")]
         public void ThenTheUserClickTheCancelButton()
         {
