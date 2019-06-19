@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium.Appium.Windows;
+﻿using OpenQA.Selenium.Appium;
+using OpenQA.Selenium.Appium.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,36 @@ namespace SAM.Utilities
             }
 
             return false;
+
+        }
+
+        public static bool WaitForElementToLoad(AppiumWebElement element)
+        {
+
+            for (int i = 1; i <= 20; i++)
+            {
+                if (IsElementDisplayed(element))
+                {
+                    return true;
+                }
+                WaitForElement.Wait();
+
+            }
+
+            return false;
+
+        }
+
+        public static bool IsElementDisplayed(AppiumWebElement element)
+        {
+            try
+            {
+                return element.Displayed;
+            }
+            catch
+            {
+                return false;
+            }
 
         }
 

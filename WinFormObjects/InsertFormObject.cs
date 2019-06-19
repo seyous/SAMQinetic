@@ -7,73 +7,131 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SAM.WinFormObjects
 {
     public class InsertFormObject : BasePage
     {
+        WindowsElement insertWindow;
+        WindowsElement editingControl;
+        WindowsElement row1Element => WinDriver.driver.FindElementByName("Name row 1");
+        WindowsElement OKButton;
+        WindowsElement Node1;
+
         public InsertFormObject(Driver driver) : base(driver)
         {
             _driver = driver;
-
-        }
-
-        string geomplaceholder => "geom placeholder";
-
-        WindowsElement insertWindow => WinDriver.driver.FindElementByName("Insert Object");
-        WindowsElement editingControl => WinDriver.driver.FindElementByName("Editing control");
-        WindowsElement row1Element => WinDriver.driver.FindElementByName("Name row 1");
-        WindowsElement OKButton => WinDriver.driver.FindElementByAccessibilityId("m_btn_ok");
-        WindowsElement Node1 => WinDriver.driver.FindElementByName("Node 1");
-
-        public void ClickPencil()
-        {
             try
             {
 
-                var window = WinDriver.driver.FindElementsByXPath("//Window[@AutomationId=\"MainWindow\"]");
-                var insertWindow = window[0].FindElementsByXPath("//Window[@AutomationId=\"InsertObjectView\"]");
-
-                var grid = insertWindow[0].FindElementsByAccessibilityId("treeList");
-                var columnCaption = "Value";
-                var rowIndex = 1;
-                var cell = grid[0].FindElementByName(String.Format("{0} row{1}", columnCaption, rowIndex));
-                cell.Click();
-
-                var editor = grid[0].FindElementsByName("Editing control");
-
-                WaitForElement.Wait();
-                //editor[0].Click();
-                WaitForElement.Wait();
-
-                var buttons = editor[0].FindElementsByTagName("Button");
-                //var buttons2 = editor.FindElementByXPath("//Button");
-
-                buttons[0].Click();
-                buttons[1].Click();
-                buttons[2].Click();
-
-
+                insertWindow = WinDriver.driver.FindElementByName("Insert Object");
+                editingControl = WinDriver.driver.FindElementByName("Editing control");
+                OKButton = WinDriver.driver.FindElementByAccessibilityId("m_btn_ok");
+                Node1 = WinDriver.driver.FindElementByName("Node 1");
             }
             catch (Exception)
             {
 
-
-
             }
 
         }
 
+        string geomplaceholder => "geom placeholder";
+       
+		
+
+
+        public void ClickPencil()
+        {
+            var formNew = WinDriver.driver.FindElementByAccessibilityId("InsertObjectView");
+            var gridNew = formNew.FindElementByAccessibilityId("treeList");
+            var group = gridNew.FindElementByName("Data Panel");
+            var node = group.FindElementByName("Node1");
+
+            var cell = node.FindElementByName("  row 1");
+
+            WaitForElement.WaitForElementToLoad(cell);
+            cell.Click();
+
+            Thread.Sleep(10000);
+
+            var editor = gridNew.FindElementByName("Editing control");
+
+            var buttons = editor.FindElementsByTagName("Button");
+
+            WaitForElement.WaitForElementToLoad(buttons[6]);
+
+            OpenQA.Selenium.Interactions.Actions element = new OpenQA.Selenium.Interactions.Actions(WinDriver.driver);
+            element.Click(buttons[6]).Perform();
+
+            Thread.Sleep(10000);
+
+        }
+
+        internal void ClickPlayButton()
+        {
+            int i= 0;
+            bool playbuttonseen = false;
+            do
+            {
+                try
+                {
+                    OpenQA.Selenium.Interactions.Actions element = new OpenQA.Selenium.Interactions.Actions(WinDriver.driver);
+
+
+                    WaitForElement.Wait();
+                    var formNew = WinDriver.driver.FindElementByAccessibilityId("InsertObjectView");
+                    var gridNew = formNew.FindElementByAccessibilityId("treeList");
+                    element.MoveToElement(gridNew).Perform();
+                    var group = gridNew.FindElementByName("Data Panel");
+                    var node = group.FindElementByName("Node1");
+
+                    var cell = node.FindElementByName("  row 1");
+                    WaitForElement.Wait();
+                    WaitForElement.Wait();
+
+                    WaitForElement.WaitForElementToLoad(cell);
+                    cell.Click();
+
+                    Thread.Sleep(10000);
+
+                    var editor = gridNew.FindElementByName("Editing control");
+
+                    var buttons = editor.FindElementsByTagName("Button");
+
+
+                   // WaitForElement.WaitForElementToLoad(buttons[0]);
+
+
+                    element.Click(buttons[0]).Perform();
+
+                    playbuttonseen = true;
+
+                    Thread.Sleep(10000);
+                }
+                catch (Exception)
+                {
+
+                }
+                ++i;
+            } while (i <= 20 & !playbuttonseen);
+
+            
+        }
 
         public void ClickOKButton()
         {
             WinDriver.driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
+            WaitForElement.WaitForElementToLoad(OKButton);
             OKButton.Click();
         }
 
         public void ChangeObjectText(string text)
         {
+            editingControl = WinDriver.driver.FindElementByName("Editing control");
+
             editingControl.SendKeys(text);
         }
 

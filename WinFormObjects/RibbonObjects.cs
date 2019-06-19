@@ -13,10 +13,6 @@ namespace SAM.WinFormObjects
 {
     public class RibbonObjects 
     {
-        //public RibbonObjects(Driver driver):base(driver)
-        //{
-        //    _driver = driver;
-        //}
 
         
         WindowsElement insertRibbonButton => WinDriver.driver.FindElementByName("Insert");
@@ -35,7 +31,17 @@ namespace SAM.WinFormObjects
             var allWindowHandles = WinDriver.driver.WindowHandles;
             WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
 
-            insertRibbonButton.Click();
+            WaitForElement.WaitForElementToLoad(insertRibbonButton);
+            try
+            {
+                insertRibbonButton.Click();
+            }
+            catch (Exception ex)
+            {
+
+                ;
+            }
+
         }
 
 
@@ -76,11 +82,5 @@ namespace SAM.WinFormObjects
                   
         }
 
-       // public int boundaryvalue (string ribbonName, int minimumvalue, int maximumvalue)
-        //{
-        //    var ribbon = WinDriver.driver.FindElementByName(ribbonName);
-        //    ribbon.SendKeys("maximumvalue");
-            
-        //} 
     }
 }

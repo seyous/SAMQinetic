@@ -13,13 +13,7 @@ namespace SAM.WinFormObjects
 {
     public class WarningDialogObjects
     {
-        //private readonly Driver _driver;
 
-        //public WarningDialogObjects(Driver driver):base(driver)
-        //{
-        //    _driver = driver;
-
-        //}
 
         WindowsElement OKbutton => WinDriver.driver.FindElementByName("OK");
 
@@ -43,7 +37,9 @@ namespace SAM.WinFormObjects
 
         public void OKButtonIsClickedOnWarningDialog()
         {
-             OKbutton.Click();
+            WaitForElement.WaitForElementToLoad(OKbutton);
+
+            OKbutton.Click();
         }
     }
 }

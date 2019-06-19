@@ -2,7 +2,6 @@
 
 namespace SAM.WinFormObjects
 {
-    // ReSharper disable once ClassNeverInstantiated.Global
     public class Calculator
     {
         private readonly Driver _driver;

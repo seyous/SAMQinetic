@@ -4,14 +4,13 @@
 @insert
 Scenario Outline:Insert mutiple object Using Comma
 Given a user opens SAM
-#When the warning message is displayed
 When the user can click on the OK button
-And the user clicks on the Insert button
+When the user clicks on the Insert button
 And the user clicks on an "<Object>"
 And the user click on the pencil button on the object
 And the user rename the object with "<Text>"
-#And the user press the enter key on the keyboard
-#And the user click the ok button
+And the user press the enter key on the keyboard
+And the user click on the play button on the object
 #Then the object should be inserted in the design explorer
 
 Examples: 

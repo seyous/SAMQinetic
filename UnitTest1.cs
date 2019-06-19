@@ -15,10 +15,7 @@ namespace SAM
     public class UnitTest1
     {
 
-        //protected static WindowsDriver<WindowsElement> session;
         private const int implicitTimeoutMs = 120000;
-
-        //WindowsDriver<RemoteWebElement> session1;
         WindowsDriver<WindowsElement> session;
         private static Process _driver;
 
@@ -71,7 +68,6 @@ namespace SAM
 
             session.FindElementByName("OK").Click();
 
-            // Wait for 5 seconds or however long it is needed for the right window to appear/for the splash screen to be dismissed
             WaitForElement.Wait();
             var allWindowHandles = session.WindowHandles;
             session.SwitchTo().Window(allWindowHandles[0]);
@@ -99,7 +95,6 @@ namespace SAM
 
 
 
-            // appCapabilities.SetCapability("app", appLocation);
 
             try
             {
@@ -116,92 +111,7 @@ namespace SAM
             Assert.IsNotNull(session);
 
 
-            /*
-
-
-             string WindowsApplicationDriverUrl = "http://127.0.0.1:4723";
-
-             DesiredCapabilities desktopCapabilities = new DesiredCapabilities();
-
-             WindowsDriver<WindowsElement> AppSession;
-
-             WindowsDriver<WindowsElement> DesktopSession;
-
-
-
-
-             try
-             {
-                         AppSession = new WindowsDriver<WindowsElement>(new Uri(WindowsApplicationDriverUrl), desktopCapabilities, TimeSpan.FromMilliseconds(Convert.ToDouble(implicitTimeoutMs)));
-                         // AppSession = new WindowsDriver<WindowsElement>(new Uri("http://127.0.0.1:4723"), (DesiredCapabilities) appCapabilities, TimeSpan.FromMilliseconds(Convert.ToDouble(implicitTimeoutMs)));
-
-                         AppSession.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromMilliseconds(Convert.ToDouble(implicitTimeoutMs)));
-
-                     }
-                     catch (Exception e)
-                     {
-                         // Create a session for Desktop
-                         //DesiredCapabilities desktopCapabilities = new DesiredCapabilities();
-                         desktopCapabilities.SetCapability("app", appLocation);
-                         //desktopCapabilities.SetCapability("platformName", "Windows");
-                         //desktopCapabilities.SetCapability("deviceName", "WindowsPC");
-                         DesktopSession = new WindowsDriver<WindowsElement>(new Uri(WindowsApplicationDriverUrl), desktopCapabilities, TimeSpan.FromMilliseconds(Convert.ToDouble(implicitTimeoutMs)));
-                         Assert.IsNotNull(DesktopSession);
-
-                         //Launch Cortana Window using Windows Key +S keyboard shortcut to allow session creation to find it
-                         DesktopSession.FindElementByName("Search Windows").Click();
-                         //DesktopSession.Keyboard.SendKeys(OpenQA.Selenium.Keys.Meta + "s" + OpenQA.Selenium.Keys.Meta);
-                         DesktopSession.Keyboard.SendKeys("{TestedApp}");
-                         DesktopSession.FindElementByName("{TestedApp}, Windows app").Click();
-            WaitForElement.Wait();
-                         WindowsElement TestedAppWindow = DesktopSession.FindElementByName("{TestedApp}");
-                         String TestedAppTopLevelWindowHandle = TestedAppWindow.GetAttribute("NativeWindowHandle");
-                         TestedAppTopLevelWindowHandle = (int.Parse(TestedAppTopLevelWindowHandle)).ToString("x");
-
-                         // Create session for already running app
-                         DesiredCapabilities appCapabilities1 = new DesiredCapabilities();
-                         appCapabilities1.SetCapability("appTopLevelWindow", TestedAppTopLevelWindowHandle);
-                         AppSession = new WindowsDriver<WindowsElement>(new Uri(WindowsApplicationDriverUrl), appCapabilities1);
-                         Assert.IsNotNull(AppSession);
-                     }
- */
-
-            /*
-            WindowsDriver<WindowsElement> AppSession;
-
-            DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.SetCapability("platormName", "Windows");
-            capabilities.SetCapability("deviceName", "WindowsPC");
-            capabilities.SetCapability("app", appLocation);
-            //capabilities.SetCapability("appArguments", xx);
-
-            try
-            {
-
-                AppSession = new WindowsDriver<WindowsElement>(new Uri("http://127.0.0.1:4723/wd/hub"), capabilities);
-            }
-            catch (Exception e) { }
-
-            //1. Creating a Desktop session
-            DesiredCapabilities desktopCapabilities = new DesiredCapabilities();
-            desktopCapabilities.SetCapability("platormName", "Windows");
-            desktopCapabilities.SetCapability("app", "Root");
-            desktopCapabilities.SetCapability("deviceName", "WindowsPC");
-            AppiumDriver<WindowsElement> DesktopSession = new WindowsDriver<WindowsElement>(new Uri("http://127.0.0.1:4723/wd/hub"), desktopCapabilities);
-            
-            WaitForElement.Wait();
-            WebElement XXXWindow = DesktopSession.findElementByName("XXX XXX");
-
-            //2. Attaching to existing XXX XXX Window
-            String XXXTopLevelWindowHandle = XXXWindow.getAttribute("NativeWindowHandle");
-            XXXTopLevelWindowHandle = Integer.toHexString(Integer.parseInt(XXXTopLevelWindowHandle));
-
-            DesiredCapabilities appCapabilities = new DesiredCapabilities();
-            appCapabilities.setCapability("deviceName", "WindowsPC");
-            appCapabilities.setCapability("appTopLevelWindow", XXXTopLevelWindowHandle);
-            driver = new WindowsDriver(new URL("http://127.0.0.1:4723/wd/hub"), appCapabilities);
-
-            */
+           
         }
     }
 }
