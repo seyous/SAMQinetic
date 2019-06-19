@@ -97,6 +97,10 @@ testRunner.And(string.Format("the user clicks on an \"{0}\"", @object), ((string
 testRunner.And("the user click on the pencil button on the object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
 testRunner.And(string.Format("the user rename the object with \"{0}\"", text), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 12
+testRunner.And("the user press the enter key on the keyboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 13
+testRunner.And("the user click on the play button on the object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
