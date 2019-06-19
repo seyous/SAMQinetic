@@ -16,9 +16,9 @@ namespace SAM.Utilities
     {
         public static  WindowsDriver<WindowsElement> driver;
 
-        private const int implicitTimeoutMs = 120000;
+        //private const int implicitTimeoutMs = 120000;
 
-        static string appLocation = @"C:\Program Files\QinetiQ\SAM V2.1\bin\SAM.exe";
+        //static string appLocation = @"C:\Program Files\QinetiQ\SAM V2.1\bin\SAM.exe";
         
         public static WindowsDriver<WindowsElement> OpenDriver()
         {
