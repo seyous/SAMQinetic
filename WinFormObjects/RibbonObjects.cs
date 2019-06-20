@@ -27,19 +27,24 @@ namespace SAM.WinFormObjects
 
         public void ClickInsertButton()
         {
-            WaitForElement.Wait();
-            var allWindowHandles = WinDriver.driver.WindowHandles;
-            WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
-
-            WaitForElement.WaitForElementToLoad(insertRibbonButton);
-            try
-            {
-                insertRibbonButton.Click();
-            }
-            catch (Exception ex)
+            for (int i = 0; i < 5; i++)
             {
 
-                ;
+                try
+                {
+                    WaitForElement.Wait();
+                    var allWindowHandles = WinDriver.driver.WindowHandles;
+                    WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
+
+                    WaitForElement.WaitForElementToLoad(insertRibbonButton);
+                    insertRibbonButton.Click();
+                    break;
+                }
+                catch (Exception ex)
+                {
+
+                    ;
+                } 
             }
 
         }

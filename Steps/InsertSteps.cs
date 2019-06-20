@@ -50,6 +50,13 @@ namespace SAM.Steps
             _insertFormObject.ClickPlayButton();
         }
 
+        [When(@"the user closes the insert window")]
+        public void WhenTheUserClosesTheInsertWindow()
+        {
+            _insertFormObject.CloseInsertWindow();
+        }
+
+
 
         [When(@"the user click on the pencil button on the object")]
         [Given(@"the user click on the pencil button on the object")]

@@ -223,6 +223,7 @@
     </Compile>
     <Compile Include="Hooks\AfterTestsHooks.cs" />
     <Compile Include="Hooks\BeforeTestsHooks.cs" />
+    <Compile Include="Steps\DesignExplorerSteps.cs" />
     <Compile Include="Steps\EditingAnObjectSteps.cs" />
     <Compile Include="Steps\EditingObjectUsingSpecialCharacterSteps.cs" />
     <Compile Include="Steps\InsertSteps.cs" />

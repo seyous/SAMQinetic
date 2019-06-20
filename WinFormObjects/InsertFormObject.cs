@@ -18,6 +18,7 @@ namespace SAM.WinFormObjects
         WindowsElement editingControl;
         WindowsElement row1Element => WinDriver.driver.FindElementByName("Name row 1");
         WindowsElement OKButton;
+        WindowsElement cancelButton;
         WindowsElement Node1;
 
         public InsertFormObject(Driver driver) : base(driver)
@@ -30,6 +31,7 @@ namespace SAM.WinFormObjects
                 editingControl = WinDriver.driver.FindElementByName("Editing control");
                 OKButton = WinDriver.driver.FindElementByAccessibilityId("m_btn_ok");
                 Node1 = WinDriver.driver.FindElementByName("Node 1");
+                cancelButton = WinDriver.driver.FindElementByAccessibilityId("m_btn_cancel");
             }
             catch (Exception)
             {
@@ -68,6 +70,11 @@ namespace SAM.WinFormObjects
 
             Thread.Sleep(10000);
 
+        }
+
+        internal void CloseInsertWindow()
+        {
+            insertWindow.SendKeys(Keys.Escape);
         }
 
         internal void ClickPlayButton()
