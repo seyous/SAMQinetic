@@ -18,7 +18,7 @@ namespace SAM.Utilities
 
         //private const int implicitTimeoutMs = 120000;
 
-        //static string appLocation = @"C:\Program Files\QinetiQ\SAM V2.1\bin\SAM.exe";
+        static string appLocation = @"C:\Program Files\QinetiQ\SAM V2.1\bin\SAM.exe";
         
         public static WindowsDriver<WindowsElement> OpenDriver()
         {
@@ -70,7 +70,7 @@ namespace SAM.Utilities
 
                 int i = 0;
                 bool isSAMOpened = false;
-                Process.Start(@"C:\Program Files\QinetiQ\SAM V2.1\bin\SAM.exe");
+                Process.Start(appLocation);
 
                 while (!isSAMOpened && i <= 3)
                 {
@@ -144,13 +144,6 @@ namespace SAM.Utilities
 
 
 
-        public static void WaitForElements(By by)
-        {
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromMinutes(2));
-
-            wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(by));
-
-        }
 
         /*
 

@@ -19,6 +19,13 @@ namespace SAM.Steps
 
         }
 
+        [When(@"the user clicks on ""(.*)""")]
+        public void WhenTheUserClicksOn(string p0)
+        {
+
+        }
+
+
         [Given(@"the user clicks on an ""(.*)""")]
         [When(@"the user clicks on an ""(.*)""")]
         public void GivenTheUserClicksOnAnObject(string objectText)

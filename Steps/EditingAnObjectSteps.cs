@@ -1,6 +1,7 @@
 ﻿using FluentAssertions;
 using NUnit.Framework;
 using OpenQA.Selenium;
+using SAM.Utilities;
 using SAM.WinFormObjects;
 using System;
 using TechTalk.SpecFlow;
@@ -29,8 +30,8 @@ namespace SAM.Steps
         [When(@"the user press function key on the keyboard")]
         public void GivenTheUserPressFOnTheKeyboard()
         {
-            _insertFormObject.ChangeObjectTextOnKeyPress();
-            _insertFormObject.ClearText();
+            _insertFormObject.MakeInsertObjectEditableByPressingF2();
+           // _insertFormObject.ClearText();
             
         }
         
