@@ -44,28 +44,24 @@ namespace SAM.Steps
             _insertFormObject.ChangeObjectText(text);
         }
 
+        [When(@"the user click on the play button on the object")]
+        public void WhenTheUserClickOnThePlayButtonOnTheObject()
+        {
+            _insertFormObject.ClickPlayButton();
+        }
+
+        [When(@"the user closes the insert window")]
+        public void WhenTheUserClosesTheInsertWindow()
+        {
+            _insertFormObject.CloseInsertWindow();
+        }
+
 
 
         [When(@"the user click on the pencil button on the object")]
         [Given(@"the user click on the pencil button on the object")]
         public void GivenTheUserClickOnThePencilButtonOnTheObject()
         {
-
-
-
-            _insertFormObject.ClickPencil();
-            _insertFormObject.ClickPencil();
-
-            _insertFormObject.ClickPencil();
-
-
-            _insertFormObject.ClickPencil();
-
-            _insertFormObject.ClickPencil();
-
-            _insertFormObject.ClickPencil();
-
-            _insertFormObject.ClickPencil();
 
             _insertFormObject.ClickPencil();
 

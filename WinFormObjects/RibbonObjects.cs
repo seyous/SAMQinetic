@@ -13,10 +13,6 @@ namespace SAM.WinFormObjects
 {
     public class RibbonObjects 
     {
-        //public RibbonObjects(Driver driver):base(driver)
-        //{
-        //    _driver = driver;
-        //}
 
         
         WindowsElement insertRibbonButton => WinDriver.driver.FindElementByName("Insert");
@@ -35,11 +31,33 @@ namespace SAM.WinFormObjects
 
         public void ClickInsertButton()
         {
-            WaitForElement.Wait();
-            var allWindowHandles = WinDriver.driver.WindowHandles;
-            WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
-            insertRibbonButton.Click();
+            for (int i = 0; i < 5; i++)
+            {
+
+                try
+                {
+                    WaitForElement.Wait();
+                    var allWindowHandles = WinDriver.driver.WindowHandles;
+                    WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
+
+                    WaitForElement.WaitForElementToLoad(insertRibbonButton);
+                    insertRibbonButton.Click();
+                    break;
+                }
+                catch (Exception ex)
+                {
+
+                    ;
+                }
+            }
+
         }
+
+        //WaitForElement.Wait();
+        //    var allWindowHandles = WinDriver.driver.WindowHandles;
+        //    WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
+        //    insertRibbonButton.Click();
+        //}
 
         public void ClickLayoutTab()
         {
@@ -105,6 +123,11 @@ namespace SAM.WinFormObjects
                   
         }
 
-      
+       // public int boundaryvalue (string ribbonName, int minimumvalue, int maximumvalue)
+        //{
+        //    var ribbon = WinDriver.driver.FindElementByName(ribbonName);
+        //    ribbon.SendKeys("maximumvalue");
+            
+        //} 
     }
 }

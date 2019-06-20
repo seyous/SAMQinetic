@@ -29,8 +29,6 @@ namespace SAM.Utilities
                 var capabilities = new DesiredCapabilities();
                 capabilities.SetCapability("app", appLocation);
 
-                //capabilities.SetCapability("deviceName", "WindowsPC");
-
                 try
                 {
                  _driver = new WindowsDriver<WindowsElement>(new Uri(ConfigurationManager.AppSettings["winAppUri"]), capabilities, TimeSpan.FromMinutes(5));
@@ -68,10 +66,6 @@ namespace SAM.Utilities
             }
         }
 
-        //public void Dispose()
-        //{
-        //    _driver?.Dispose();
-        //}
     }
 }
 

@@ -9,12 +9,16 @@ using System.Threading.Tasks;
 
 namespace SAM.WinFormObjects
 {
-    public class DesignExplorerObjects : BasePage
+    public class DesignExplorerObjects
     {
-        public DesignExplorerObjects(Driver driver) : base(driver)
-        {
-            _driver = driver;
+        
 
+
+        public bool IsElementInExplorerWindow()
+        {
+            WindowsElement element = WinDriver.driver.FindElementByName("treeListColumn1 row 1");
+            WaitForElement.WaitForElementToLoad(element);
+            return element.Displayed;
         }
 
         

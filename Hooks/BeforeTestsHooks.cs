@@ -14,7 +14,6 @@ namespace SAM.Hooks
     {
         private static Process _driver;
 
-       // [BeforeFeature]
         [BeforeTestRun]
         public static void StartWinAppDriver()
         {

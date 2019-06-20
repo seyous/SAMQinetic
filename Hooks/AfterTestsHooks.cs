@@ -10,12 +10,10 @@ namespace SAM.Hooks
     [Binding]
     public sealed class AfterTestsHooks
     {
-       // private static Process _driver;
 
         [AfterTestRun]
         public static void KillWinAppDriver()
         {
-            //_driver.Kill();
 
             try
             {

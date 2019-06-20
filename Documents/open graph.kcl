@@ -1,0 +1,4 @@
+kcl_version 9
+kcl_type log
+opendesign C:\Program Files\QinetiQ\Paramarine V18.0\help\designs\Reporting.design
+%open_view (stability.runs.intact_light.intact_light.gz_curve)

@@ -1,4 +1,5 @@
 ﻿using FluentAssertions;
+using SAM.Utilities;
 using SAM.WinFormObjects;
 using TechTalk.SpecFlow;
 

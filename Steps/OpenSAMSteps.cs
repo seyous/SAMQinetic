@@ -20,7 +20,6 @@ namespace SAM.Steps
         public void GivenAUserOpensSAM()
         {
             WinDriver.OpenDriver();
-          //  _warningDialog.IsSAMOpened().Should().BeTrue("SAM is not opened");
 
         }
 
