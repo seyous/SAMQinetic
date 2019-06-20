@@ -21,6 +21,10 @@ namespace SAM.WinFormObjects
         
         WindowsElement insertRibbonButton => WinDriver.driver.FindElementByName("Insert");
         WindowsElement propertiesRibbonButton => WinDriver.driver.FindElementByName("Properties");
+        WindowsElement layoutTab => WinDriver.driver.FindElementByName(" Layout");
+        WindowsElement SAMTab => WinDriver.driver.FindElementByName(" SAM");
+
+        WindowsElement TempLocationTab => WinDriver.driver.FindElementByName("Temp Location");
 
 
         public WindowsElement GetRibbon(string ribbonName)
@@ -34,8 +38,33 @@ namespace SAM.WinFormObjects
             WaitForElement.Wait();
             var allWindowHandles = WinDriver.driver.WindowHandles;
             WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
-
             insertRibbonButton.Click();
+        }
+
+        public void ClickLayoutTab()
+        {
+            WaitForElement.Wait();
+        var allWindowHandles = WinDriver.driver.WindowHandles;
+            WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
+            layoutTab.Click();
+        }
+
+
+        public void ClickSAMTab()
+        {
+            WaitForElement.Wait();
+            var allWindowHandles = WinDriver.driver.WindowHandles;
+            WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
+            SAMTab.Click();
+        }
+
+       
+        public void ClickTempLocationTab()
+        {
+            WaitForElement.Wait();
+            var allWindowHandles = WinDriver.driver.WindowHandles;
+            WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
+            TempLocationTab.Click();
         }
 
 
@@ -76,11 +105,6 @@ namespace SAM.WinFormObjects
                   
         }
 
-       // public int boundaryvalue (string ribbonName, int minimumvalue, int maximumvalue)
-        //{
-        //    var ribbon = WinDriver.driver.FindElementByName(ribbonName);
-        //    ribbon.SendKeys("maximumvalue");
-            
-        //} 
+      
     }
 }

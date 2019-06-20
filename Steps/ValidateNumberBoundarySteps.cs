@@ -1,4 +1,5 @@
-﻿using SAM.WinFormObjects;
+﻿using FluentAssertions;
+using SAM.WinFormObjects;
 using System;
 using TechTalk.SpecFlow;
 
@@ -8,19 +9,47 @@ namespace SAM
     public class ValidateNumberBoundarySteps
     {
 
-        private readonly RibbonObjects _ribbon;
+        private readonly RibbonValueObjects _ribbonvalue;
 
-        public ValidateNumberBoundarySteps(RibbonObjects ribbon)
+
+        public ValidateNumberBoundarySteps(RibbonValueObjects ribbonvalue)
         {
-            ribbon = ribbon;
+            _ribbonvalue = ribbonvalue;
         }
+
        
 
-        [Then(@"the ribbon ""(.*)"" value is '(.*)' and  '(.*)'")]
-        public void ThenTheRibbonValueIsAnd(string ribbonName, int minimumvalue, int maximumvalue)
+        [Then(@"the user click the Settings Tab")]
+        public void ThenTheUserClickTheSettingsTab()
         {
-            ScenarioContext.Current.Pending();
+            _ribbonvalue.ClickSettingsTab();
         }
+
+
+        [Then(@"the user enters (.*) into the textbox")]
+        public void ThenTheUserEntersIntoTheTextButton(int objectvalue)
+        {
+            _ribbonvalue.ChangeObjectValue(objectvalue.ToString());
+        }
+      
+
+
+        [Then(@"the user press the enter key on the keyboard")]
+        public void ThenTheUserPressTheEnterKeyOnTheKeyboard()
+        {
+            _ribbonvalue.PressEnterKey();
+        }
+
+
+        [Then(@"the number changes to (.*) in the textbox")]
+        public void ThenTheNumberChangesToInTheTextButton(string valueText)
+        {
+            _ribbonvalue.GetValueObject(valueText).Should().BeTrue("The value " + valueText + " is not enterered");
+                }
+
+
+
+
 
     }
 }
