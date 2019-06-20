@@ -12,24 +12,28 @@ using System.Threading.Tasks;
 
 namespace SAM.WinFormObjects
 {
-    public class InsertFormObject : BasePage
+    public class InsertFormObject
     {
         WindowsElement insertWindow;
-        WindowsElement editingControl;
+        WindowsElement editingControl;// = WinDriver.driver.FindElementByName("Editing control");
         WindowsElement row1Element => WinDriver.driver.FindElementByName("Name row 1");
+        string strOKButtonID = "m_btn_ok";
+
         WindowsElement OKButton;
+
         WindowsElement cancelButton;
         WindowsElement Node1;
+        string geomplaceholder => "geom placeholder";
 
-        public InsertFormObject(Driver driver) : base(driver)
+
+        public InsertFormObject()
         {
-            _driver = driver;
             try
             {
 
                 insertWindow = WinDriver.driver.FindElementByName("Insert Object");
                 editingControl = WinDriver.driver.FindElementByName("Editing control");
-                OKButton = WinDriver.driver.FindElementByAccessibilityId("m_btn_ok");
+                OKButton = WinDriver.driver.FindElementByAccessibilityId(strOKButtonID);
                 Node1 = WinDriver.driver.FindElementByName("Node 1");
                 cancelButton = WinDriver.driver.FindElementByAccessibilityId("m_btn_cancel");
             }
@@ -40,7 +44,6 @@ namespace SAM.WinFormObjects
 
         }
 
-        string geomplaceholder => "geom placeholder";
        
 		
 
@@ -74,6 +77,7 @@ namespace SAM.WinFormObjects
 
         internal void CloseInsertWindow()
         {
+            WaitForElement.WaitForElementToLoad(insertWindow);
             insertWindow.SendKeys(Keys.Escape);
         }
 
@@ -131,6 +135,8 @@ namespace SAM.WinFormObjects
         public void ClickOKButton()
         {
             WinDriver.driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
+            OKButton = WinDriver.driver.FindElementByAccessibilityId(strOKButtonID);
+
             WaitForElement.WaitForElementToLoad(OKButton);
             OKButton.Click();
         }
@@ -142,7 +148,7 @@ namespace SAM.WinFormObjects
             editingControl.SendKeys(text);
         }
 
-        public void ChangeObjectTextOnKeyPress()
+        public void MakeInsertObjectEditableByPressingF2()
         {
             row1Element.SendKeys(Keys.F2);
         }
@@ -153,6 +159,8 @@ namespace SAM.WinFormObjects
         }
         public void ClearText()
         {
+            WaitForElement.WaitForElementToLoad(editingControl);
+
             editingControl.Clear();
         }
 

@@ -1,5 +1,7 @@
-﻿using OpenQA.Selenium.Appium;
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Windows;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +16,7 @@ namespace SAM.Utilities
         public static bool WaitForElementToLoad(WindowsElement element)
         {
 
-            for (int i = 1; i <= 20; i++)
+            for (int i = 1; i <= 100; i++)
             {
                 if (IsElementDisplayed(element))
                 {
@@ -77,5 +79,13 @@ namespace SAM.Utilities
 
         }
 
+
+        public static void WaitForElements(By by)
+        {
+            WebDriverWait wait = new WebDriverWait(WinDriver.driver, TimeSpan.FromMinutes(2));
+
+            wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(by));
+
+        }
     }
 }

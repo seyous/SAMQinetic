@@ -3,18 +3,19 @@
 	
 
 @editobject
-Scenario Outline:Editing object Using Special Character
+Scenario Outline:Editing object With invalid Object Name
 Given a user opens SAM
 When the warning message is displayed
-Then the user can click on the OK button
+And the user can click on the OK button
 And the user clicks on the Insert button	
-When the user clicks on an "<Object>"
+And the user clicks on an "<Object>"
 And the user press function key on the keyboard
-And the user rename the object with "<Text>"
-When the user clicks on an "<Object>"
+And the user rename the object with "<Invalid Object Name>"
+And the user press the enter key on the keyboard
+And the user can click on the OK button
 Then the "Invalid object name" should appear on the button
 
 
 Examples: 
-| Object           | Text     |
+| Object           | Invalid Object Name     |
 | geom placeholder | @#$^1234 |
