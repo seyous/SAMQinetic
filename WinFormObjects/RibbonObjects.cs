@@ -96,31 +96,34 @@ namespace SAM.WinFormObjects
 
         public bool IsRibbonButtonEnabled(string ribbonName, string visibility)
         {
-           
-            var allWindowHandles = WinDriver.driver.WindowHandles;
-            WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
 
-            var objectstatus = GetRibbon(ribbonName);
-
-            try
+            for (int i = 0; i <= 5; i++)
             {
-                if (visibility == "Enabled")
+                var allWindowHandles = WinDriver.driver.WindowHandles;
+                WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
+
+                var objectstatus = GetRibbon(ribbonName);
+
+                try
+                {
+                    if (visibility == "Enabled")
+                    {
+
+                        return objectstatus.Enabled;
+                    }
+                    else if (visibility == "Disabled")
+                    {
+                        return !objectstatus.Enabled;
+                    }
+                }
+                catch (Exception)
                 {
 
-                    return objectstatus.Enabled;
-                }
-                else if (visibility=="Disabled")
-                {
-                    return !objectstatus.Enabled;
-                }
+                    return false;
+                }break;
             }
-            catch (Exception)
-            {
-
                 return false;
-            }
-            return false;
-                  
+                   
         }
 
        // public int boundaryvalue (string ribbonName, int minimumvalue, int maximumvalue)
