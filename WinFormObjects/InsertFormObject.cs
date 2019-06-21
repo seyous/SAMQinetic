@@ -212,7 +212,7 @@ namespace SAM.WinFormObjects
             }
         }
 
-        public void ClickOnObject(string objectText)
+        public void ClickOnObject()
         {
             row1Element.Click();
         }
@@ -221,10 +221,10 @@ namespace SAM.WinFormObjects
         {
             for (int i = 0; i < 50; i++)
             {
-                string objectTextRenamed = "treeListColumn1 row " + i.ToString();
+                string RenamedObjectText = "treeListColumn1 row " + i.ToString();
                 try
                 {
-                    WindowsElement element = WinDriver.driver.FindElementByName(objectTextRenamed);
+                    WindowsElement element = WinDriver.driver.FindElementByName(RenamedObjectText);
                     if (element.Text == objectText)
                     {
                         bool displayedObject = element.Displayed;

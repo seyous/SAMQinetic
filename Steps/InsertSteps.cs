@@ -26,15 +26,12 @@ namespace SAM.Steps
         }
 
 
-        [Given(@"the user clicks on an ""(.*)""")]
-        [When(@"the user clicks on an ""(.*)""")]
-        public void GivenTheUserClicksOnAnObject(string objectText)
+        [When(@"the user clicks on an object")]
+        public void WhenTheUserClicksOnAnObject()
         {
-            if (objectText != null)
-            {
-                _insertFormObject.ClickOnObject(objectText);
-            }
+            _insertFormObject.ClickOnObject();
         }
+
 
         [Then(@"the insert object ""(.*)"" is displayed")]
         public void ThenTheInsertObjectIsDisplayed(string objectText)
