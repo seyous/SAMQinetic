@@ -9,7 +9,7 @@ Then the user can click on the OK button
 And the user click the Settings Tab
 And the user enters 4 into the textbox
 And the user press the enter key on the keyboard
-Then the number changes to "6" in the textbox
+Then the number changes to 6 in the textbox
  
 
 

@@ -29,7 +29,7 @@ namespace SAM
         [Then(@"the user enters (.*) into the textbox")]
         public void ThenTheUserEntersIntoTheTextButton(int objectvalue)
         {
-            _ribbonvalue.ChangeObjectValue(objectvalue.ToString());
+            _ribbonvalue.EnterNumberValue(objectvalue.ToString());
         }
       
 

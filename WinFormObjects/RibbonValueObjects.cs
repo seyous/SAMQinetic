@@ -31,7 +31,7 @@ namespace SAM.WinFormObjects
             maxcolumnTextbox.SendKeys(Keys.Enter);
         }
 
-        public void ChangeObjectValue(string text)
+        public void EnterNumberValue(string text)
         {
             maxcolumnTextbox.Clear();
             maxcolumnTextbox.SendKeys(text);

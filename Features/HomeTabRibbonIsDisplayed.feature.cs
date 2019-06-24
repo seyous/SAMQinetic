@@ -18,20 +18,20 @@ namespace SAM.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Validate Number Boundary for Settings Menu")]
-    public partial class ValidateNumberBoundaryForSettingsMenuFeature
+    [NUnit.Framework.DescriptionAttribute("To Validate Hame Tab Ribbon is displayed")]
+    public partial class ToValidateHameTabRibbonIsDisplayedFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "ValidateNumberBoundary.feature"
+#line 1 "HomeTabRibbonIsDisplayed.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Validate Number Boundary for Settings Menu", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "To Validate Hame Tab Ribbon is displayed", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -70,12 +70,18 @@ namespace SAM.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Validate Minimum Values for Column TextBox")]
-        [NUnit.Framework.CategoryAttribute("RibbonboundaryValue")]
-        public virtual void ValidateMinimumValuesForColumnTextBox()
+        [NUnit.Framework.DescriptionAttribute("Home Tab Ribbon is Displayed")]
+        [NUnit.Framework.CategoryAttribute("DisplayedTabRibbon")]
+        [NUnit.Framework.TestCaseAttribute("Auto Recalculate", null)]
+        public virtual void HomeTabRibbonIsDisplayed(string ribbon, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate Minimum Values for Column TextBox", null, new string[] {
-                        "RibbonboundaryValue"});
+            string[] @__tags = new string[] {
+                    "DisplayedTabRibbon"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Home Tab Ribbon is Displayed", null, @__tags);
 #line 5
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -86,39 +92,7 @@ testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk
 #line 8
 testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 9
-testRunner.And("the user click the Settings Tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 10
-testRunner.And("the user enters 4 into the textbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 11
-testRunner.And("the user press the enter key on the keyboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
-testRunner.Then("the number changes to 6 in the textbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Validate Maximum Values for Column TextBox")]
-        [NUnit.Framework.CategoryAttribute("RibbonboundaryValue")]
-        public virtual void ValidateMaximumValuesForColumnTextBox()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate Maximum Values for Column TextBox", null, new string[] {
-                        "RibbonboundaryValue"});
-#line 17
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 18
-testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 19
-testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 20
-testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 22
-testRunner.And("the user enters 201 into the textbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 23
-testRunner.And("the user press the enter key on the keyboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 24
-testRunner.Then("the number changes to 200 in the textbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And(string.Format("the ribbon \"{0}\" is displayed", ribbon), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
