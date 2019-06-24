@@ -61,8 +61,8 @@ namespace SAM.WinFormObjects
 
         public void ClickLayoutTab()
         {
-            WaitForElement.Wait();
-        var allWindowHandles = WinDriver.driver.WindowHandles;
+            WaitForElement.WaitForElementToLoad(layoutTab);
+            var allWindowHandles = WinDriver.driver.WindowHandles;
             WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
             layoutTab.Click();
         }
@@ -70,7 +70,7 @@ namespace SAM.WinFormObjects
 
         public void ClickSAMTab()
         {
-            WaitForElement.Wait();
+            WaitForElement.WaitForElementToLoad(SAMTab);
             var allWindowHandles = WinDriver.driver.WindowHandles;
             WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
             SAMTab.Click();
@@ -97,15 +97,16 @@ namespace SAM.WinFormObjects
         public bool IsRibbonButtonEnabled(string ribbonName, string visibility)
         {
 
-            for (int i = 0; i <= 5; i++)
+            for (int i = 1; i <= 10; i++)
             {
-                var allWindowHandles = WinDriver.driver.WindowHandles;
-                WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
-
-                var objectstatus = GetRibbon(ribbonName);
-
+                
                 try
                 {
+                    var allWindowHandles = WinDriver.driver.WindowHandles;
+                    WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
+
+                    var objectstatus = GetRibbon(ribbonName);
+
                     if (visibility == "Enabled")
                     {
 
@@ -115,12 +116,13 @@ namespace SAM.WinFormObjects
                     {
                         return !objectstatus.Enabled;
                     }
+                    break;
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
 
                     return false;
-                }break;
+                }
             }
                 return false;
                    
