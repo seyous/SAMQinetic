@@ -1,4 +1,11 @@
 <TestData>
-<ObjectData1>geom placeholder</ObjectData1>
-<ObjectData2>b1, b2, b3, b4</ObjectData2>
+  <ObjectData1>
+    <Object>geom placeholder</Object>
+    <Text>b1, b2, b3, b4</Text>
+  </ObjectData1>
+
+  <ObjectData2>
+    <Object>geom placeholder</Object>
+    <Text>b1: b2: b3: b4</Text>
+  </ObjectData2>
 </TestData>

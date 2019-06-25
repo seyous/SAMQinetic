@@ -2,7 +2,7 @@
 	
 
 @editobject
-Scenario Outline:Editing object with Valid Object Name
+Scenario Outline: Editing object with Valid Object Name
 Given a user opens SAM
 When the warning message is displayed
 And the user can click on the OK button

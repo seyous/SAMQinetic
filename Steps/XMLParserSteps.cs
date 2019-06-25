@@ -13,7 +13,8 @@ namespace SAM.Steps
         [Given(@"the user uses ""(.*)"" from ""(.*)"" xml")]
         public void GivenTheUserUsesFromXml(string testCase, string file)
         {
-            XDocument doc = XDocument.Load(@"C:\SAMAutomation\TestData\" + file + ".xml");
+            XDocument doc = XDocument.Load(@"C:\SAMAutomation\SAM2\TestData\" + file + ".xml");
+
             Dictionary<string, string> dataDictionary = new Dictionary<string, string>();
             foreach (XElement element in doc.Descendants().Where(p => p.HasElements == false))
             {
