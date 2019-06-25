@@ -17,6 +17,6 @@ Scenario Outline: XML Parser
 	Then the object should be inserted in the design explorer
 
 	Examples: 
-	| Test Data | Object           | Text              |
-	| TestCase1 | geom placeholder | b1, b2, b3, b4    |
-	| TestCase2 | geom placeholder | geom placeholder1 |
+	| Test Data |
+	| TestCase1 |
+	| TestCase2 |

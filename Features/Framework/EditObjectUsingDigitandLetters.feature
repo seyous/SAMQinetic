@@ -10,7 +10,7 @@ And the user clicks on the Insert button
 When the user clicks on an object
 And the user press function key on the keyboard
 And the user rename the object with "<Valid Object Name>"
-And the user clicks on an object
+And the user clicks on an "<Object>"
 And the user click the ok button
 Then the "<Valid Object Name>" should be inserted in the design explorer
 

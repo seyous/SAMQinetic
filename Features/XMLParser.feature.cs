@@ -72,9 +72,9 @@ namespace SAM.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("XML Parser")]
         [NUnit.Framework.CategoryAttribute("mytag")]
-        [NUnit.Framework.TestCaseAttribute("TestCase1", "geom placeholder", "b1, b2, b3, b4", null)]
-        [NUnit.Framework.TestCaseAttribute("TestCase2", "geom placeholder", "geom placeholder1", null)]
-        public virtual void XMLParser(string testData, string @object, string text, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("TestCase1", null)]
+        [NUnit.Framework.TestCaseAttribute("TestCase2", null)]
+        public virtual void XMLParser(string testData, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "mytag"};
