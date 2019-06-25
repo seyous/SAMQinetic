@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace SAM.Features
+namespace SAM.Features.Framework
 {
     using TechTalk.SpecFlow;
     
@@ -18,20 +18,20 @@ namespace SAM.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("To Validate Layout Ribbon is displayed")]
-    public partial class ToValidateLayoutRibbonIsDisplayedFeature
+    [NUnit.Framework.DescriptionAttribute("Editing An Object Using the Enter Key")]
+    public partial class EditingAnObjectUsingTheEnterKeyFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "LayoutTabRibbonIsDisplayed.feature"
+#line 1 "EditObjectUsingEnterKey.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "To Validate Layout Ribbon is displayed", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Editing An Object Using the Enter Key", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -70,18 +70,18 @@ namespace SAM.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Layout Ribbon is Displayed")]
-        [NUnit.Framework.CategoryAttribute("DisplayedTabRibbon")]
-        [NUnit.Framework.TestCaseAttribute("Show", null)]
-        public virtual void LayoutRibbonIsDisplayed(string ribbon, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("Editing object Using Enter Key")]
+        [NUnit.Framework.CategoryAttribute("editobject")]
+        [NUnit.Framework.TestCaseAttribute("geom placeholder", "gradient placeholder", null)]
+        public virtual void EditingObjectUsingEnterKey(string @object, string text, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "DisplayedTabRibbon"};
+                    "editobject"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Layout Ribbon is Displayed", null, @__tags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Editing object Using Enter Key", null, @__tags);
 #line 5
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -90,11 +90,21 @@ testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table
 #line 7
 testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 8
-testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 9
-testRunner.And("the user click the layout Tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("the user clicks on the Insert button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
-testRunner.And(string.Format("the ribbon \"{0}\" is displayed", ribbon), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("the user clicks on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 11
+testRunner.And("the user press function key on the keyboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 12
+testRunner.And(string.Format("the user rename the object with \"{0}\"", text), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 13
+testRunner.When("the user press the enter key on the keyboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 14
+testRunner.And("the user click the ok button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 15
+testRunner.Then(string.Format("the \"{0}\" should be inserted in the design explorer", text), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

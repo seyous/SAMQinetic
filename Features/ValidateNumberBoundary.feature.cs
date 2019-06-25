@@ -113,6 +113,8 @@ testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table
 testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 20
 testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 21
+testRunner.And("the user click the Settings Tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 22
 testRunner.And("the user enters 201 into the textbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 23

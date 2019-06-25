@@ -3,7 +3,7 @@ using SAM.WinFormObjects;
 using System;
 using TechTalk.SpecFlow;
 
-namespace SAM
+namespace SAM.Steps
 {
     [Binding]
     public class ValidateNumberBoundarySteps

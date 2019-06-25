@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace SAM.Features
+namespace SAM.Features.Framework
 {
     using TechTalk.SpecFlow;
     

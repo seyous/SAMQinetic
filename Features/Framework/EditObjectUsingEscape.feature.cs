@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace SAM.Features
+namespace SAM.Features.Framework
 {
     using TechTalk.SpecFlow;
     
@@ -71,11 +71,11 @@ namespace SAM.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Editing object Using the Escape Key")]
-        [NUnit.Framework.CategoryAttribute("Editobject")]
+        [NUnit.Framework.CategoryAttribute("editobject")]
         public virtual void EditingObjectUsingTheEscapeKey()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Editing object Using the Escape Key", null, new string[] {
-                        "Editobject"});
+                        "editobject"});
 #line 6
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();

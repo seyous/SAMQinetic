@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace SAM.Features
+namespace SAM.Features.Framework
 {
     using TechTalk.SpecFlow;
     
@@ -18,20 +18,20 @@ namespace SAM.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("To Validate Ribbon Object for Layout Tab is visible")]
-    public partial class ToValidateRibbonObjectForLayoutTabIsVisibleFeature
+    [NUnit.Framework.DescriptionAttribute("To Validate SAM Tab Ribbon is displayed")]
+    public partial class ToValidateSAMTabRibbonIsDisplayedFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "LayoutTabRibbonEnableDisable.feature"
+#line 1 "SAMTabRibbonIsDisplayed.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "To Validate Ribbon Object for Layout Tab is visible", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "To Validate SAM Tab Ribbon is displayed", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -70,32 +70,31 @@ namespace SAM.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Layout Ribbon Enabled and Disabled")]
-        [NUnit.Framework.CategoryAttribute("EnableDisableRibbon")]
-        [NUnit.Framework.TestCaseAttribute("Design Explorer", "Enabled", null)]
-        [NUnit.Framework.TestCaseAttribute("Graphics", "Enabled", null)]
-        public virtual void LayoutRibbonEnabledAndDisabled(string ribbon, string visibility, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("SAM Tab Ribbon is Displayed")]
+        [NUnit.Framework.CategoryAttribute("DisplayedTabRibbon")]
+        [NUnit.Framework.TestCaseAttribute("Simulation", null)]
+        public virtual void SAMTabRibbonIsDisplayed(string ribbon, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "EnableDisableRibbon"};
+                    "DisplayedTabRibbon"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Layout Ribbon Enabled and Disabled", null, @__tags);
-#line 5
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("SAM Tab Ribbon is Displayed", null, @__tags);
+#line 6
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 6
-testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 7
-testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
-testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
-testRunner.And("the user click the layout Tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 10
-testRunner.And(string.Format("the ribbon \"{0}\" has a \"{1}\"", ribbon, visibility), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("the user click the SAM Tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 11
+testRunner.And(string.Format("the ribbon \"{0}\" is displayed", ribbon), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
