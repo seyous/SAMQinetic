@@ -274,6 +274,7 @@
     <Compile Include="Steps\InsertSteps.cs" />
     <Compile Include="Steps\RibbonEnableDisableSteps.cs" />
     <Compile Include="Steps\RibbonSteps.cs" />
+    <Compile Include="Steps\XMLParserSteps.cs" />
     <Compile Include="Utilities\Driver.cs" />
     <Compile Include="Features\calcs1.feature.cs">
       <AutoGen>True</AutoGen>
