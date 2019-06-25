@@ -30,6 +30,7 @@ namespace SAM.Steps
         [When(@"the user clicks on an ""(.*)""")]
         public void GivenTheUserClicksOnAnObject(string objectText)
         {
+
             if (objectText != null)
             {
                 _insertFormObject.ClickOnObject(objectText);
