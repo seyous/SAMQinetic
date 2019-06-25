@@ -17,6 +17,10 @@ namespace SAM.WinFormObjects
         
         WindowsElement insertRibbonButton => WinDriver.driver.FindElementByName("Insert");
         WindowsElement propertiesRibbonButton => WinDriver.driver.FindElementByName("Properties");
+        WindowsElement layoutTab => WinDriver.driver.FindElementByName(" Layout");
+        WindowsElement SAMTab => WinDriver.driver.FindElementByName(" SAM");
+
+        WindowsElement TempLocationTab => WinDriver.driver.FindElementByName("Temp Location");
 
 
         public WindowsElement GetRibbon(string ribbonName)
@@ -44,9 +48,41 @@ namespace SAM.WinFormObjects
                 {
 
                     ;
-                } 
+                }
             }
 
+        }
+
+        //WaitForElement.Wait();
+        //    var allWindowHandles = WinDriver.driver.WindowHandles;
+        //    WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
+        //    insertRibbonButton.Click();
+        //}
+
+        public void ClickLayoutTab()
+        {
+            WaitForElement.WaitForElementToLoad(layoutTab);
+            var allWindowHandles = WinDriver.driver.WindowHandles;
+            WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
+            layoutTab.Click();
+        }
+
+
+        public void ClickSAMTab()
+        {
+            WaitForElement.WaitForElementToLoad(SAMTab);
+            var allWindowHandles = WinDriver.driver.WindowHandles;
+            WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
+            SAMTab.Click();
+        }
+
+       
+        public void ClickTempLocationTab()
+        {
+            WaitForElement.Wait();
+            var allWindowHandles = WinDriver.driver.WindowHandles;
+            WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
+            TempLocationTab.Click();
         }
 
 
@@ -60,32 +96,43 @@ namespace SAM.WinFormObjects
 
         public bool IsRibbonButtonEnabled(string ribbonName, string visibility)
         {
-           
-            var allWindowHandles = WinDriver.driver.WindowHandles;
-            WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
 
-            var objectstatus = GetRibbon(ribbonName);
-
-            try
+            for (int i = 1; i <= 10; i++)
             {
-                if (visibility == "Enabled")
+                
+                try
+                {
+                    var allWindowHandles = WinDriver.driver.WindowHandles;
+                    WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
+
+                    var objectstatus = GetRibbon(ribbonName);
+
+                    if (visibility == "Enabled")
+                    {
+
+                        return objectstatus.Enabled;
+                    }
+                    else if (visibility == "Disabled")
+                    {
+                        return !objectstatus.Enabled;
+                    }
+                    break;
+                }
+                catch (Exception e)
                 {
 
-                    return objectstatus.Enabled;
-                }
-                else if (visibility=="Disabled")
-                {
-                    return !objectstatus.Enabled;
+                    return false;
                 }
             }
-            catch (Exception)
-            {
-
                 return false;
-            }
-            return false;
-                  
+                   
         }
 
+       // public int boundaryvalue (string ribbonName, int minimumvalue, int maximumvalue)
+        //{
+        //    var ribbon = WinDriver.driver.FindElementByName(ribbonName);
+        //    ribbon.SendKeys("maximumvalue");
+            
+        //} 
     }
 }

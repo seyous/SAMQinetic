@@ -1,18 +1,24 @@
-﻿Feature: ValidateNumberBoundary
+﻿Feature: Validate Number Boundary for Settings Menu
 	
 	
-@boundaryValue
-Scenario Outline: Settings Ribbon for boundary values
+@RibbonboundaryValue
+Scenario: Validate Minimum Values for Column TextBox
 Given a user opens SAM
 When the warning message is displayed
 Then the user can click on the OK button
-And the ribbon "<Ribbon>" value is '<minimumvalue>' and  '<maximumvalue>' 
+And the user click the Settings Tab
+And the user enters 4 into the textbox
+And the user press the enter key on the keyboard
+Then the number changes to 6 in the textbox
+ 
 
-Examples: 
-| Ribbon                     | minimumvalue | maximumvalue |
-| Max. number of columns     | 4          | 200          |
-| Prompt user if rows exceed | 0           | 1000000      |
-| Max. number of messages    | 0           | 10000        |
-| Min. width                 | 150         | 500          |
-| Max. width                 | 300         | 1000         |
 
+ @RibbonboundaryValue
+Scenario: Validate Maximum Values for Column TextBox
+Given a user opens SAM
+When the warning message is displayed
+Then the user can click on the OK button
+
+And the user enters 201 into the textbox
+And the user press the enter key on the keyboard
+Then the number changes to 200 in the textbox

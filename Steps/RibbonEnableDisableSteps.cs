@@ -15,6 +15,25 @@ namespace SAM.Steps
             _ribbon = ribbon;
         }
 
+        [Then(@"the user click the layout Tab")]
+        public void ThenTheUserClickTheLayoutTab()
+        {
+            _ribbon.ClickLayoutTab();
+        }
+
+        [Then(@"the user click the SAM Tab")]
+        public void ThenTheUserClickTheSAMTab()
+        {
+            _ribbon.ClickSAMTab();
+
+        }
+
+        [Then(@"the user click on the Temp Location Tab")]
+        public void ThenTheUserClickOnTheTempLocationTab()
+        {
+            _ribbon.ClickTempLocationTab();
+        }
+
 
         [Then(@"the ribbon ""(.*)"" has a ""(.*)""")]
         public void ThenTheRibbonHasA(string ribbonName, string visibility)

@@ -161,6 +161,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EditObjectUsingPencil.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\LayoutTabRibbonIsDisplayed.feature.cs">
+      <DependentUpon>LayoutTabRibbonIsDisplayed.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\SAMTabRibbonIsDisplayed.feature.cs">
+      <DependentUpon>SAMTabRibbonIsDisplayed.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\SettingsTabRibbonIsDisplayed.feature.cs">
+      <DependentUpon>SettingsTabRibbonIsDisplayed.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\TempLocationTabRibbonIsDisplayed.feature.cs">
+      <DependentUpon>TempLocationTabRibbonIsDisplayed.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Features\InsertableObjectDescription.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -180,6 +200,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InsertRibbonIsEnabled.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\SettingsTabRibbonEnableDisable.feature.cs">
+      <DependentUpon>SettingsTabRibbonEnableDisable.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\SAMTabRibbonEnableDisable.feature.cs">
+      <DependentUpon>SAMTabRibbonEnableDisable.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\TempTabRibbonEnableDisable.feature.cs">
+      <DependentUpon>TempTabRibbonEnableDisable.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Features\NavigatingbetweenObject.feature.cs">
       <AutoGen>True</AutoGen>
@@ -201,15 +236,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PlotGraphObject.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\RibbonEnableDisable.feature.cs">
+    <Compile Include="Features\LayoutTabRibbonEnableDisable.feature.cs">
+      <DependentUpon>LayoutTabRibbonEnableDisable.feature</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RibbonEnableDisable.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\RibbonValidations.feature.cs">
+    <Compile Include="Features\HomeRibbonEnableDisable.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RibbonValidations.feature</DependentUpon>
+      <DependentUpon>HomeRibbonEnableDisable.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\HomeTabRibbonIsDisplayed.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HomeTabRibbonIsDisplayed.feature</DependentUpon>
     </Compile>
     <Compile Include="Features\SelectingObject.feature.cs">
       <AutoGen>True</AutoGen>
@@ -261,6 +301,7 @@
     <Compile Include="WinFormObjects\DesignExplorerObjects.cs" />
     <Compile Include="WinFormObjects\InsertFormObject.cs" />
     <Compile Include="WinFormObjects\RibbonObjects.cs" />
+    <Compile Include="WinFormObjects\RibbonValueObjects.cs" />
     <Compile Include="WinFormObjects\WarningDialogObjects.cs" />
     <Compile Include="Steps\CalculatorSteps.cs" />
     <Compile Include="Steps\OpenSAMSteps.cs" />
@@ -313,6 +354,22 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>EditObjectUsingPencil.feature.cs</LastGenOutput>
     </None>
+    <None Include="Features\LayoutTabRibbonIsDisplayed.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>LayoutTabRibbonIsDisplayed.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\SAMTabRibbonIsDisplayed.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SAMTabRibbonIsDisplayed.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\SettingsTabRibbonIsDisplayed.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SettingsTabRibbonIsDisplayed.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\TempLocationTabRibbonIsDisplayed.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>TempLocationTabRibbonIsDisplayed.feature.cs</LastGenOutput>
+    </None>
     <None Include="Features\InsertableObjectDescription.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>InsertableObjectDescription.feature.cs</LastGenOutput>
@@ -328,6 +385,18 @@
     <None Include="Features\InsertRibbonIsEnabled.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>InsertRibbonIsEnabled.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\SettingsTabRibbonEnableDisable.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SettingsTabRibbonEnableDisable.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\SAMTabRibbonEnableDisable.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SAMTabRibbonEnableDisable.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\TempTabRibbonEnableDisable.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>TempTabRibbonEnableDisable.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\NavigatingbetweenObject.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
@@ -349,13 +418,17 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>PlotGraphObject.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\RibbonEnableDisable.feature">
+    <None Include="Features\LayoutTabRibbonEnableDisable.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>RibbonEnableDisable.feature.cs</LastGenOutput>
+      <LastGenOutput>LayoutTabRibbonEnableDisable.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\RibbonValidations.feature">
+    <None Include="Features\HomeRibbonEnableDisable.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>RibbonValidations.feature.cs</LastGenOutput>
+      <LastGenOutput>HomeRibbonEnableDisable.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\HomeTabRibbonIsDisplayed.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>HomeTabRibbonIsDisplayed.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\SelectingObject.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

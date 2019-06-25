@@ -71,11 +71,11 @@ namespace SAM.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Editing object Using the Escape Key")]
-        [NUnit.Framework.CategoryAttribute("editobject")]
+        [NUnit.Framework.CategoryAttribute("Editobject")]
         public virtual void EditingObjectUsingTheEscapeKey()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Editing object Using the Escape Key", null, new string[] {
-                        "editobject"});
+                        "Editobject"});
 #line 6
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
