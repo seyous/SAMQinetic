@@ -212,7 +212,7 @@ namespace SAM.WinFormObjects
             }
         }
 
-        public void ClickOnObject()
+        public void ClickOnObject(string objectText)
         {
             row1Element.Click();
         }
