@@ -73,6 +73,7 @@ namespace SAM.Features.Framework
         [NUnit.Framework.DescriptionAttribute("Temp Location Ribbon is Displayed")]
         [NUnit.Framework.CategoryAttribute("DisplayedTabRibbon")]
         [NUnit.Framework.TestCaseAttribute("Validation", null)]
+        [NUnit.Framework.TestCaseAttribute("Remove Traces", null)]
         public virtual void TempLocationRibbonIsDisplayed(string ribbon, string[] exampleTags)
         {
             string[] @__tags = new string[] {

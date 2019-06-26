@@ -79,10 +79,22 @@ namespace SAM.WinFormObjects
        
         public void ClickTempLocationTab()
         {
-            WaitForElement.Wait();
-            var allWindowHandles = WinDriver.driver.WindowHandles;
-            WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
-            TempLocationTab.Click();
+            for (int i = 1; i < 5; i++)
+            {
+                try
+                {
+                    WaitForElement.Wait();
+                    var allWindowHandles = WinDriver.driver.WindowHandles;
+                    WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
+                    TempLocationTab.Click();
+                    break;
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
         }
 
 
