@@ -21,8 +21,9 @@ namespace SAM.WinFormObjects
         WindowsElement SAMTab => WinDriver.driver.FindElementByName(" SAM");
 
         WindowsElement TempLocationTab => WinDriver.driver.FindElementByName("Temp Location");
+        WindowsElement FileTab => WinDriver.driver.FindElementByName("The BackstageViewControl");
 
-
+        
         public WindowsElement GetRibbon(string ribbonName)
         {
 
@@ -65,6 +66,15 @@ namespace SAM.WinFormObjects
             var allWindowHandles = WinDriver.driver.WindowHandles;
             WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
             layoutTab.Click();
+        }
+
+        public void ClickFileTab()
+        {
+            WaitForElement.WaitForElementToLoad(layoutTab);
+            var allWindowHandles = WinDriver.driver.WindowHandles;
+            WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
+            FileTab.Click();
+
         }
 
 

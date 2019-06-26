@@ -21,6 +21,12 @@ namespace SAM.Steps
             _ribbon.ClickLayoutTab();
         }
 
+        [Then(@"the user click the File Tab")]
+        public void ThenTheUserClickTheFileTab()
+        {
+            _ribbon.ClickFileTab();
+        }
+
         [Then(@"the user click the SAM Tab")]
         public void ThenTheUserClickTheSAMTab()
         {

@@ -18,20 +18,20 @@ namespace SAM.Features.Framework
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("To Validate Home Tab Ribbon is displayed")]
-    public partial class ToValidateHomeTabRibbonIsDisplayedFeature
+    [NUnit.Framework.DescriptionAttribute("To Validate File Tab Ribbon is displayed")]
+    public partial class ToValidateFileTabRibbonIsDisplayedFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "HomeTabRibbonIsDisplayed.feature"
+#line 1 "FileTabRibbonIsDisplayed .feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "To Validate Home Tab Ribbon is displayed", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "To Validate File Tab Ribbon is displayed", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -70,10 +70,10 @@ namespace SAM.Features.Framework
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Home Tab Ribbon is Displayed")]
+        [NUnit.Framework.DescriptionAttribute("File Tab Ribbon is Displayed")]
         [NUnit.Framework.CategoryAttribute("DisplayedTabRibbon")]
-        [NUnit.Framework.TestCaseAttribute("Auto Recalculate", null)]
-        public virtual void HomeTabRibbonIsDisplayed(string ribbon, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("Open", null)]
+        public virtual void FileTabRibbonIsDisplayed(string ribbon, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "DisplayedTabRibbon"};
@@ -81,7 +81,7 @@ namespace SAM.Features.Framework
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Home Tab Ribbon is Displayed", null, @__tags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("File Tab Ribbon is Displayed", null, @__tags);
 #line 5
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -92,6 +92,8 @@ testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk
 #line 8
 testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 9
+testRunner.And("the user click the File Tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 10
 testRunner.And(string.Format("the ribbon \"{0}\" is displayed", ribbon), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
