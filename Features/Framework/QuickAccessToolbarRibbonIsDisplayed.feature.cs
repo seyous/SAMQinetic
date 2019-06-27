@@ -18,20 +18,20 @@ namespace SAM.Features.Framework
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("To Validate Home Tab Ribbon is displayed")]
-    public partial class ToValidateHomeTabRibbonIsDisplayedFeature
+    [NUnit.Framework.DescriptionAttribute("To Validate Quick Access Toolbar Ribbon is displayed")]
+    public partial class ToValidateQuickAccessToolbarRibbonIsDisplayedFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "HomeTabRibbonIsDisplayed.feature"
+#line 1 "QuickAccessToolbarRibbonIsDisplayed.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "To Validate Home Tab Ribbon is displayed", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "To Validate Quick Access Toolbar Ribbon is displayed", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -70,10 +70,10 @@ namespace SAM.Features.Framework
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Home Tab Ribbon is Displayed")]
+        [NUnit.Framework.DescriptionAttribute("Quick Access Toolbar Ribbon is Displayed")]
         [NUnit.Framework.CategoryAttribute("DisplayedTabRibbon")]
-        [NUnit.Framework.TestCaseAttribute("Auto Recalculate", null)]
-        public virtual void HomeTabRibbonIsDisplayed(string ribbon, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("Save", null)]
+        public virtual void QuickAccessToolbarRibbonIsDisplayed(string ribbon, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "DisplayedTabRibbon"};
@@ -81,7 +81,7 @@ namespace SAM.Features.Framework
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Home Tab Ribbon is Displayed", null, @__tags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Quick Access Toolbar Ribbon is Displayed", null, @__tags);
 #line 5
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();

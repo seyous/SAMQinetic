@@ -11,5 +11,6 @@ And the user click on the Temp Location Tab
 And the ribbon "<Ribbon>" is displayed
 
 Examples: 
-| Ribbon     |
-| Validation |
+| Ribbon        |
+| Validation    |
+| Remove Traces |

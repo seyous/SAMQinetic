@@ -16,9 +16,9 @@ namespace SAM.WinFormObjects
         WindowsElement settingsTab => WinDriver.driver.FindElementByName(" Settings");
 
        //WindowsElement maxcolumnTextbox => WinDriver.driver.FindElementByAccessibilityId("594004");
-       WindowsElement maxcolumnTextbox => WinDriver.driver.FindElementByClassName("WindowsForms10.Window.b.app.0.21093c0_r6_ad1");
+      // WindowsElement maxcolumnTextbox => WinDriver.driver.FindElementByClassName("WindowsForms10.Window.b.app.0.21093c0_r6_ad1");
 
-        //WindowsElement maxcolumnTextbox => WinDriver.driver.FindElementByName("Max. number of columns");
+        WindowsElement maxcolumnTextbox => WinDriver.driver.FindElementByName("Editing control");
 
         public void ClickSettingsTab()
         {

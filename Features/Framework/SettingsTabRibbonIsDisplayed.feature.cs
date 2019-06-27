@@ -73,6 +73,7 @@ namespace SAM.Features.Framework
         [NUnit.Framework.DescriptionAttribute("Settings Tab Ribbon is Displayed")]
         [NUnit.Framework.CategoryAttribute("DisplayedTabRibbon")]
         [NUnit.Framework.TestCaseAttribute("Graphs", null)]
+        [NUnit.Framework.TestCaseAttribute("Legend", null)]
         public virtual void SettingsTabRibbonIsDisplayed(string ribbon, string[] exampleTags)
         {
             string[] @__tags = new string[] {

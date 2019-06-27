@@ -12,5 +12,6 @@ And the ribbon "<Ribbon>" is displayed
 Examples: 
 | Ribbon |
 | Show   |
+| Help   |
 
 

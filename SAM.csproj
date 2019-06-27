@@ -161,6 +161,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EditObjectUsingPencil.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Framework\FileTabRibbonIsDisplayed .feature.cs">
+      <DependentUpon>FileTabRibbonIsDisplayed .feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\Framework\FileTabRibbonEnableDisable.feature.cs">
+      <DependentUpon>FileTabRibbonEnableDisable.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\Framework\QuickAccessToolbarRibbonEnableDisable.feature.cs">
+      <DependentUpon>QuickAccessToolbarRibbonEnableDisable.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\Framework\QuickAccessToolbarRibbonIsDisplayed.feature.cs">
+      <DependentUpon>QuickAccessToolbarRibbonIsDisplayed.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Features\Framework\LayoutTabRibbonIsDisplayed.feature.cs">
       <DependentUpon>LayoutTabRibbonIsDisplayed.feature</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -355,6 +375,22 @@
     <None Include="Features\Framework\EditObjectUsingPencil.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>EditObjectUsingPencil.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Framework\FileTabRibbonIsDisplayed .feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>FileTabRibbonIsDisplayed .feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Framework\FileTabRibbonEnableDisable.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>FileTabRibbonEnableDisable.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Framework\QuickAccessToolbarRibbonEnableDisable.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>QuickAccessToolbarRibbonEnableDisable.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Framework\QuickAccessToolbarRibbonIsDisplayed.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>QuickAccessToolbarRibbonIsDisplayed.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Framework\LayoutTabRibbonIsDisplayed.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

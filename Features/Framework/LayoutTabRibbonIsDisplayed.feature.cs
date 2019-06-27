@@ -73,6 +73,7 @@ namespace SAM.Features.Framework
         [NUnit.Framework.DescriptionAttribute("Layout Ribbon is Displayed")]
         [NUnit.Framework.CategoryAttribute("DisplayedTabRibbon")]
         [NUnit.Framework.TestCaseAttribute("Show", null)]
+        [NUnit.Framework.TestCaseAttribute("Help", null)]
         public virtual void LayoutRibbonIsDisplayed(string ribbon, string[] exampleTags)
         {
             string[] @__tags = new string[] {

@@ -1,4 +1,4 @@
-﻿Feature: To Validate Hame Tab Ribbon is displayed
+﻿Feature: To Validate Home Tab Ribbon is displayed
 	
 
 @DisplayedTabRibbon
