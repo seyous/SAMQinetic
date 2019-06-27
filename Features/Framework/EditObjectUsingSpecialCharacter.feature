@@ -1,6 +1,4 @@
 ﻿Feature: Editing Object Using Special Character
-	
-	
 
 @editobject
 Scenario Outline:Editing object With invalid Object Name

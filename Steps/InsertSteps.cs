@@ -30,6 +30,10 @@ namespace SAM.Steps
         [When(@"the user clicks on an ""(.*)""")]
         public void GivenTheUserClicksOnAnObject(string objectText)
         {
+            if (XMLParserSteps.dataDictionary != null)
+            {
+                objectText = ScenarioContext.Current["Element"].ToString();
+            }
 
             if (objectText != null)
             {
@@ -49,6 +53,12 @@ namespace SAM.Steps
         [Given(@"the user rename the object with ""(.*)""")]
         public void GivenTheUserTypeAText(string text)
         {
+
+            if (XMLParserSteps.dataDictionary != null)
+            {
+                text = ScenarioContext.Current["Text"].ToString();
+            }
+
             _insertFormObject.ChangeObjectText(text);
         }
 

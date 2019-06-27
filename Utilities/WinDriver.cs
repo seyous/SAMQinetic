@@ -19,7 +19,9 @@ namespace SAM.Utilities
         //private const int implicitTimeoutMs = 120000;
 
         static string appLocation = @"C:\Program Files\QinetiQ\SAM V2.1\bin\SAM.exe";
-        
+        static bool isSAMOpened;
+        static WindowsElement applicationWindow = null;
+
         public static WindowsDriver<WindowsElement> OpenDriver()
         {
             //Improved the SAM opening and making it more reliable
@@ -64,45 +66,93 @@ namespace SAM.Utilities
 
 
 
-            WindowsElement applicationWindow = null;
+
+
+            try
+            {
+
+
+               // WindowsElement applicationWindow = null;
+                DesiredCapabilities desktopCapabilities = new DesiredCapabilities();
+                desktopCapabilities.SetCapability("platformName", "Windows");
+                desktopCapabilities.SetCapability("app", "Root");
+
+                desktopCapabilities.SetCapability("deviceName", "WindowsPC");
+
+                driver = new WindowsDriver<WindowsElement>(new Uri("http://127.0.0.1:4723"), desktopCapabilities);
+
+                var openWindows =
+                driver.FindElementsByAccessibilityId("MainWindow");
+
+
+                foreach (var window in openWindows)
+                {
+
+                    if
+           (window.GetAttribute("Name").StartsWith("SAM"))
+                    {
+                        applicationWindow = window;
+                        driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Escape);
+                        driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Escape);
+
+                        isSAMOpened = true;
+                        break;
+                    }
+                } 
+
+            }
+            catch(Exception ex)
+            {
+
+            }
             try
             {
 
                 int i = 0;
-                bool isSAMOpened = false;
+                isSAMOpened = false;
                 Process.Start(appLocation);
+
+
 
                 while (!isSAMOpened && i <= 3)
                 {
+                    i++;
 
-                    DesiredCapabilities desktopCapabilities = new DesiredCapabilities();
-                    desktopCapabilities.SetCapability("platformName",
-                    "Windows");
-                    desktopCapabilities.SetCapability("app", "Root");
+                    try
+                    {
+                        DesiredCapabilities desktopCapabilities = new DesiredCapabilities();
+                        desktopCapabilities.SetCapability("platformName", "Windows");
+                        desktopCapabilities.SetCapability("app", "Root");
 
-                    desktopCapabilities.SetCapability("deviceName",
-                    "WindowsPC");
+                        desktopCapabilities.SetCapability("deviceName", "WindowsPC");
 
-                    driver = new WindowsDriver<WindowsElement>(new Uri("http://127.0.0.1:4723"), desktopCapabilities);
+                        driver = new WindowsDriver<WindowsElement>(new Uri("http://127.0.0.1:4723"), desktopCapabilities);
 
-                    var openWindows =
-                    driver.FindElementsByAccessibilityId("MainWindow");
-
+                        var openWindows =
+                        driver.FindElementsByAccessibilityId("MainWindow");
 
 
-                    foreach (var window in openWindows)
+
+
+                        foreach (var window in openWindows)
+                        {
+
+                            if (window.GetAttribute("Name").StartsWith("SAM"))
+                            {
+                                applicationWindow = window;
+                                driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Escape);
+                                driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Escape);
+
+                                isSAMOpened = true;
+                                break;
+                            }
+                        }
+
+                    }
+                    catch(Exception ex)
                     {
 
-                        if
-               (window.GetAttribute("Name").StartsWith("SAM"))
-                        {
-                            applicationWindow = window;
-                            isSAMOpened = true;
-                            break;
-                        }
-                    } //
-
-                    i++;
+                    }
 
                 }
 

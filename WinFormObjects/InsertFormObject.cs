@@ -214,7 +214,22 @@ namespace SAM.WinFormObjects
 
         public void ClickOnObject(string objectText)
         {
-            row1Element.Click();
+            //row1Element.Click();
+            if (objectText == "Object")
+            {
+                objectText = "";
+            }
+
+            for (int i = 1; i <=19; i++)
+            {
+                WindowsElement element = WinDriver.driver.FindElementByName("Name row " + i);
+                if (element.Text == objectText)
+                {
+                    element.Click();
+                    break;
+                }
+
+            }
         }
 
         public bool DesignObjectIsDisplayed(string objectText)
