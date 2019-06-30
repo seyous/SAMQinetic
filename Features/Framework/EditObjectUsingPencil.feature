@@ -4,8 +4,7 @@
 @editobject
 Scenario Outline: Editing object Using Pencil Button
 Given a user opens SAM
-When the user can click on the OK button
-And the user clicks on the Insert button
+When the user clicks on the Insert button
 And the user clicks on an "Object"
 And the user click on the pencil button on the object
 And the user rename the object with "<Text>"

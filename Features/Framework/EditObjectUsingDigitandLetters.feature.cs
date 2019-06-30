@@ -94,7 +94,7 @@ testRunner.And("the user can click on the OK button", ((string)(null)), ((TechTa
 #line 9
 testRunner.And("the user clicks on the Insert button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
-testRunner.When(string.Format("the user clicks on an \"{0}\"", @object), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And(string.Format("the user clicks on an \"{0}\"", @object), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
 testRunner.And("the user press function key on the keyboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12

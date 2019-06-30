@@ -91,23 +91,19 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
  testRunner.Given(string.Format("the user uses \"{0}\" from \"InsertData\" xml", testData), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
- testRunner.When("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 9
  testRunner.When("the user clicks on the Insert button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
+#line 9
  testRunner.When("the user clicks on an \"Object\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 11
+#line 10
  testRunner.And("the user click on the pencil button on the object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
+#line 11
  testRunner.And("the user rename the object with \"Text\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 13
+#line 12
  testRunner.And("the user press the enter key on the keyboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 14
+#line 13
  testRunner.And("the user click on the play button on the object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 15
+#line 14
  testRunner.And("the user closes the insert window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 16
- testRunner.Then("the object should be inserted in the design explorer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

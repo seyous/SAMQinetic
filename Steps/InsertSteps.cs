@@ -30,7 +30,7 @@ namespace SAM.Steps
         [When(@"the user clicks on an ""(.*)""")]
         public void GivenTheUserClicksOnAnObject(string objectText)
         {
-            if (XMLParserSteps.dataDictionary != null)
+            if (objectText == "Object" )
             {
                 objectText = ScenarioContext.Current["Element"].ToString();
             }
@@ -69,6 +69,7 @@ namespace SAM.Steps
         }
 
         [When(@"the user closes the insert window")]
+        [Then(@"the user closes the insert window")]
         public void WhenTheUserClosesTheInsertWindow()
         {
             _insertFormObject.CloseInsertWindow();

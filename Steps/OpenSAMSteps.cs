@@ -21,7 +21,6 @@ namespace SAM.Steps
         {
             WinDriver.OpenDriver();
 
-            WinDriver.OpenDriver();
 
 
         }

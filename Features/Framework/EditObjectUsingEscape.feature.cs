@@ -82,20 +82,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
 testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
-testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("the user clicks on the Insert button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
-testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("the user clicks on an \"geom placeholder\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
-testRunner.And("the user clicks on the Insert button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 11
-testRunner.When("the user clicks on an \"geom placeholder\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 12
 testRunner.And("the user press function key on the keyboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 13
+#line 11
 testRunner.And("the user rename the object with \"text1234\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 14
+#line 12
 testRunner.And("the user press the escape key", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 15
+#line 13
 testRunner.Then("the object is reverted to \"geom placeholder\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

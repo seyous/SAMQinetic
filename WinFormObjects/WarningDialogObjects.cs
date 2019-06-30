@@ -37,6 +37,7 @@ namespace SAM.WinFormObjects
 
         public void OKButtonIsClickedOnWarningDialog()
         {
+            
             WaitForElement.WaitForElementToLoad(OKbutton);
 
             OKbutton.Click();
