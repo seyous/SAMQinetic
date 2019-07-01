@@ -35,12 +35,12 @@ namespace SAM.Utilities
                     {
 
                         Process.Start(appLocation);
-                        Thread.Sleep(1000);
+                      //  Thread.Sleep(1000);
 
 
                     }
 
-                    Thread.Sleep(5000);
+                    Thread.Sleep(1000);
 
                     if (Process.GetProcessesByName("SAM").Length > 0)
                     {
@@ -86,7 +86,6 @@ namespace SAM.Utilities
                 }
                 catch (Exception ex)
                 {
-                    Thread.Sleep(5000);
                 }
 
                 ++i;

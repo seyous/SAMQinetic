@@ -13,7 +13,7 @@ Scenario Outline:Editing object Using Enter Key
 	And the user rename the object with "Text"
 	When the user press the enter key on the keyboard
 	And the user click the ok button
-	#Then the "Text" should be inserted in the design explorer
+	Then the "Text" should be inserted in the design explorer
 
 Examples: 
 | Test Data | 

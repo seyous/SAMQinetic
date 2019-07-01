@@ -13,4 +13,4 @@ And the ribbon "<Ribbon>" is displayed
 
 Examples: 
 | Ribbon     |
-| Simulation |
+| All Scenarios. |

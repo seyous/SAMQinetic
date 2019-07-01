@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TestCases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TestCase1>
+		<Object>geom placeholder</Object>
+		<Text>b1, b2, b3, b4</Text>
+	</TestCase1>
+	<TestCase2/>
+</TestCases>
