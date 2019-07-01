@@ -1,0 +1,516 @@
+=> SAM.Features.Framework.EditingAnObjectUsingDigitsAndLettersFeature.EditingObjectWithValidObjectName("TestCase1",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (38.4s)
+And the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.4s)
+And the user uses "TestCase1" from "InsertData" xml
+-> done: XMLParserSteps.GivenTheUserUsesFromXml("TestCase1", "InsertData") (0.0s)
+When the user clicks on the Insert button
+-> done: OpenInsertDialogSteps.ThenTheUserClicksOnTheInsertButton() (1.6s)
+And the user clicks on an "Object"
+-> done: InsertSteps.GivenTheUserClicksOnAnObject("Object") (4.3s)
+And the user press function key on the keyboard
+-> done: EditingAnObjectSteps.GivenTheUserPressFOnTheKeyboard() (0.8s)
+And the user rename the object with "object1234"
+-> done: InsertSteps.GivenTheUserTypeAText("object1234") (0.8s)
+And the user clicks on an "Object"
+-> done: InsertSteps.GivenTheUserClicksOnAnObject("Object") (1.8s)
+And the user click the ok button
+-> done: InsertSteps.GivenTheUserClickTheOkButton() (0.6s)
+Then the "object1234" should be inserted in the design explorer
+-> done: InsertSteps.ThenTheShouldBeInsertedInTheDesignExplorer("object1234") (2.4s)
+=> SAM.Features.Framework.EditingAnObjectUsingDigitsAndLettersFeature.EditingObjectWithValidObjectName("TestCase2",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (43.8s)
+And the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.4s)
+And the user uses "TestCase2" from "InsertData" xml
+-> done: XMLParserSteps.GivenTheUserUsesFromXml("TestCase2", "InsertData") (0.0s)
+When the user clicks on the Insert button
+-> done: OpenInsertDialogSteps.ThenTheUserClicksOnTheInsertButton() (1.6s)
+And the user clicks on an "Object"
+-> done: InsertSteps.GivenTheUserClicksOnAnObject("Object") (3.6s)
+And the user press function key on the keyboard
+-> done: EditingAnObjectSteps.GivenTheUserPressFOnTheKeyboard() (0.9s)
+And the user rename the object with "object1234"
+-> done: InsertSteps.GivenTheUserTypeAText("object1234") (0.7s)
+And the user clicks on an "Object"
+-> done: InsertSteps.GivenTheUserClicksOnAnObject("Object") (1.8s)
+And the user click the ok button
+-> done: InsertSteps.GivenTheUserClickTheOkButton() (0.6s)
+Then the "object1234" should be inserted in the design explorer
+-> done: InsertSteps.ThenTheShouldBeInsertedInTheDesignExplorer("object1234") (2.4s)
+=> SAM.Features.Framework.EditingAnObjectUsingDigitsAndLettersFeature
+-> Using app.config
+=> SAM.Features.Framework.EditingAnObjectUsingTheEnterKeyFeature.EditingObjectUsingEnterKey("TestCase1",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (42.4s)
+And the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.5s)
+And the user uses "TestCase1" from "InsertData" xml
+-> done: XMLParserSteps.GivenTheUserUsesFromXml("TestCase1", "InsertData") (0.0s)
+When the user clicks on the Insert button
+-> done: OpenInsertDialogSteps.ThenTheUserClicksOnTheInsertButton() (1.6s)
+And the user clicks on an "Object"
+-> done: InsertSteps.GivenTheUserClicksOnAnObject("Object") (3.7s)
+And the user press function key on the keyboard
+-> done: EditingAnObjectSteps.GivenTheUserPressFOnTheKeyboard() (0.8s)
+And the user rename the object with "Text"
+-> done: InsertSteps.GivenTheUserTypeAText("Text") (0.9s)
+When the user press the enter key on the keyboard
+-> done: InsertSteps.GivenTheUserPressTheEnterKeyOnTheKeyboard() (0.4s)
+And the user click the ok button
+-> done: InsertSteps.GivenTheUserClickTheOkButton() (0.7s)
+=> SAM.Features.Framework.EditingAnObjectUsingTheEnterKeyFeature.EditingObjectUsingEnterKey("TestCase2",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (42.7s)
+And the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.5s)
+And the user uses "TestCase2" from "InsertData" xml
+-> done: XMLParserSteps.GivenTheUserUsesFromXml("TestCase2", "InsertData") (0.0s)
+When the user clicks on the Insert button
+-> done: OpenInsertDialogSteps.ThenTheUserClicksOnTheInsertButton() (1.6s)
+And the user clicks on an "Object"
+-> done: InsertSteps.GivenTheUserClicksOnAnObject("Object") (3.9s)
+And the user press function key on the keyboard
+-> done: EditingAnObjectSteps.GivenTheUserPressFOnTheKeyboard() (0.9s)
+And the user rename the object with "Text"
+-> done: InsertSteps.GivenTheUserTypeAText("Text") (0.9s)
+When the user press the enter key on the keyboard
+-> done: InsertSteps.GivenTheUserPressTheEnterKeyOnTheKeyboard() (0.4s)
+And the user click the ok button
+-> done: InsertSteps.GivenTheUserClickTheOkButton() (0.7s)
+=> SAM.Features.Framework.EditingAnObjectUsingTheF2KeyFeature.EditingObjectUsingF2KeyOnKeyboard("TestCase1",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (42.9s)
+And the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.5s)
+And the user uses "TestCase1" from "InsertData" xml
+-> done: XMLParserSteps.GivenTheUserUsesFromXml("TestCase1", "InsertData") (0.0s)
+When the user clicks on the Insert button
+-> done: OpenInsertDialogSteps.ThenTheUserClicksOnTheInsertButton() (1.4s)
+And the user clicks on an "Object"
+-> done: InsertSteps.GivenTheUserClicksOnAnObject("Object") (3.7s)
+And the user press function key on the keyboard
+-> done: EditingAnObjectSteps.GivenTheUserPressFOnTheKeyboard() (0.8s)
+And the user rename the object with "letters1234"
+-> done: InsertSteps.GivenTheUserTypeAText("letters1234") (0.8s)
+And the user clicks on an "Object"
+-> done: InsertSteps.GivenTheUserClicksOnAnObject("Object") (1.8s)
+And the user click the ok button
+-> done: InsertSteps.GivenTheUserClickTheOkButton() (0.6s)
+Then the "letters1234" should be inserted in the design explorer
+-> done: InsertSteps.ThenTheShouldBeInsertedInTheDesignExplorer("letters1234") (2.3s)
+=> SAM.Features.Framework.EditingAnObjectUsingTheF2KeyFeature.EditingObjectUsingF2KeyOnKeyboard("TestCase2",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (41.6s)
+And the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.5s)
+And the user uses "TestCase2" from "InsertData" xml
+-> done: XMLParserSteps.GivenTheUserUsesFromXml("TestCase2", "InsertData") (0.0s)
+When the user clicks on the Insert button
+-> done: OpenInsertDialogSteps.ThenTheUserClicksOnTheInsertButton() (1.8s)
+And the user clicks on an "Object"
+-> done: InsertSteps.GivenTheUserClicksOnAnObject("Object") (4.5s)
+And the user press function key on the keyboard
+-> done: EditingAnObjectSteps.GivenTheUserPressFOnTheKeyboard() (0.9s)
+And the user rename the object with "letters1234"
+-> done: InsertSteps.GivenTheUserTypeAText("letters1234") (0.8s)
+And the user clicks on an "Object"
+-> done: InsertSteps.GivenTheUserClicksOnAnObject("Object") (1.8s)
+And the user click the ok button
+-> done: InsertSteps.GivenTheUserClickTheOkButton() (0.6s)
+Then the "letters1234" should be inserted in the design explorer
+-> done: InsertSteps.ThenTheShouldBeInsertedInTheDesignExplorer("letters1234") (2.5s)
+=> SAM.Features.Framework.EditingObjectUsingSpecialCharacterFeature.EditingObjectWithInvalidObjectName("TestCase1",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (41.5s)
+And the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.4s)
+And the user uses "TestCase1" from "InsertData" xml
+-> done: XMLParserSteps.GivenTheUserUsesFromXml("TestCase1", "InsertData") (0.0s)
+When the user clicks on the Insert button
+-> done: OpenInsertDialogSteps.ThenTheUserClicksOnTheInsertButton() (1.6s)
+And the user clicks on an "Object"
+-> done: InsertSteps.GivenTheUserClicksOnAnObject("Object") (3.7s)
+And the user press function key on the keyboard
+-> done: EditingAnObjectSteps.GivenTheUserPressFOnTheKeyboard() (0.8s)
+And the user rename the object with "@#$^1234"
+-> done: InsertSteps.GivenTheUserTypeAText("@#$^1234") (0.6s)
+And the user press the enter key on the keyboard
+-> done: InsertSteps.GivenTheUserPressTheEnterKeyOnTheKeyboard() (0.4s)
+And the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.8s)
+Then the "Invalid object name" should appear on the button
+-> done: EditingObjectUsingSpecialCharacterSteps.ThenTheShouldAppearOnTheButton("Invalid object name") (0.2s)
+=> SAM.Features.Framework.EditingObjectUsingSpecialCharacterFeature.EditingObjectWithInvalidObjectName("TestCase2",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (42.5s)
+And the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.5s)
+And the user uses "TestCase2" from "InsertData" xml
+-> done: XMLParserSteps.GivenTheUserUsesFromXml("TestCase2", "InsertData") (0.0s)
+When the user clicks on the Insert button
+-> done: OpenInsertDialogSteps.ThenTheUserClicksOnTheInsertButton() (1.6s)
+And the user clicks on an "Object"
+-> done: InsertSteps.GivenTheUserClicksOnAnObject("Object") (3.9s)
+And the user press function key on the keyboard
+-> done: EditingAnObjectSteps.GivenTheUserPressFOnTheKeyboard() (0.8s)
+And the user rename the object with "@#$^1234"
+-> done: InsertSteps.GivenTheUserTypeAText("@#$^1234") (0.6s)
+And the user press the enter key on the keyboard
+-> done: InsertSteps.GivenTheUserPressTheEnterKeyOnTheKeyboard() (0.4s)
+And the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.8s)
+Then the "Invalid object name" should appear on the button
+-> done: EditingObjectUsingSpecialCharacterSteps.ThenTheShouldAppearOnTheButton("Invalid object name") (0.2s)
+=> SAM.Features.Framework.EditObjectByPressingTheEscapeKeyFeature.EditingObjectUsingTheEscapeKey("TestCase1",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (43.3s)
+And the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.5s)
+And the user uses "TestCase1" from "InsertData" xml
+-> done: XMLParserSteps.GivenTheUserUsesFromXml("TestCase1", "InsertData") (0.0s)
+When the user clicks on the Insert button
+-> done: OpenInsertDialogSteps.ThenTheUserClicksOnTheInsertButton() (1.5s)
+And the user clicks on an "Object"
+-> done: InsertSteps.GivenTheUserClicksOnAnObject("Object") (3.7s)
+And the user press function key on the keyboard
+-> done: EditingAnObjectSteps.GivenTheUserPressFOnTheKeyboard() (0.8s)
+And the user rename the object with "text1234"
+-> done: InsertSteps.GivenTheUserTypeAText("text1234") (0.6s)
+And the user press the escape key
+-> done: EditingAnObjectSteps.GivenTheUserPressTheEscapeKey() (0.9s)
+Then the object is reverted to "geom placeholder"
+-> done: EditingAnObjectSteps.ThenTheObjectIsRevertedTo("geom placeholder") (0.7s)
+=> SAM.Features.Framework.EditObjectByPressingTheEscapeKeyFeature.EditingObjectUsingTheEscapeKey("TestCase2",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (42.9s)
+And the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.4s)
+And the user uses "TestCase2" from "InsertData" xml
+-> done: XMLParserSteps.GivenTheUserUsesFromXml("TestCase2", "InsertData") (0.0s)
+When the user clicks on the Insert button
+-> done: OpenInsertDialogSteps.ThenTheUserClicksOnTheInsertButton() (1.6s)
+And the user clicks on an "Object"
+-> done: InsertSteps.GivenTheUserClicksOnAnObject("Object") (4.0s)
+And the user press function key on the keyboard
+-> done: EditingAnObjectSteps.GivenTheUserPressFOnTheKeyboard() (0.8s)
+And the user rename the object with "text1234"
+-> done: InsertSteps.GivenTheUserTypeAText("text1234") (0.6s)
+And the user press the escape key
+-> done: EditingAnObjectSteps.GivenTheUserPressTheEscapeKey() (0.8s)
+Then the object is reverted to "geom placeholder"
+-> done: EditingAnObjectSteps.ThenTheObjectIsRevertedTo("geom placeholder") (0.7s)
+=> SAM.Features.Framework.EditObjectUsingPencilFeature.EditingObjectUsingPencilButton("TestCase1",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (41.7s)
+And the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.5s)
+And the user uses "TestCase1" from "InsertData" xml
+-> done: XMLParserSteps.GivenTheUserUsesFromXml("TestCase1", "InsertData") (0.0s)
+When the user clicks on the Insert button
+-> done: OpenInsertDialogSteps.ThenTheUserClicksOnTheInsertButton() (1.6s)
+And the user clicks on an "Object"
+-> done: InsertSteps.GivenTheUserClicksOnAnObject("Object") (3.9s)
+And the user click on the pencil button on the object
+-> error: An element could not be located on the page using the given search parameters.
+And the user rename the object with "geom placeholder1"
+-> skipped because of previous errors
+And the user press the enter key on the keyboard
+-> skipped because of previous errors
+And the user click on the play button on the object
+-> skipped because of previous errors
+And the user closes the insert window
+-> skipped because of previous errors
+Then the object should be inserted in the design explorer
+-> skipped because of previous errors
+=> SAM.Features.Framework.EditObjectUsingPencilFeature.EditingObjectUsingPencilButton("TestCase2",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (45.1s)
+And the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.4s)
+And the user uses "TestCase2" from "InsertData" xml
+-> done: XMLParserSteps.GivenTheUserUsesFromXml("TestCase2", "InsertData") (0.0s)
+When the user clicks on the Insert button
+-> done: OpenInsertDialogSteps.ThenTheUserClicksOnTheInsertButton() (1.5s)
+And the user clicks on an "Object"
+-> done: InsertSteps.GivenTheUserClicksOnAnObject("Object") (4.0s)
+And the user click on the pencil button on the object
+-> error: An element could not be located on the page using the given search parameters.
+And the user rename the object with "geom placeholder1"
+-> skipped because of previous errors
+And the user press the enter key on the keyboard
+-> skipped because of previous errors
+And the user click on the play button on the object
+-> skipped because of previous errors
+And the user closes the insert window
+-> skipped because of previous errors
+Then the object should be inserted in the design explorer
+-> skipped because of previous errors
+=> SAM.Features.Framework.OpenInsertDialogFeature.ClickOnInsertRibbon
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (42.3s)
+Then the user clicks on the Insert button
+-> done: OpenInsertDialogSteps.ThenTheUserClicksOnTheInsertButton() (2.1s)
+=> SAM.Features.Framework.ToValidateFileTabRibbonIsDisplayedFeature.FileTabRibbonIsDisplayed("Open",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (43.8s)
+And the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.4s)
+When the user click the File Tab
+-> error: An element could not be located on the page using the given search parameters.
+Then the ribbon "Open" is displayed
+-> skipped because of previous errors
+=> SAM.Features.Framework.ToValidateHomeTabRibbonIsDisplayedFeature.HomeTabRibbonIsDisplayed("Auto Recalculate",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (44.8s)
+When the warning message is displayed
+-> done: WarningDialogSteps.WhenTheWarningMessageIsDisplayed() (0.2s)
+Then the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.4s)
+And the ribbon "Auto Recalculate" is displayed
+-> done: OpenInsertDialogSteps.ThenTheRibbonIsDisplayed("Auto Recalculate") (2.6s)
+=> SAM.Features.Framework.ToValidateLayoutRibbonIsDisplayedFeature.LayoutRibbonIsDisplayed("Show",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (43.2s)
+And the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.4s)
+When the user click the layout Tab
+-> done: RibbonEnableDisableSteps.ThenTheUserClickTheLayoutTab() (1.0s)
+Then the ribbon "Show" is displayed
+-> done: OpenInsertDialogSteps.ThenTheRibbonIsDisplayed("Show") (2.6s)
+=> SAM.Features.Framework.ToValidateQuickAccessToolbarRibbonIsDisplayedFeature.QuickAccessToolbarRibbonIsDisplayed("Save",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (42.8s)
+When the warning message is displayed
+-> done: WarningDialogSteps.WhenTheWarningMessageIsDisplayed() (0.1s)
+Then the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.4s)
+And the ribbon "Save" is displayed
+-> done: OpenInsertDialogSteps.ThenTheRibbonIsDisplayed("Save") (2.4s)
+=> SAM.Features.Framework.ToValidateRibbonObjectForFileTabIsVisibleFeature.FileRibbonEnabledAndDisabled("New","Enabled",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (44.1s)
+And the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.5s)
+When the user click the File Tab
+-> error: An element could not be located on the page using the given search parameters.
+Then the ribbon "New" has a "Enabled"
+-> skipped because of previous errors
+=> SAM.Features.Framework.ToValidateRibbonObjectForHomeTabIsVisibleFeature.HomeRibbonObjectEnabledAndDisabled("Copy","Disabled",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (42.6s)
+When the warning message is displayed
+-> done: WarningDialogSteps.WhenTheWarningMessageIsDisplayed() (0.1s)
+Then the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.4s)
+And the ribbon "Copy" has a "Disabled"
+-> done: RibbonEnableDisableSteps.ThenTheRibbonHasA("Copy", "Disabled") (2.6s)
+=> SAM.Features.Framework.ToValidateRibbonObjectForHomeTabIsVisibleFeature.HomeRibbonObjectEnabledAndDisabled("Insert","Enabled",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (41.7s)
+When the warning message is displayed
+-> done: WarningDialogSteps.WhenTheWarningMessageIsDisplayed() (0.2s)
+Then the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.5s)
+And the ribbon "Insert" has a "Enabled"
+-> done: RibbonEnableDisableSteps.ThenTheRibbonHasA("Insert", "Enabled") (2.7s)
+=> SAM.Features.Framework.ToValidateRibbonObjectForLayoutTabIsVisibleFeature.LayoutRibbonEnabledAndDisabled("Design \n Explorer","Enabled",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (43.3s)
+And the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.4s)
+When the user click the layout Tab
+-> done: RibbonEnableDisableSteps.ThenTheUserClickTheLayoutTab() (1.0s)
+Then the ribbon "Design 
+ Explorer" has a "Enabled"
+-> No matching step definition found for the step. Use the following code to create one:
+        [Then(@"the ribbon ""Design \n Explorer""(.*)""Enabled""")]
+        public void ThenTheRibbonDesign_ExplorerEnabled(string p0)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+=> SAM.Features.Framework.ToValidateRibbonObjectForLayoutTabIsVisibleFeature.LayoutRibbonEnabledAndDisabled("Graphics","Enabled",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (41.4s)
+And the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.5s)
+When the user click the layout Tab
+-> done: RibbonEnableDisableSteps.ThenTheUserClickTheLayoutTab() (1.0s)
+Then the ribbon "Graphics" has a "Enabled"
+-> done: RibbonEnableDisableSteps.ThenTheRibbonHasA("Graphics", "Enabled") (2.6s)
+=> SAM.Features.Framework.ToValidateRibbonObjectForQuickAccessToolbarIsVisibleFeature.QuickAccessToolbarRibbonObjectEnabledAndDisabled("Save","Enabled",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (43.0s)
+When the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.5s)
+Then the ribbon "Save" has a "Enabled"
+-> done: RibbonEnableDisableSteps.ThenTheRibbonHasA("Save", "Enabled") (2.4s)
+=> SAM.Features.Framework.ToValidateRibbonObjectForQuickAccessToolbarIsVisibleFeature.QuickAccessToolbarRibbonObjectEnabledAndDisabled("Undo","Disabled",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (44.7s)
+When the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.5s)
+Then the ribbon "Undo" has a "Disabled"
+-> done: RibbonEnableDisableSteps.ThenTheRibbonHasA("Undo", "Disabled") (2.4s)
+=> SAM.Features.Framework.ToValidateRibbonObjectForSAMTabIsVisibleFeature.SAMRibbonEnabledAndDisabled("All Scenarios","Disabled",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (42.5s)
+When the warning message is displayed
+-> done: WarningDialogSteps.WhenTheWarningMessageIsDisplayed() (0.2s)
+Then the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.4s)
+And the user click the SAM Tab
+-> done: RibbonEnableDisableSteps.ThenTheUserClickTheSAMTab() (1.0s)
+And the ribbon "All Scenarios" has a "Disabled"
+-> done: RibbonEnableDisableSteps.ThenTheRibbonHasA("All Scenarios", "Disabled") (2.8s)
+=> SAM.Features.Framework.ToValidateRibbonObjectForSAMTabIsVisibleFeature.SAMRibbonEnabledAndDisabled("Update Results","Disabled",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (43.8s)
+When the warning message is displayed
+-> done: WarningDialogSteps.WhenTheWarningMessageIsDisplayed() (0.2s)
+Then the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.4s)
+And the user click the SAM Tab
+-> done: RibbonEnableDisableSteps.ThenTheUserClickTheSAMTab() (1.0s)
+And the ribbon "Update Results" has a "Disabled"
+-> done: RibbonEnableDisableSteps.ThenTheRibbonHasA("Update Results", "Disabled") (2.8s)
+=> SAM.Features.Framework.ToValidateRibbonObjectForSettingsTabIsVisibleFeature.SettingsRibbonEnabledAndDisabled("Text","Enabled",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (43.3s)
+When the warning message is displayed
+-> done: WarningDialogSteps.WhenTheWarningMessageIsDisplayed() (0.2s)
+Then the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.5s)
+And the user click the Settings Tab
+-> done: ValidateNumberBoundarySteps.ThenTheUserClickTheSettingsTab() (2.6s)
+And the ribbon "Text" has a "Enabled"
+-> done: RibbonEnableDisableSteps.ThenTheRibbonHasA("Text", "Enabled") (2.7s)
+=> SAM.Features.Framework.ToValidateRibbonObjectForSettingsTabIsVisibleFeature.SettingsRibbonEnabledAndDisabled("Graphs","Enabled",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (43.7s)
+When the warning message is displayed
+-> done: WarningDialogSteps.WhenTheWarningMessageIsDisplayed() (0.1s)
+Then the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.4s)
+And the user click the Settings Tab
+-> done: ValidateNumberBoundarySteps.ThenTheUserClickTheSettingsTab() (2.6s)
+And the ribbon "Graphs" has a "Enabled"
+-> done: RibbonEnableDisableSteps.ThenTheRibbonHasA("Graphs", "Enabled") (2.6s)
+=> SAM.Features.Framework.ToValidateRibbonObjectForTempLocationTabIsVisibleFeature.TempLocationEnabledAndDisabled("Link to Paramarine","Disabled",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (42.7s)
+When the warning message is displayed
+-> done: WarningDialogSteps.WhenTheWarningMessageIsDisplayed() (0.1s)
+Then the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.4s)
+And the user click on the Temp Location Tab
+-> done: RibbonEnableDisableSteps.ThenTheUserClickOnTheTempLocationTab() (2.7s)
+And the ribbon "Link to Paramarine" has a "Disabled"
+-> done: RibbonEnableDisableSteps.ThenTheRibbonHasA("Link to Paramarine", "Disabled") (2.6s)
+=> SAM.Features.Framework.ToValidateRibbonObjectForTempLocationTabIsVisibleFeature.TempLocationEnabledAndDisabled("Trace Anscestor","Enabled",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (42.5s)
+When the warning message is displayed
+-> done: WarningDialogSteps.WhenTheWarningMessageIsDisplayed() (0.8s)
+Then the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.8s)
+And the user click on the Temp Location Tab
+-> done: RibbonEnableDisableSteps.ThenTheUserClickOnTheTempLocationTab() (2.7s)
+And the ribbon "Trace Anscestor" has a "Enabled"
+-> done: RibbonEnableDisableSteps.ThenTheRibbonHasA("Trace Anscestor", "Enabled") (2.6s)
+=> SAM.Features.Framework.ToValidateSAMTabRibbonIsDisplayedFeature.SAMTabRibbonIsDisplayed("Simulation",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (43.0s)
+When the warning message is displayed
+-> done: WarningDialogSteps.WhenTheWarningMessageIsDisplayed() (0.1s)
+Then the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.4s)
+And the user click the SAM Tab
+-> done: RibbonEnableDisableSteps.ThenTheUserClickTheSAMTab() (0.9s)
+And the ribbon "Simulation" is displayed
+-> error: An element could not be located on the page using the given search parameters.
+=> SAM.Features.Framework.ToValidateSettingsTabRibbonIsDisplayedFeature.SettingsTabRibbonIsDisplayed("Graphs",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (43.2s)
+When the warning message is displayed
+-> done: WarningDialogSteps.WhenTheWarningMessageIsDisplayed() (0.2s)
+Then the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.5s)
+And the user click the Settings Tab
+-> done: ValidateNumberBoundarySteps.ThenTheUserClickTheSettingsTab() (2.6s)
+And the ribbon "Graphs" is displayed
+-> done: OpenInsertDialogSteps.ThenTheRibbonIsDisplayed("Graphs") (2.6s)
+=> SAM.Features.Framework.ToValidateSettingsTabRibbonIsDisplayedFeature.SettingsTabRibbonIsDisplayed("Legend",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (42.6s)
+When the warning message is displayed
+-> done: WarningDialogSteps.WhenTheWarningMessageIsDisplayed() (0.2s)
+Then the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.4s)
+And the user click the Settings Tab
+-> done: ValidateNumberBoundarySteps.ThenTheUserClickTheSettingsTab() (2.6s)
+And the ribbon "Legend" is displayed
+-> done: OpenInsertDialogSteps.ThenTheRibbonIsDisplayed("Legend") (2.7s)
+=> SAM.Features.Framework.ToValidateTempLocationRibbonIsDisplayedFeature.TempLocationRibbonIsDisplayed("Validation",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (45.7s)
+When the warning message is displayed
+-> done: WarningDialogSteps.WhenTheWarningMessageIsDisplayed() (0.2s)
+Then the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.4s)
+And the user click on the Temp Location Tab
+-> done: RibbonEnableDisableSteps.ThenTheUserClickOnTheTempLocationTab() (2.7s)
+And the ribbon "Validation" is displayed
+-> done: OpenInsertDialogSteps.ThenTheRibbonIsDisplayed("Validation") (2.6s)
+=> SAM.Features.Framework.ToValidateTempLocationRibbonIsDisplayedFeature.TempLocationRibbonIsDisplayed("Remove Traces",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (41.6s)
+When the warning message is displayed
+-> done: WarningDialogSteps.WhenTheWarningMessageIsDisplayed() (0.2s)
+Then the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.4s)
+And the user click on the Temp Location Tab
+-> done: RibbonEnableDisableSteps.ThenTheUserClickOnTheTempLocationTab() (2.7s)
+And the ribbon "Remove Traces" is displayed
+-> done: OpenInsertDialogSteps.ThenTheRibbonIsDisplayed("Remove Traces") (2.6s)
+=> SAM.Features.Framework.XMLParserFeature.XMLParser("TestCase1",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (44.8s)
+And the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.4s)
+And the user uses "TestCase1" from "InsertData" xml
+-> done: XMLParserSteps.GivenTheUserUsesFromXml("TestCase1", "InsertData") (0.0s)
+When the user clicks on the Insert button
+-> done: OpenInsertDialogSteps.ThenTheUserClicksOnTheInsertButton() (1.5s)
+When the user clicks on an "Object"
+-> done: InsertSteps.GivenTheUserClicksOnAnObject("Object") (3.7s)
+And the user click on the pencil button on the object
+-> error: An element could not be located on the page using the given search parameters.
+And the user rename the object with "Text"
+-> skipped because of previous errors
+And the user press the enter key on the keyboard
+-> skipped because of previous errors
+And the user click on the play button on the object
+-> skipped because of previous errors
+=> SAM.Features.Framework.XMLParserFeature.XMLParser("TestCase2",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (42.8s)
+And the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.4s)
+And the user uses "TestCase2" from "InsertData" xml
+-> done: XMLParserSteps.GivenTheUserUsesFromXml("TestCase2", "InsertData") (0.0s)
+When the user clicks on the Insert button
+-> done: OpenInsertDialogSteps.ThenTheUserClicksOnTheInsertButton() (1.5s)
+When the user clicks on an "Object"
+-> done: InsertSteps.GivenTheUserClicksOnAnObject("Object") (3.7s)
+And the user click on the pencil button on the object
+-> error: An element could not be located on the page using the given search parameters.
+And the user rename the object with "Text"
+-> skipped because of previous errors
+And the user press the enter key on the keyboard
+-> skipped because of previous errors
+And the user click on the play button on the object
+-> skipped because of previous errors

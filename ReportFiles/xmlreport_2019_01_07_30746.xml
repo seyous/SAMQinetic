@@ -1,0 +1,717 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="SAM.dll" total="37" errors="7" failures="0" not-run="0" inconclusive="1" ignored="0" skipped="0" invalid="0" date="2019-07-01" time="12:07:46">
+  <environment nunit-version="3.6.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.17134.0" platform="Win32NT" cwd="C:\SAMAutomation\Reports" machine-name="DESKTOP-QQB6KRE" user="aka_s" user-domain="DESKTOP-QQB6KRE" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="SAM.dll" executed="True" result="Failure" success="False" time="1857.681" asserts="0">
+    <properties>
+      <property name="_PID" value="18168" />
+      <property name="_APPDOMAIN" value="domain-" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+      <stack-trace />
+    </failure>
+    <results>
+      <test-suite type="TestSuite" name="SAM" executed="True" result="Failure" success="False" time="1857.653" asserts="0">
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+          <stack-trace />
+        </failure>
+        <results>
+          <test-suite type="TestSuite" name="Features" executed="True" result="Failure" success="False" time="1857.652" asserts="0">
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+              <stack-trace />
+            </failure>
+            <results>
+              <test-suite type="TestSuite" name="Framework" executed="True" result="Failure" success="False" time="1857.652" asserts="0">
+                <failure>
+                  <message><![CDATA[One or more child tests had errors]]></message>
+                  <stack-trace />
+                </failure>
+                <results>
+                  <test-suite type="TestFixture" name="EditingAnObjectUsingDigitsAndLettersFeature" description="Editing An Object Using Digits and Letters" executed="True" result="Success" success="True" time="108.086" asserts="0">
+                    <categories>
+                      <category name="Framework" />
+                      <category name="Done" />
+                    </categories>
+                    <properties>
+                      <property name="Description" value="Editing An Object Using Digits and Letters" />
+                    </properties>
+                    <results>
+                      <test-suite type="ParameterizedTest" name="EditingObjectWithValidObjectName" description="Editing object with Valid Object Name" executed="True" result="Success" success="True" time="107.319" asserts="0">
+                        <properties>
+                          <property name="Description" value="Editing object with Valid Object Name" />
+                        </properties>
+                        <results>
+                          <test-case name="SAM.Features.Framework.EditingAnObjectUsingDigitsAndLettersFeature.EditingObjectWithValidObjectName(&quot;TestCase1&quot;,null)" executed="True" result="Success" success="True" time="51.498" asserts="0" />
+                          <test-case name="SAM.Features.Framework.EditingAnObjectUsingDigitsAndLettersFeature.EditingObjectWithValidObjectName(&quot;TestCase2&quot;,null)" executed="True" result="Success" success="True" time="55.778" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="EditingAnObjectUsingTheEnterKeyFeature" description="Editing An Object Using the Enter Key" executed="True" result="Success" success="True" time="102.490" asserts="0">
+                    <categories>
+                      <category name="Framework" />
+                      <category name="Done" />
+                    </categories>
+                    <properties>
+                      <property name="Description" value="Editing An Object Using the Enter Key" />
+                    </properties>
+                    <results>
+                      <test-suite type="ParameterizedTest" name="EditingObjectUsingEnterKey" description="Editing object Using Enter Key" executed="True" result="Success" success="True" time="102.487" asserts="0">
+                        <categories>
+                          <category name="editobject" />
+                        </categories>
+                        <properties>
+                          <property name="Description" value="Editing object Using Enter Key" />
+                        </properties>
+                        <results>
+                          <test-case name="SAM.Features.Framework.EditingAnObjectUsingTheEnterKeyFeature.EditingObjectUsingEnterKey(&quot;TestCase1&quot;,null)" executed="True" result="Success" success="True" time="51.025" asserts="0" />
+                          <test-case name="SAM.Features.Framework.EditingAnObjectUsingTheEnterKeyFeature.EditingObjectUsingEnterKey(&quot;TestCase2&quot;,null)" executed="True" result="Success" success="True" time="51.461" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="EditingAnObjectUsingTheF2KeyFeature" description="Editing An Object Using the F2 key" executed="True" result="Success" success="True" time="109.612" asserts="0">
+                    <categories>
+                      <category name="Framework" />
+                      <category name="Done" />
+                    </categories>
+                    <properties>
+                      <property name="Description" value="Editing An Object Using the F2 key" />
+                    </properties>
+                    <results>
+                      <test-suite type="ParameterizedTest" name="EditingObjectUsingF2KeyOnKeyboard" description="Editing object Using F2 Key on Keyboard" executed="True" result="Success" success="True" time="109.609" asserts="0">
+                        <categories>
+                          <category name="editobject" />
+                        </categories>
+                        <properties>
+                          <property name="Description" value="Editing object Using F2 Key on Keyboard" />
+                        </properties>
+                        <results>
+                          <test-case name="SAM.Features.Framework.EditingAnObjectUsingTheF2KeyFeature.EditingObjectUsingF2KeyOnKeyboard(&quot;TestCase1&quot;,null)" executed="True" result="Success" success="True" time="54.773" asserts="0" />
+                          <test-case name="SAM.Features.Framework.EditingAnObjectUsingTheF2KeyFeature.EditingObjectUsingF2KeyOnKeyboard(&quot;TestCase2&quot;,null)" executed="True" result="Success" success="True" time="54.835" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="EditingObjectUsingSpecialCharacterFeature" description="Editing Object Using Special Character" executed="True" result="Success" success="True" time="101.454" asserts="0">
+                    <categories>
+                      <category name="Framework" />
+                      <category name="Done" />
+                    </categories>
+                    <properties>
+                      <property name="Description" value="Editing Object Using Special Character" />
+                    </properties>
+                    <results>
+                      <test-suite type="ParameterizedTest" name="EditingObjectWithInvalidObjectName" description="Editing object With invalid Object Name" executed="True" result="Success" success="True" time="101.450" asserts="0">
+                        <categories>
+                          <category name="editobject" />
+                        </categories>
+                        <properties>
+                          <property name="Description" value="Editing object With invalid Object Name" />
+                        </properties>
+                        <results>
+                          <test-case name="SAM.Features.Framework.EditingObjectUsingSpecialCharacterFeature.EditingObjectWithInvalidObjectName(&quot;TestCase1&quot;,null)" executed="True" result="Success" success="True" time="50.143" asserts="0" />
+                          <test-case name="SAM.Features.Framework.EditingObjectUsingSpecialCharacterFeature.EditingObjectWithInvalidObjectName(&quot;TestCase2&quot;,null)" executed="True" result="Success" success="True" time="51.307" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="EditObjectByPressingTheEscapeKeyFeature" description="Edit Object by Pressing the Escape Key" executed="True" result="Success" success="True" time="103.897" asserts="0">
+                    <categories>
+                      <category name="Framework" />
+                      <category name="Done" />
+                    </categories>
+                    <properties>
+                      <property name="Description" value="Edit Object by Pressing the Escape Key" />
+                    </properties>
+                    <results>
+                      <test-suite type="ParameterizedTest" name="EditingObjectUsingTheEscapeKey" description="Editing object Using the Escape Key" executed="True" result="Success" success="True" time="103.897" asserts="0">
+                        <categories>
+                          <category name="editobject" />
+                        </categories>
+                        <properties>
+                          <property name="Description" value="Editing object Using the Escape Key" />
+                        </properties>
+                        <results>
+                          <test-case name="SAM.Features.Framework.EditObjectByPressingTheEscapeKeyFeature.EditingObjectUsingTheEscapeKey(&quot;TestCase1&quot;,null)" executed="True" result="Success" success="True" time="51.948" asserts="0" />
+                          <test-case name="SAM.Features.Framework.EditObjectByPressingTheEscapeKeyFeature.EditingObjectUsingTheEscapeKey(&quot;TestCase2&quot;,null)" executed="True" result="Success" success="True" time="51.949" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="EditObjectUsingPencilFeature" description="Edit Object Using Pencil" executed="True" result="Failure" success="False" time="122.790" asserts="0">
+                    <categories>
+                      <category name="Framework" />
+                      <category name="Done" />
+                    </categories>
+                    <properties>
+                      <property name="Description" value="Edit Object Using Pencil" />
+                    </properties>
+                    <failure>
+                      <message><![CDATA[One or more child tests had errors]]></message>
+                      <stack-trace />
+                    </failure>
+                    <results>
+                      <test-suite type="ParameterizedTest" name="EditingObjectUsingPencilButton" description="Editing object Using Pencil Button" executed="True" result="Failure" success="False" time="122.789" asserts="0">
+                        <categories>
+                          <category name="editobject" />
+                        </categories>
+                        <properties>
+                          <property name="Description" value="Editing object Using Pencil Button" />
+                        </properties>
+                        <failure>
+                          <message><![CDATA[One or more child tests had errors]]></message>
+                          <stack-trace />
+                        </failure>
+                        <results>
+                          <test-case name="SAM.Features.Framework.EditObjectUsingPencilFeature.EditingObjectUsingPencilButton(&quot;TestCase1&quot;,null)" executed="True" result="Error" success="False" time="59.817" asserts="0">
+                            <failure>
+                              <message><![CDATA[System.InvalidOperationException : An element could not be located on the page using the given search parameters.]]></message>
+                              <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Appium.AppiumWebElement.FindElementByName(String name)
+   at SAM.WinFormObjects.InsertFormObject.ClickPencil() in C:\SAMAutomation\WinFormObjects\InsertFormObject.cs:line 68
+   at SAM.Steps.InsertSteps.GivenTheUserClickOnThePencilButtonOnTheObject() in C:\SAMAutomation\Steps\InsertSteps.cs:line 85
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at SAM.Features.Framework.EditObjectUsingPencilFeature.ScenarioCleanup()
+   at SAM.Features.Framework.EditObjectUsingPencilFeature.EditingObjectUsingPencilButton(String testData, String[] exampleTags) in C:\SAMAutomation\Features\Framework\EditObjectUsingPencil.feature:line 17]]></stack-trace>
+                            </failure>
+                          </test-case>
+                          <test-case name="SAM.Features.Framework.EditObjectUsingPencilFeature.EditingObjectUsingPencilButton(&quot;TestCase2&quot;,null)" executed="True" result="Error" success="False" time="62.971" asserts="0">
+                            <failure>
+                              <message><![CDATA[System.InvalidOperationException : An element could not be located on the page using the given search parameters.]]></message>
+                              <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Appium.AppiumWebElement.FindElementByName(String name)
+   at SAM.WinFormObjects.InsertFormObject.ClickPencil() in C:\SAMAutomation\WinFormObjects\InsertFormObject.cs:line 68
+   at SAM.Steps.InsertSteps.GivenTheUserClickOnThePencilButtonOnTheObject() in C:\SAMAutomation\Steps\InsertSteps.cs:line 85
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at SAM.Features.Framework.EditObjectUsingPencilFeature.ScenarioCleanup()
+   at SAM.Features.Framework.EditObjectUsingPencilFeature.EditingObjectUsingPencilButton(String testData, String[] exampleTags) in C:\SAMAutomation\Features\Framework\EditObjectUsingPencil.feature:line 17]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="OpenInsertDialogFeature" description="OpenInsertDialog" executed="True" result="Success" success="True" time="44.361" asserts="0">
+                    <categories>
+                      <category name="Framework" />
+                      <category name="Done" />
+                    </categories>
+                    <properties>
+                      <property name="Description" value="OpenInsertDialog" />
+                    </properties>
+                    <results>
+                      <test-case name="SAM.Features.Framework.OpenInsertDialogFeature.ClickOnInsertRibbon" description="Click on InsertRibbon" executed="True" result="Success" success="True" time="44.359" asserts="0">
+                        <categories>
+                          <category name="mytag" />
+                        </categories>
+                        <properties>
+                          <property name="Description" value="Click on InsertRibbon" />
+                        </properties>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="ToValidateFileTabRibbonIsDisplayedFeature" description="To Validate File Tab Ribbon is displayed" executed="True" result="Failure" success="False" time="45.277" asserts="0">
+                    <categories>
+                      <category name="Framework" />
+                      <category name="Done" />
+                    </categories>
+                    <properties>
+                      <property name="Description" value="To Validate File Tab Ribbon is displayed" />
+                    </properties>
+                    <failure>
+                      <message><![CDATA[One or more child tests had errors]]></message>
+                      <stack-trace />
+                    </failure>
+                    <results>
+                      <test-suite type="ParameterizedTest" name="FileTabRibbonIsDisplayed" description="File Tab Ribbon is Displayed" executed="True" result="Failure" success="False" time="45.273" asserts="0">
+                        <categories>
+                          <category name="DisplayedTabRibbon" />
+                        </categories>
+                        <properties>
+                          <property name="Description" value="File Tab Ribbon is Displayed" />
+                        </properties>
+                        <failure>
+                          <message><![CDATA[One or more child tests had errors]]></message>
+                          <stack-trace />
+                        </failure>
+                        <results>
+                          <test-case name="SAM.Features.Framework.ToValidateFileTabRibbonIsDisplayedFeature.FileTabRibbonIsDisplayed(&quot;Open&quot;,null)" executed="True" result="Error" success="False" time="45.272" asserts="0">
+                            <failure>
+                              <message><![CDATA[System.InvalidOperationException : An element could not be located on the page using the given search parameters.]]></message>
+                              <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Appium.AppiumDriver`1.FindElementByName(String name)
+   at SAM.WinFormObjects.RibbonObjects.get_FileTab() in C:\SAMAutomation\WinFormObjects\RibbonObjects.cs:line 24
+   at SAM.WinFormObjects.RibbonObjects.ClickFileTab() in C:\SAMAutomation\WinFormObjects\RibbonObjects.cs:line 75
+   at SAM.Steps.RibbonEnableDisableSteps.ThenTheUserClickTheFileTab() in C:\SAMAutomation\Steps\RibbonEnableDisableSteps.cs:line 29
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at SAM.Features.Framework.ToValidateFileTabRibbonIsDisplayedFeature.ScenarioCleanup()
+   at SAM.Features.Framework.ToValidateFileTabRibbonIsDisplayedFeature.FileTabRibbonIsDisplayed(String ribbon, String[] exampleTags) in C:\SAMAutomation\Features\Framework\FileTabRibbonIsDisplayed .feature:line 10]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="ToValidateHomeTabRibbonIsDisplayedFeature" description="To Validate Home Tab Ribbon is displayed" executed="True" result="Success" success="True" time="47.999" asserts="0">
+                    <categories>
+                      <category name="Framework" />
+                      <category name="Done" />
+                    </categories>
+                    <properties>
+                      <property name="Description" value="To Validate Home Tab Ribbon is displayed" />
+                    </properties>
+                    <results>
+                      <test-suite type="ParameterizedTest" name="HomeTabRibbonIsDisplayed" description="Home Tab Ribbon is Displayed" executed="True" result="Success" success="True" time="47.997" asserts="0">
+                        <categories>
+                          <category name="DisplayedTabRibbon" />
+                        </categories>
+                        <properties>
+                          <property name="Description" value="Home Tab Ribbon is Displayed" />
+                        </properties>
+                        <results>
+                          <test-case name="SAM.Features.Framework.ToValidateHomeTabRibbonIsDisplayedFeature.HomeTabRibbonIsDisplayed(&quot;Auto Recalculate&quot;,null)" executed="True" result="Success" success="True" time="47.997" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="ToValidateLayoutRibbonIsDisplayedFeature" description="To Validate Layout Ribbon is displayed" executed="True" result="Success" success="True" time="47.292" asserts="0">
+                    <categories>
+                      <category name="Framework" />
+                      <category name="Done" />
+                    </categories>
+                    <properties>
+                      <property name="Description" value="To Validate Layout Ribbon is displayed" />
+                    </properties>
+                    <results>
+                      <test-suite type="ParameterizedTest" name="LayoutRibbonIsDisplayed" description="Layout Ribbon is Displayed" executed="True" result="Success" success="True" time="47.288" asserts="0">
+                        <categories>
+                          <category name="DisplayedTabRibbon" />
+                        </categories>
+                        <properties>
+                          <property name="Description" value="Layout Ribbon is Displayed" />
+                        </properties>
+                        <results>
+                          <test-case name="SAM.Features.Framework.ToValidateLayoutRibbonIsDisplayedFeature.LayoutRibbonIsDisplayed(&quot;Show&quot;,null)" executed="True" result="Success" success="True" time="47.288" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="ToValidateQuickAccessToolbarRibbonIsDisplayedFeature" description="To Validate Quick Access Toolbar Ribbon is displayed" executed="True" result="Success" success="True" time="45.759" asserts="0">
+                    <categories>
+                      <category name="Framework" />
+                      <category name="Done" />
+                    </categories>
+                    <properties>
+                      <property name="Description" value="To Validate Quick Access Toolbar Ribbon is displayed" />
+                    </properties>
+                    <results>
+                      <test-suite type="ParameterizedTest" name="QuickAccessToolbarRibbonIsDisplayed" description="Quick Access Toolbar Ribbon is Displayed" executed="True" result="Success" success="True" time="45.756" asserts="0">
+                        <categories>
+                          <category name="DisplayedTabRibbon" />
+                        </categories>
+                        <properties>
+                          <property name="Description" value="Quick Access Toolbar Ribbon is Displayed" />
+                        </properties>
+                        <results>
+                          <test-case name="SAM.Features.Framework.ToValidateQuickAccessToolbarRibbonIsDisplayedFeature.QuickAccessToolbarRibbonIsDisplayed(&quot;Save&quot;,null)" executed="True" result="Success" success="True" time="45.756" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="ToValidateRibbonObjectForFileTabIsVisibleFeature" description="To Validate Ribbon Object for File Tab is visible" executed="True" result="Failure" success="False" time="45.716" asserts="0">
+                    <categories>
+                      <category name="Framework" />
+                      <category name="Done" />
+                    </categories>
+                    <properties>
+                      <property name="Description" value="To Validate Ribbon Object for File Tab is visible" />
+                    </properties>
+                    <failure>
+                      <message><![CDATA[One or more child tests had errors]]></message>
+                      <stack-trace />
+                    </failure>
+                    <results>
+                      <test-suite type="ParameterizedTest" name="FileRibbonEnabledAndDisabled" description="File Ribbon Enabled and Disabled" executed="True" result="Failure" success="False" time="45.714" asserts="0">
+                        <categories>
+                          <category name="EnableDisableRibbon" />
+                        </categories>
+                        <properties>
+                          <property name="Description" value="File Ribbon Enabled and Disabled" />
+                        </properties>
+                        <failure>
+                          <message><![CDATA[One or more child tests had errors]]></message>
+                          <stack-trace />
+                        </failure>
+                        <results>
+                          <test-case name="SAM.Features.Framework.ToValidateRibbonObjectForFileTabIsVisibleFeature.FileRibbonEnabledAndDisabled(&quot;New&quot;,&quot;Enabled&quot;,null)" executed="True" result="Error" success="False" time="45.714" asserts="0">
+                            <failure>
+                              <message><![CDATA[System.InvalidOperationException : An element could not be located on the page using the given search parameters.]]></message>
+                              <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Appium.AppiumDriver`1.FindElementByName(String name)
+   at SAM.WinFormObjects.RibbonObjects.get_FileTab() in C:\SAMAutomation\WinFormObjects\RibbonObjects.cs:line 24
+   at SAM.WinFormObjects.RibbonObjects.ClickFileTab() in C:\SAMAutomation\WinFormObjects\RibbonObjects.cs:line 75
+   at SAM.Steps.RibbonEnableDisableSteps.ThenTheUserClickTheFileTab() in C:\SAMAutomation\Steps\RibbonEnableDisableSteps.cs:line 29
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at SAM.Features.Framework.ToValidateRibbonObjectForFileTabIsVisibleFeature.ScenarioCleanup()
+   at SAM.Features.Framework.ToValidateRibbonObjectForFileTabIsVisibleFeature.FileRibbonEnabledAndDisabled(String ribbon, String visibility, String[] exampleTags) in C:\SAMAutomation\Features\Framework\FileTabRibbonEnableDisable.feature:line 10]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="ToValidateRibbonObjectForHomeTabIsVisibleFeature" description="To Validate Ribbon Object for Home Tab is visible" executed="True" result="Success" success="True" time="90.752" asserts="0">
+                    <categories>
+                      <category name="Framework" />
+                      <category name="Done" />
+                    </categories>
+                    <properties>
+                      <property name="Description" value="To Validate Ribbon Object for Home Tab is visible" />
+                    </properties>
+                    <results>
+                      <test-suite type="ParameterizedTest" name="HomeRibbonObjectEnabledAndDisabled" description="Home Ribbon Object Enabled and Disabled" executed="True" result="Success" success="True" time="90.750" asserts="0">
+                        <categories>
+                          <category name="EnableDisableRibbon" />
+                        </categories>
+                        <properties>
+                          <property name="Description" value="Home Ribbon Object Enabled and Disabled" />
+                        </properties>
+                        <results>
+                          <test-case name="SAM.Features.Framework.ToValidateRibbonObjectForHomeTabIsVisibleFeature.HomeRibbonObjectEnabledAndDisabled(&quot;Copy&quot;,&quot;Disabled&quot;,null)" executed="True" result="Success" success="True" time="45.786" asserts="0" />
+                          <test-case name="SAM.Features.Framework.ToValidateRibbonObjectForHomeTabIsVisibleFeature.HomeRibbonObjectEnabledAndDisabled(&quot;Insert&quot;,&quot;Enabled&quot;,null)" executed="True" result="Success" success="True" time="44.963" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="ToValidateRibbonObjectForLayoutTabIsVisibleFeature" description="To Validate Ribbon Object for Layout Tab is visible" executed="True" result="Success" success="True" time="90.369" asserts="0">
+                    <categories>
+                      <category name="Framework" />
+                      <category name="Done" />
+                    </categories>
+                    <properties>
+                      <property name="Description" value="To Validate Ribbon Object for Layout Tab is visible" />
+                    </properties>
+                    <results>
+                      <test-suite type="ParameterizedTest" name="LayoutRibbonEnabledAndDisabled" description="Layout Ribbon Enabled and Disabled" executed="True" result="Success" success="True" time="90.366" asserts="0">
+                        <categories>
+                          <category name="EnableDisableRibbon" />
+                        </categories>
+                        <properties>
+                          <property name="Description" value="Layout Ribbon Enabled and Disabled" />
+                        </properties>
+                        <results>
+                          <test-case name="SAM.Features.Framework.ToValidateRibbonObjectForLayoutTabIsVisibleFeature.LayoutRibbonEnabledAndDisabled(&quot;Design \n Explorer&quot;,&quot;Enabled&quot;,null)" executed="True" result="Inconclusive" success="False" time="44.863" asserts="0">
+                            <reason>
+                              <message><![CDATA[No matching step definition found for one or more steps.
+using System;
+using TechTalk.SpecFlow;
+
+namespace MyNamespace
+{
+    [Binding]
+    public class StepDefinitions
+    {
+        [Then(@"the ribbon ""Design \n Explorer""(.*)""Enabled""")]
+        public void ThenTheRibbonDesign_ExplorerEnabled(string p0)
+        {
+            ScenarioContext.Current.Pending();
+        }
+    }
+}
+]]></message>
+                            </reason>
+                          </test-case>
+                          <test-case name="SAM.Features.Framework.ToValidateRibbonObjectForLayoutTabIsVisibleFeature.LayoutRibbonEnabledAndDisabled(&quot;Graphics&quot;,&quot;Enabled&quot;,null)" executed="True" result="Success" success="True" time="45.503" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="ToValidateRibbonObjectForQuickAccessToolbarIsVisibleFeature" description="To Validate Ribbon Object for Quick Access Toolbar is visible" executed="True" result="Success" success="True" time="93.483" asserts="0">
+                    <categories>
+                      <category name="Framework" />
+                      <category name="Done" />
+                    </categories>
+                    <properties>
+                      <property name="Description" value="To Validate Ribbon Object for Quick Access Toolbar is visible" />
+                    </properties>
+                    <results>
+                      <test-suite type="ParameterizedTest" name="QuickAccessToolbarRibbonObjectEnabledAndDisabled" description="Quick Access Toolbar Ribbon Object Enabled and Disabled" executed="True" result="Success" success="True" time="93.480" asserts="0">
+                        <categories>
+                          <category name="EnableDisableRibbon" />
+                        </categories>
+                        <properties>
+                          <property name="Description" value="Quick Access Toolbar Ribbon Object Enabled and Disabled" />
+                        </properties>
+                        <results>
+                          <test-case name="SAM.Features.Framework.ToValidateRibbonObjectForQuickAccessToolbarIsVisibleFeature.QuickAccessToolbarRibbonObjectEnabledAndDisabled(&quot;Save&quot;,&quot;Enabled&quot;,null)" executed="True" result="Success" success="True" time="45.882" asserts="0" />
+                          <test-case name="SAM.Features.Framework.ToValidateRibbonObjectForQuickAccessToolbarIsVisibleFeature.QuickAccessToolbarRibbonObjectEnabledAndDisabled(&quot;Undo&quot;,&quot;Disabled&quot;,null)" executed="True" result="Success" success="True" time="47.598" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="ToValidateRibbonObjectForSAMTabIsVisibleFeature" description="To Validate Ribbon Object for SAM Tab is visible" executed="True" result="Success" success="True" time="95.120" asserts="0">
+                    <categories>
+                      <category name="Framework" />
+                      <category name="Done" />
+                    </categories>
+                    <properties>
+                      <property name="Description" value="To Validate Ribbon Object for SAM Tab is visible" />
+                    </properties>
+                    <results>
+                      <test-suite type="ParameterizedTest" name="SAMRibbonEnabledAndDisabled" description="SAM Ribbon enabled and disabled" executed="True" result="Success" success="True" time="95.119" asserts="0">
+                        <categories>
+                          <category name="EnableDisableRibbon" />
+                        </categories>
+                        <properties>
+                          <property name="Description" value="SAM Ribbon enabled and disabled" />
+                        </properties>
+                        <results>
+                          <test-case name="SAM.Features.Framework.ToValidateRibbonObjectForSAMTabIsVisibleFeature.SAMRibbonEnabledAndDisabled(&quot;All Scenarios&quot;,&quot;Disabled&quot;,null)" executed="True" result="Success" success="True" time="46.938" asserts="0" />
+                          <test-case name="SAM.Features.Framework.ToValidateRibbonObjectForSAMTabIsVisibleFeature.SAMRibbonEnabledAndDisabled(&quot;Update Results&quot;,&quot;Disabled&quot;,null)" executed="True" result="Success" success="True" time="48.181" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="ToValidateRibbonObjectForSettingsTabIsVisibleFeature" description="To Validate Ribbon Object for Settings Tab is visible" executed="True" result="Success" success="True" time="98.585" asserts="0">
+                    <categories>
+                      <category name="Framework" />
+                      <category name="Done" />
+                    </categories>
+                    <properties>
+                      <property name="Description" value="To Validate Ribbon Object for Settings Tab is visible" />
+                    </properties>
+                    <results>
+                      <test-suite type="ParameterizedTest" name="SettingsRibbonEnabledAndDisabled" description="Settings Ribbon enabled and disabled" executed="True" result="Success" success="True" time="98.583" asserts="0">
+                        <categories>
+                          <category name="EnableDisableRibbon" />
+                        </categories>
+                        <properties>
+                          <property name="Description" value="Settings Ribbon enabled and disabled" />
+                        </properties>
+                        <results>
+                          <test-case name="SAM.Features.Framework.ToValidateRibbonObjectForSettingsTabIsVisibleFeature.SettingsRibbonEnabledAndDisabled(&quot;Text&quot;,&quot;Enabled&quot;,null)" executed="True" result="Success" success="True" time="49.134" asserts="0" />
+                          <test-case name="SAM.Features.Framework.ToValidateRibbonObjectForSettingsTabIsVisibleFeature.SettingsRibbonEnabledAndDisabled(&quot;Graphs&quot;,&quot;Enabled&quot;,null)" executed="True" result="Success" success="True" time="49.449" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="ToValidateRibbonObjectForTempLocationTabIsVisibleFeature" description="To Validate Ribbon Object for TempLocation Tab is visible" executed="True" result="Success" success="True" time="97.969" asserts="0">
+                    <categories>
+                      <category name="Framework" />
+                      <category name="Done" />
+                    </categories>
+                    <properties>
+                      <property name="Description" value="To Validate Ribbon Object for TempLocation Tab is visible" />
+                    </properties>
+                    <results>
+                      <test-suite type="ParameterizedTest" name="TempLocationEnabledAndDisabled" description="Temp Location Enabled and Disabled" executed="True" result="Success" success="True" time="97.967" asserts="0">
+                        <categories>
+                          <category name="EnableDisableRibbon" />
+                        </categories>
+                        <properties>
+                          <property name="Description" value="Temp Location Enabled and Disabled" />
+                        </properties>
+                        <results>
+                          <test-case name="SAM.Features.Framework.ToValidateRibbonObjectForTempLocationTabIsVisibleFeature.TempLocationEnabledAndDisabled(&quot;Link to Paramarine&quot;,&quot;Disabled&quot;,null)" executed="True" result="Success" success="True" time="48.570" asserts="0" />
+                          <test-case name="SAM.Features.Framework.ToValidateRibbonObjectForTempLocationTabIsVisibleFeature.TempLocationEnabledAndDisabled(&quot;Trace Anscestor&quot;,&quot;Enabled&quot;,null)" executed="True" result="Success" success="True" time="49.397" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="ToValidateSAMTabRibbonIsDisplayedFeature" description="To Validate SAM Tab Ribbon is displayed" executed="True" result="Failure" success="False" time="47.407" asserts="0">
+                    <categories>
+                      <category name="Framework" />
+                      <category name="Done" />
+                    </categories>
+                    <properties>
+                      <property name="Description" value="To Validate SAM Tab Ribbon is displayed" />
+                    </properties>
+                    <failure>
+                      <message><![CDATA[One or more child tests had errors]]></message>
+                      <stack-trace />
+                    </failure>
+                    <results>
+                      <test-suite type="ParameterizedTest" name="SAMTabRibbonIsDisplayed" description="SAM Tab Ribbon is Displayed" executed="True" result="Failure" success="False" time="47.405" asserts="0">
+                        <categories>
+                          <category name="DisplayedTabRibbon" />
+                        </categories>
+                        <properties>
+                          <property name="Description" value="SAM Tab Ribbon is Displayed" />
+                        </properties>
+                        <failure>
+                          <message><![CDATA[One or more child tests had errors]]></message>
+                          <stack-trace />
+                        </failure>
+                        <results>
+                          <test-case name="SAM.Features.Framework.ToValidateSAMTabRibbonIsDisplayedFeature.SAMTabRibbonIsDisplayed(&quot;Simulation&quot;,null)" executed="True" result="Error" success="False" time="47.405" asserts="0">
+                            <failure>
+                              <message><![CDATA[System.InvalidOperationException : An element could not be located on the page using the given search parameters.]]></message>
+                              <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Appium.AppiumDriver`1.FindElementByName(String name)
+   at SAM.WinFormObjects.RibbonObjects.GetRibbon(String ribbonName) in C:\SAMAutomation\WinFormObjects\RibbonObjects.cs:line 29
+   at SAM.WinFormObjects.RibbonObjects.IsRibbonButtonDisplayed(String ribbonText) in C:\SAMAutomation\WinFormObjects\RibbonObjects.cs:line 115
+   at SAM.Steps.OpenInsertDialogSteps.ThenTheRibbonIsDisplayed(String ribbonName) in C:\SAMAutomation\Steps\RibbonSteps.cs:line 36
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at SAM.Features.Framework.ToValidateSAMTabRibbonIsDisplayedFeature.ScenarioCleanup()
+   at SAM.Features.Framework.ToValidateSAMTabRibbonIsDisplayedFeature.SAMTabRibbonIsDisplayed(String ribbon, String[] exampleTags) in C:\SAMAutomation\Features\Framework\SAMTabRibbonIsDisplayed.feature:line 12]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="ToValidateSettingsTabRibbonIsDisplayedFeature" description="To Validate Settings Tab Ribbon is displayed" executed="True" result="Success" success="True" time="97.413" asserts="0">
+                    <categories>
+                      <category name="Framework" />
+                      <category name="Done" />
+                    </categories>
+                    <properties>
+                      <property name="Description" value="To Validate Settings Tab Ribbon is displayed" />
+                    </properties>
+                    <results>
+                      <test-suite type="ParameterizedTest" name="SettingsTabRibbonIsDisplayed" description="Settings Tab Ribbon is Displayed" executed="True" result="Success" success="True" time="97.412" asserts="0">
+                        <categories>
+                          <category name="DisplayedTabRibbon" />
+                        </categories>
+                        <properties>
+                          <property name="Description" value="Settings Tab Ribbon is Displayed" />
+                        </properties>
+                        <results>
+                          <test-case name="SAM.Features.Framework.ToValidateSettingsTabRibbonIsDisplayedFeature.SettingsTabRibbonIsDisplayed(&quot;Graphs&quot;,null)" executed="True" result="Success" success="True" time="48.972" asserts="0" />
+                          <test-case name="SAM.Features.Framework.ToValidateSettingsTabRibbonIsDisplayedFeature.SettingsTabRibbonIsDisplayed(&quot;Legend&quot;,null)" executed="True" result="Success" success="True" time="48.440" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="ToValidateTempLocationRibbonIsDisplayedFeature" description="To Validate Temp Location Ribbon is displayed" executed="True" result="Success" success="True" time="99.105" asserts="0">
+                    <categories>
+                      <category name="Framework" />
+                      <category name="Done" />
+                    </categories>
+                    <properties>
+                      <property name="Description" value="To Validate Temp Location Ribbon is displayed" />
+                    </properties>
+                    <results>
+                      <test-suite type="ParameterizedTest" name="TempLocationRibbonIsDisplayed" description="Temp Location Ribbon is Displayed" executed="True" result="Success" success="True" time="99.103" asserts="0">
+                        <categories>
+                          <category name="DisplayedTabRibbon" />
+                        </categories>
+                        <properties>
+                          <property name="Description" value="Temp Location Ribbon is Displayed" />
+                        </properties>
+                        <results>
+                          <test-case name="SAM.Features.Framework.ToValidateTempLocationRibbonIsDisplayedFeature.TempLocationRibbonIsDisplayed(&quot;Validation&quot;,null)" executed="True" result="Success" success="True" time="51.632" asserts="0" />
+                          <test-case name="SAM.Features.Framework.ToValidateTempLocationRibbonIsDisplayedFeature.TempLocationRibbonIsDisplayed(&quot;Remove Traces&quot;,null)" executed="True" result="Success" success="True" time="47.470" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="XMLParserFeature" description="XMLParser" executed="True" result="Failure" success="False" time="122.704" asserts="0">
+                    <categories>
+                      <category name="Framework" />
+                      <category name="Done" />
+                    </categories>
+                    <properties>
+                      <property name="Description" value="XMLParser" />
+                    </properties>
+                    <failure>
+                      <message><![CDATA[One or more child tests had errors]]></message>
+                      <stack-trace />
+                    </failure>
+                    <results>
+                      <test-suite type="ParameterizedTest" name="XMLParser" description="XML Parser" executed="True" result="Failure" success="False" time="122.701" asserts="0">
+                        <categories>
+                          <category name="mytag" />
+                        </categories>
+                        <properties>
+                          <property name="Description" value="XML Parser" />
+                        </properties>
+                        <failure>
+                          <message><![CDATA[One or more child tests had errors]]></message>
+                          <stack-trace />
+                        </failure>
+                        <results>
+                          <test-case name="SAM.Features.Framework.XMLParserFeature.XMLParser(&quot;TestCase1&quot;,null)" executed="True" result="Error" success="False" time="62.357" asserts="0">
+                            <failure>
+                              <message><![CDATA[System.InvalidOperationException : An element could not be located on the page using the given search parameters.]]></message>
+                              <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Appium.AppiumWebElement.FindElementByName(String name)
+   at SAM.WinFormObjects.InsertFormObject.ClickPencil() in C:\SAMAutomation\WinFormObjects\InsertFormObject.cs:line 68
+   at SAM.Steps.InsertSteps.GivenTheUserClickOnThePencilButtonOnTheObject() in C:\SAMAutomation\Steps\InsertSteps.cs:line 85
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at SAM.Features.Framework.XMLParserFeature.ScenarioCleanup()
+   at SAM.Features.Framework.XMLParserFeature.XMLParser(String testData, String[] exampleTags) in C:\SAMAutomation\Features\Framework\XMLParser.feature:line 15]]></stack-trace>
+                            </failure>
+                          </test-case>
+                          <test-case name="SAM.Features.Framework.XMLParserFeature.XMLParser(&quot;TestCase2&quot;,null)" executed="True" result="Error" success="False" time="60.344" asserts="0">
+                            <failure>
+                              <message><![CDATA[System.InvalidOperationException : An element could not be located on the page using the given search parameters.]]></message>
+                              <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Appium.AppiumWebElement.FindElementByName(String name)
+   at SAM.WinFormObjects.InsertFormObject.ClickPencil() in C:\SAMAutomation\WinFormObjects\InsertFormObject.cs:line 68
+   at SAM.Steps.InsertSteps.GivenTheUserClickOnThePencilButtonOnTheObject() in C:\SAMAutomation\Steps\InsertSteps.cs:line 85
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at SAM.Features.Framework.XMLParserFeature.ScenarioCleanup()
+   at SAM.Features.Framework.XMLParserFeature.XMLParser(String testData, String[] exampleTags) in C:\SAMAutomation\Features\Framework\XMLParser.feature:line 15]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
