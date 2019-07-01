@@ -1177,3 +1177,102 @@ And the user clicks on the Insert button
 And the insert object "weight linear" is displayed
 -> error: Expected boolean to be true because Insert Object is not displayed, but found False.
 => SAM.Features.InsertingObjectIsDisplayedFeature.InsertMiscellaneousObjectsDisplayed("weight linear start end",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (31.7s)
+When the warning message is displayed
+-> done: WarningDialogSteps.WhenTheWarningMessageIsDisplayed() (0.2s)
+Then the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.6s)
+And the user clicks on the Insert button
+-> done: OpenInsertDialogSteps.ThenTheUserClicksOnTheInsertButton() (1.8s)
+And the insert object "weight linear start end" is displayed
+-> error: Expected boolean to be true because Insert Object is not displayed, but found False.
+=> SAM.Features.InsertingObjectIsDisplayedFeature.InsertMiscellaneousObjectsDisplayed("weight summary",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (32.4s)
+When the warning message is displayed
+-> done: WarningDialogSteps.WhenTheWarningMessageIsDisplayed() (0.2s)
+Then the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.4s)
+And the user clicks on the Insert button
+-> done: OpenInsertDialogSteps.ThenTheUserClicksOnTheInsertButton() (1.7s)
+And the insert object "weight summary" is displayed
+-> error: Expected boolean to be true because Insert Object is not displayed, but found False.
+=> SAM.Features.InsertingObjectIsDisplayedFeature.InsertOutputObjectsDisplayed("graph diagram",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (32.6s)
+When the warning message is displayed
+-> done: WarningDialogSteps.WhenTheWarningMessageIsDisplayed() (0.2s)
+Then the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.4s)
+And the user clicks on the Insert button
+-> done: OpenInsertDialogSteps.ThenTheUserClicksOnTheInsertButton() (2.2s)
+And the insert object "graph diagram" is displayed
+-> error: Expected boolean to be true because Insert Object is not displayed, but found False.
+=> SAM.Features.InsertingObjectIsDisplayedFeature.InsertOutputObjectsDisplayed("report",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (29.5s)
+When the warning message is displayed
+-> done: WarningDialogSteps.WhenTheWarningMessageIsDisplayed() (0.2s)
+Then the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.5s)
+And the user clicks on the Insert button
+-> done: OpenInsertDialogSteps.ThenTheUserClicksOnTheInsertButton() (1.6s)
+And the insert object "report" is displayed
+-> error: Expected boolean to be true because Insert Object is not displayed, but found False.
+=> SAM.Features.InsertingObjectIsDisplayedFeature.InsertOutputObjectsDisplayed("report CSS definition",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (29.7s)
+When the warning message is displayed
+-> done: WarningDialogSteps.WhenTheWarningMessageIsDisplayed() (0.2s)
+Then the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.4s)
+And the user clicks on the Insert button
+-> done: OpenInsertDialogSteps.ThenTheUserClicksOnTheInsertButton() (1.7s)
+And the insert object "report CSS definition" is displayed
+-> error: Expected boolean to be true because Insert Object is not displayed, but found False.
+=> SAM.Features.InsertingObjectIsDisplayedFeature.InsertOutputObjectsDisplayed("report deckplan",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (29.3s)
+When the warning message is displayed
+-> done: WarningDialogSteps.WhenTheWarningMessageIsDisplayed() (0.2s)
+Then the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.4s)
+And the user clicks on the Insert button
+-> done: OpenInsertDialogSteps.ThenTheUserClicksOnTheInsertButton() (1.7s)
+And the insert object "report deckplan" is displayed
+-> error: Expected boolean to be true because Insert Object is not displayed, but found False.
+=> SAM.Features.InsertingObjectIsDisplayedFeature.InsertOutputObjectsDisplayed("report deckplan review",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (20.9s)
+When the warning message is displayed
+-> done: WarningDialogSteps.WhenTheWarningMessageIsDisplayed() (0.6s)
+Then the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (1.6s)
+And the user clicks on the Insert button
+-> done: OpenInsertDialogSteps.ThenTheUserClicksOnTheInsertButton() (3.1s)
+And the insert object "report deckplan review" is displayed
+-> error: Expected boolean to be true because Insert Object is not displayed, but found False.
+=> SAM.Features.InsertingObjectIsDisplayedFeature.InsertOutputObjectsDisplayed("report global settinngs",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (27.5s)
+When the warning message is displayed
+-> done: WarningDialogSteps.WhenTheWarningMessageIsDisplayed() (0.2s)
+Then the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.5s)
+And the user clicks on the Insert button
+-> done: OpenInsertDialogSteps.ThenTheUserClicksOnTheInsertButton() (1.8s)
+And the insert object "report global settinngs" is displayed
+-> error: Expected boolean to be true because Insert Object is not displayed, but found False.
+=> SAM.Features.InsertingObjectIsDisplayedFeature.InsertOutputObjectsDisplayed("report schema",null)
+Given a user opens SAM
+-> done: OpenSAMSteps.GivenAUserOpensSAM() (35.2s)
+When the warning message is displayed
+-> done: WarningDialogSteps.WhenTheWarningMessageIsDisplayed() (0.1s)
+Then the user can click on the OK button
+-> done: WarningDialogSteps.ThenTheUserCanClickOnTheOKButton() (0.4s)
+And the user clicks on the Insert button
+-> done: OpenInsertDialogSteps.ThenTheUserClicksOnTheInsertButton() (1.8s)
+And the insert object "report schema" is displayed
+-> error: Expected boolean to be true because Insert Object is not displayed, but found False.
+=> SAM.Features.InsertingObjectIsDisplayedFeature.InsertOutputObjectsDisplayed("view 2D",null)

@@ -86,7 +86,6 @@ namespace SAM.Utilities
                 }
                 catch (Exception ex)
                 {
-                    Thread.Sleep(5000);
                 }
 
                 ++i;
