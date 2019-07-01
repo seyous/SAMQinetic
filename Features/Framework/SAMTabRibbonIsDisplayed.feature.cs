@@ -76,7 +76,7 @@ namespace SAM.Features.Framework
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("SAM Tab Ribbon is Displayed")]
         [NUnit.Framework.CategoryAttribute("DisplayedTabRibbon")]
-        [NUnit.Framework.TestCaseAttribute("Simulation", null)]
+        [NUnit.Framework.TestCaseAttribute("All Scenarios.", null)]
         public virtual void SAMTabRibbonIsDisplayed(string ribbon, string[] exampleTags)
         {
             string[] @__tags = new string[] {
