@@ -15,18 +15,21 @@ namespace SAM.Steps
             _ribbon = ribbon;
         }
 
+        [When(@"the user click the layout Tab")]
         [Then(@"the user click the layout Tab")]
         public void ThenTheUserClickTheLayoutTab()
         {
             _ribbon.ClickLayoutTab();
         }
 
+        [When(@"the user click the File Tab")]
         [Then(@"the user click the File Tab")]
         public void ThenTheUserClickTheFileTab()
         {
             _ribbon.ClickFileTab();
         }
 
+        [When(@"the user click the SAM Tab")]
         [Then(@"the user click the SAM Tab")]
         public void ThenTheUserClickTheSAMTab()
         {
@@ -34,6 +37,7 @@ namespace SAM.Steps
 
         }
 
+        [When(@"the user click on the Temp Location Tab")]
         [Then(@"the user click on the Temp Location Tab")]
         public void ThenTheUserClickOnTheTempLocationTab()
         {
@@ -41,6 +45,7 @@ namespace SAM.Steps
         }
 
 
+        [When(@"the ribbon ""(.*)"" has a ""(.*)""")]
         [Then(@"the ribbon ""(.*)"" has a ""(.*)""")]
         public void ThenTheRibbonHasA(string ribbonName, string visibility)
         {

@@ -1,4 +1,5 @@
-﻿Feature: To Validate Home Tab Ribbon is displayed
+﻿@Framework @Done
+Feature: To Validate Home Tab Ribbon is displayed
 	
 
 @DisplayedTabRibbon

@@ -6,6 +6,6 @@
 
   <TestCase2>
     <Object>geom placeholder</Object>
-    <Text>b1: b2: b3: b4</Text>
+    <Text>b1; b2; b3; b4</Text>
   </TestCase2>
 </TestCases>

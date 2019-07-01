@@ -54,7 +54,7 @@ namespace SAM.Steps
         public void GivenTheUserTypeAText(string text)
         {
 
-            if (XMLParserSteps.dataDictionary != null)
+            if (text == "Text")
             {
                 text = ScenarioContext.Current["Text"].ToString();
             }

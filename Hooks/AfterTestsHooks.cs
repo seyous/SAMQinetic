@@ -11,6 +11,7 @@ namespace SAM.Hooks
     public sealed class AfterTestsHooks
     {
 
+        [AfterScenario]
         [AfterTestRun]
         public static void KillWinAppDriver()
         {

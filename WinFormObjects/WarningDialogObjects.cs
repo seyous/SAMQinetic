@@ -27,7 +27,6 @@ namespace SAM.WinFormObjects
 
         public bool IsWarningDialogDisplayed()
         {
-            WaitForElement.Wait();
 
             var currentWindowHandle = WinDriver.driver.CurrentWindowHandle;
             return OKbutton.Displayed;
@@ -37,10 +36,19 @@ namespace SAM.WinFormObjects
 
         public void OKButtonIsClickedOnWarningDialog()
         {
-            
-            WaitForElement.WaitForElementToLoad(OKbutton);
+            try
+            {
 
-            OKbutton.Click();
+                WaitForElement.WaitForElementToLoad(OKbutton);
+
+                    OKbutton.Click();
+
+
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }

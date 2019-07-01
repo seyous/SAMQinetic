@@ -19,6 +19,8 @@ namespace SAM.Features.Framework
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
     [NUnit.Framework.DescriptionAttribute("To Validate Ribbon Object for Quick Access Toolbar is visible")]
+    [NUnit.Framework.CategoryAttribute("Framework")]
+    [NUnit.Framework.CategoryAttribute("Done")]
     public partial class ToValidateRibbonObjectForQuickAccessToolbarIsVisibleFeature
     {
         
@@ -31,7 +33,9 @@ namespace SAM.Features.Framework
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "To Validate Ribbon Object for Quick Access Toolbar is visible", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "To Validate Ribbon Object for Quick Access Toolbar is visible", null, ProgrammingLanguage.CSharp, new string[] {
+                        "Framework",
+                        "Done"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -83,17 +87,15 @@ namespace SAM.Features.Framework
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Quick Access Toolbar Ribbon Object Enabled and Disabled", null, @__tags);
-#line 5
+#line 6
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 6
-testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 7
-testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
-testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
-testRunner.And(string.Format("the ribbon \"{0}\" has a \"{1}\"", ribbon, visibility), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then(string.Format("the ribbon \"{0}\" has a \"{1}\"", ribbon, visibility), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

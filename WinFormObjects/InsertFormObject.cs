@@ -70,15 +70,19 @@ namespace SAM.WinFormObjects
 
             OpenQA.Selenium.Interactions.Actions element = new OpenQA.Selenium.Interactions.Actions(WinDriver.driver);
             element.Click(buttons[6]).Perform();
-
             Thread.Sleep(10000);
 
         }
 
         internal void CloseInsertWindow()
         {
+            var allWindowHandles = WinDriver.driver.WindowHandles;
+            WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
+
             WaitForElement.WaitForElementToLoad(insertWindow);
-            insertWindow.SendKeys(Keys.Escape);
+            
+
+
         }
 
         internal void ClickPlayButton()

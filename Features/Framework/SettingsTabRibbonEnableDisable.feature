@@ -1,4 +1,5 @@
-﻿Feature: To Validate Ribbon Object for Settings Tab is visible
+﻿@Framework @Done
+Feature: To Validate Ribbon Object for Settings Tab is visible
 
 
 @EnableDisableRibbon

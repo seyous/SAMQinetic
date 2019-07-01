@@ -1,4 +1,5 @@
-﻿Feature: To Validate Temp Location Ribbon is displayed
+﻿@Framework @Done
+Feature: To Validate Temp Location Ribbon is displayed
 
 
 

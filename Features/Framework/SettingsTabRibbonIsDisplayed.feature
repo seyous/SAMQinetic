@@ -1,4 +1,5 @@
-﻿Feature: To Validate Settings Tab Ribbon is displayed
+﻿@Framework @Done
+Feature: To Validate Settings Tab Ribbon is displayed
 
 
 

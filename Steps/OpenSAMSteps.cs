@@ -20,9 +20,6 @@ namespace SAM.Steps
         public void GivenAUserOpensSAM()
         {
             WinDriver.OpenDriver();
-
-
-
         }
 
 

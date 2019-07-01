@@ -281,7 +281,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ValidateNumberBoundary.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\XMLParser.feature.cs">
+    <Compile Include="Features\Framework\XMLParser.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>XMLParser.feature</DependentUpon>
@@ -476,7 +476,7 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ValidateNumberBoundary.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\XMLParser.feature">
+    <None Include="Features\Framework\XMLParser.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>XMLParser.feature.cs</LastGenOutput>
     </None>

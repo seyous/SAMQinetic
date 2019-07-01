@@ -16,7 +16,7 @@ Then the object should be inserted in the design explorer
 
 Examples: 
 | Object           | Text           |
-#| geom placeholder | b1, b2, b3, b4 |
+| geom placeholder | b1, b2, b3, b4 |
 | geom placeholder | geom placeholder1 |
 
 

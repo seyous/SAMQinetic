@@ -25,206 +25,107 @@ namespace SAM.Utilities
         public static WindowsDriver<WindowsElement> OpenDriver()
         {
             //Improved the SAM opening and making it more reliable
-
-            /*
- 
-                if (driver != null)
-                {
-                    return driver;
-                }
-
-                var capabilities = new DesiredCapabilities();
-                capabilities.SetCapability("app", appLocation);
+            int i = 0;
+            isSAMOpened = false;
+            while (!isSAMOpened && i <= 2)
+            {
                 try
                 {
-                    driver = new WindowsDriver<WindowsElement>(new Uri("http://127.0.0.1:4723"), capabilities, TimeSpan.FromMinutes(10));
-                    WaitForElement.Wait();
-                    driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromMilliseconds(Convert.ToDouble(implicitTimeoutMs)));
-
-
-                }
-                catch (Exception)
-                {
-                    WaitForElement.Wait();
-
-
-                    if (driver != null)
+                    if (Process.GetProcessesByName("SAM").Length == 0)
                     {
-                        return driver;
+
+                        Process.Start(appLocation);
+                        Thread.Sleep(1000);
+
+
                     }
 
+                    Thread.Sleep(5000);
 
-                    WaitForElement.Wait();
-                    driver = new WindowsDriver<WindowsElement>(new Uri(ConfigurationManager.AppSettings["winAppUri"]), capabilities, TimeSpan.FromMinutes(5));
-                    WaitForElement.Wait();
-                    driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromMilliseconds(Convert.ToDouble(implicitTimeoutMs)));
-
-                }
-
-
-            */
-
-
-
-
-
-            try
-            {
-
-
-               // WindowsElement applicationWindow = null;
-                DesiredCapabilities desktopCapabilities = new DesiredCapabilities();
-                desktopCapabilities.SetCapability("platformName", "Windows");
-                desktopCapabilities.SetCapability("app", "Root");
-
-                desktopCapabilities.SetCapability("deviceName", "WindowsPC");
-
-                driver = new WindowsDriver<WindowsElement>(new Uri("http://127.0.0.1:4723"), desktopCapabilities);
-
-                var openWindows =
-                driver.FindElementsByAccessibilityId("MainWindow");
-
-
-                foreach (var window in openWindows)
-                {
-
-                    if
-           (window.GetAttribute("Name").StartsWith("SAM"))
+                    if (Process.GetProcessesByName("SAM").Length > 0)
                     {
-                        applicationWindow = window;
-                        driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Escape);
-                        driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Escape);
 
-                        isSAMOpened = true;
-                        break;
-                    }
-                } 
+                        DesiredCapabilities desktopCapabilities = new DesiredCapabilities();
+                        desktopCapabilities.SetCapability("platformName", "Windows");
+                        desktopCapabilities.SetCapability("app", "Root");
 
-            }
-            catch(Exception ex)
-            {
+                        desktopCapabilities.SetCapability("deviceName", "WindowsPC");
 
-            }
-            try
-            {
-                if (!isSAMOpened)
-                {
+                        driver = new WindowsDriver<WindowsElement>(new Uri("http://127.0.0.1:4723"), desktopCapabilities);
 
-                    int i = 0;
-                    Process.Start(appLocation);
+                        var openWindows =
+                        driver.FindElementsByAccessibilityId("MainWindow");
 
-                    Thread.Sleep(30000);
-
-                    while (!isSAMOpened && i <= 3)
-                    {
-                        i++;
-
-                        try
+                        foreach (var window in openWindows)
                         {
-                            DesiredCapabilities desktopCapabilities = new DesiredCapabilities();
-                            desktopCapabilities.SetCapability("platformName", "Windows");
-                            desktopCapabilities.SetCapability("app", "Root");
 
-                            desktopCapabilities.SetCapability("deviceName", "WindowsPC");
-
-                            driver = new WindowsDriver<WindowsElement>(new Uri("http://127.0.0.1:4723"), desktopCapabilities);
-
-                            var openWindows =
-                            driver.FindElementsByAccessibilityId("MainWindow");
-
-
-
-
-                            foreach (var window in openWindows)
+                            if
+                            (window.GetAttribute("Name").StartsWith("SAM"))
                             {
+                                applicationWindow = window;
 
-                                if (window.GetAttribute("Name").StartsWith("SAM"))
-                                {
-                                    applicationWindow = window;
+                                var topLevelWindowHandle = applicationWindow.GetAttribute("NativeWindowHandle");
 
-                                    isSAMOpened = true;
-                                    driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Escape);
-                                    driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Escape);
+                                topLevelWindowHandle =
+                                int.Parse(topLevelWindowHandle).ToString("X");
 
-                                    break;
-                                }
+                                DesiredCapabilities capabilities = new
+                                DesiredCapabilities();
+                                capabilities.SetCapability("deviceName", "WindowsPC");
+                                capabilities.SetCapability("appTopLevelWindow", topLevelWindowHandle);
+
+                                driver = new WindowsDriver<WindowsElement>(new Uri("http://127.0.0.1:4723"), capabilities);
+
+                                isSAMOpened = true;
+                                return driver;
                             }
-
-                        }
-                        catch (Exception ex)
-                        {
-
                         }
 
                     }
+
+                }
+                catch (Exception ex)
+                {
+                    Thread.Sleep(5000);
                 }
 
-
-
-
-                //driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Enter);
-
-
-                // driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Command + "a" + OpenQA.Selenium.Keys.Command);
-
-
-                var topLevelWindowHandle = applicationWindow.GetAttribute("NativeWindowHandle");
-
-                //driver.FindElementByName("Insert").Click();
-
-
-
-
-                topLevelWindowHandle =
-                int.Parse(topLevelWindowHandle).ToString("X");
-
-                DesiredCapabilities capabilities = new
-                DesiredCapabilities();
-                capabilities.SetCapability("deviceName", "WindowsPC");
-                capabilities.SetCapability("appTopLevelWindow", topLevelWindowHandle);
-
-                driver = new WindowsDriver<WindowsElement>(new Uri("http://127.0.0.1:4723"), capabilities);
+                ++i;
             }
-            catch (Exception ex)
-            {
-
-            }
-
 
             return driver;
-            
+
         }
 
 
 
 
-        /*
 
-        private ExpectedCondition<Boolean> elementFoundAndClicked(By locator)
-        {
-            return new ExpectedCondition<Boolean>() {
-        @Override
-        
-        public Boolean apply(WebDriver driver)
-            {
-                WebElement el = driver.findElement(locator);
-                el.click();
-                return true;
-            }
-        };
+
+        //    private ExpectedCondition<Boolean> elementFoundAndClicked(By locator)
+        //    {
+        //        return new ExpectedCondition<Boolean>() {
+        //    @Override=
+
+        //    public Boolean apply(WebDriver driver)
+        //        {
+        //            WebElement el = driver.findElement(locator);
+        //            el.click();
+        //            return true;
+        //        }
+        //    };
+        //}
+
+        //public void CustomWait()
+        //{
+        //    WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromMinutes(2));
+
+        //    wait.Until(ElementFoundAndClicked(loginScreen));
+        //    wait.until(ExpectedConditions.presenceOfElementLocated(username)).sendKeys(AUTH_USER);
+        //    wait.until(ExpectedConditions.presenceOfElementLocated(password)).sendKeys(AUTH_PASS);
+        //    wait.until(elementFoundAndClicked(loginBtn));
+        //    wait.until(ExpectedConditions.presenceOfElementLocated(getLoggedInBy(AUTH_USER)));
+        //}
+
+
     }
-    
-    public void testLogin_CustomWait()
-    {
-        WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromMinutes(2));
-
-        wait.Until(ElementFoundAndClicked(loginScreen));
-        wait.until(ExpectedConditions.presenceOfElementLocated(username)).sendKeys(AUTH_USER);
-        wait.until(ExpectedConditions.presenceOfElementLocated(password)).sendKeys(AUTH_PASS);
-        wait.until(elementFoundAndClicked(loginBtn));
-        wait.until(ExpectedConditions.presenceOfElementLocated(getLoggedInBy(AUTH_USER)));
-    }
-    */
-
-}
 }

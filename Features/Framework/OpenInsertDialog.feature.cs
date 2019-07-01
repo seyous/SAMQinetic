@@ -19,6 +19,8 @@ namespace SAM.Features.Framework
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
     [NUnit.Framework.DescriptionAttribute("OpenInsertDialog")]
+    [NUnit.Framework.CategoryAttribute("Framework")]
+    [NUnit.Framework.CategoryAttribute("Done")]
     public partial class OpenInsertDialogFeature
     {
         
@@ -31,7 +33,9 @@ namespace SAM.Features.Framework
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "OpenInsertDialog", "\tIn order to Open the Insert\r\n\tDialog Box and I click on the Ribbon", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "OpenInsertDialog", "\tIn order to Open the Insert\r\n\tDialog Box and I click on the Ribbon", ProgrammingLanguage.CSharp, new string[] {
+                        "Framework",
+                        "Done"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -76,17 +80,13 @@ namespace SAM.Features.Framework
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Click on InsertRibbon", null, new string[] {
                         "mytag"});
-#line 7
+#line 8
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 8
- testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
- testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 10
- testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 11
- testRunner.And("the user clicks on the Insert button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("the user clicks on the Insert button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
