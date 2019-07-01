@@ -73,15 +73,19 @@ namespace SAM.WinFormObjects
 
             OpenQA.Selenium.Interactions.Actions element = new OpenQA.Selenium.Interactions.Actions(WinDriver.driver);
             element.Click(buttons[6]).Perform();
-
             Thread.Sleep(10000);
 
         }
 
         internal void CloseInsertWindow()
         {
+            var allWindowHandles = WinDriver.driver.WindowHandles;
+            WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
+
             WaitForElement.WaitForElementToLoad(insertWindow);
-            insertWindow.SendKeys(Keys.Escape);
+            
+
+
         }
 
         internal void ClickPlayButton()
@@ -273,8 +277,22 @@ namespace SAM.WinFormObjects
 
         public void ClickOnObject(string objectText)
         {
+            //row1Element.Click();
+            if (objectText == "Object")
+            {
+                objectText = "";
+            }
 
-            row1Element.Click();
+            for (int i = 1; i <=19; i++)
+            {
+                WindowsElement element = WinDriver.driver.FindElementByName("Name row " + i);
+                if (element.Text == objectText)
+                {
+                    element.Click();
+                    break;
+                }
+
+            }
         }
 
         public bool DesignObjectIsDisplayed(string objectText)

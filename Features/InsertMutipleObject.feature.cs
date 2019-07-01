@@ -72,6 +72,7 @@ namespace SAM.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Insert mutiple object Using Comma")]
         [NUnit.Framework.CategoryAttribute("insert")]
+        [NUnit.Framework.TestCaseAttribute("geom placeholder", "b1, b2, b3, b4", null)]
         [NUnit.Framework.TestCaseAttribute("geom placeholder", "geom placeholder1", null)]
         public virtual void InsertMutipleObjectUsingComma(string @object, string text, string[] exampleTags)
         {

@@ -4,8 +4,8 @@
     <Text>b1, b2, b3, b4</Text>
 </TestCase1>
 
-  <TestCase2>
+  <TestCase1>
     <Object>geom placeholder</Object>
-    <Text>b1; b2; b3; b4</Text>
-  </TestCase2>
+    <Text>b1: b2: b3: b4</Text>
+  </TestCase1>
 </TestCases>

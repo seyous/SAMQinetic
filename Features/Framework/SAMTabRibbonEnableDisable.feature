@@ -1,4 +1,5 @@
-﻿Feature: To Validate Ribbon Object for SAM Tab is visible
+﻿@Framework @Done
+Feature: To Validate Ribbon Object for SAM Tab is visible
 
 	
 @EnableDisableRibbon

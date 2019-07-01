@@ -1,4 +1,5 @@
-﻿Feature: To Validate Quick Access Toolbar Ribbon is displayed
+﻿@Framework @Done
+Feature: To Validate Quick Access Toolbar Ribbon is displayed
 	
 
 @DisplayedTabRibbon

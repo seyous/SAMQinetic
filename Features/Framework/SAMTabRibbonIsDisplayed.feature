@@ -1,4 +1,5 @@
-﻿Feature: To Validate SAM Tab Ribbon is displayed
+﻿@Framework @Done
+Feature: To Validate SAM Tab Ribbon is displayed
 
 
 

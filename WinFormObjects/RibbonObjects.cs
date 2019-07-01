@@ -26,48 +26,40 @@ namespace SAM.WinFormObjects
         
         public WindowsElement GetRibbon(string ribbonName)
         {
-
             return WinDriver.driver.FindElementByName(ribbonName);
         }
 
         public void ClickInsertButton()
         {
+
             for (int i = 0; i < 5; i++)
             {
 
                 try
                 {
-                    WaitForElement.Wait();
-                    System.Collections.ObjectModel.ReadOnlyCollection<string> allWindowHandles = WinDriver.driver.WindowHandles;
+                    var allWindowHandles = WinDriver.driver.WindowHandles;
+                    WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
+                    WaitForElement.WaitForElementToLoad(insertRibbonButton);
 
-                   // var allWindowHandles = WinDriver.driver.WindowHandles;
-                    if (allWindowHandles.Count == 1)
-                    {
-                        WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
-
-                        WaitForElement.WaitForElementToLoad(insertRibbonButton);
-                        insertRibbonButton.Click();
-                        break;
-                    }
-                  
+                    insertRibbonButton.Click();
+                    break;
                 }
                 catch (Exception ex)
                 {
-
-                    ;
+                    WinDriver.driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Escape);
+                    WinDriver.driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Escape);
                 }
             }
 
         }
 
-    
-    //WaitForElement.Wait();
-    //    var allWindowHandles = WinDriver.driver.WindowHandles;
-    //    WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
-    //    insertRibbonButton.Click();
-    //}
+        //WaitForElement.Wait();
+        //    var allWindowHandles = WinDriver.driver.WindowHandles;
+        //    WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
+        //    insertRibbonButton.Click();
+        //}
 
-    public void ClickLayoutTab()
+        public void ClickLayoutTab()
         {
             WaitForElement.WaitForElementToLoad(layoutTab);
             var allWindowHandles = WinDriver.driver.WindowHandles;
@@ -124,36 +116,34 @@ namespace SAM.WinFormObjects
         }
 
         public bool IsRibbonButtonEnabled(string ribbonName, string visibility)
-        {
 
-            for (int i = 1; i <= 10; i++)
-            {
-                
+        { 
+            bool visible = false;
+
+                WaitForElement.Wait();
                 try
                 {
                     var allWindowHandles = WinDriver.driver.WindowHandles;
                     WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
 
-                    var objectstatus = GetRibbon(ribbonName);
-
-                    if (visibility == "Enabled")
-                    {
-
-                        return objectstatus.Enabled;
-                    }
-                    else if (visibility == "Disabled")
-                    {
-                        return !objectstatus.Enabled;
-                    }
-                    break;
+                    visible= GetRibbon(ribbonName).Enabled;
                 }
                 catch (Exception e)
                 {
-
-                    return false;
+                     visible = false;
                 }
-            }
-                return false;
+
+                if (visibility == "Enabled")
+                {
+
+                    return visible;             
+                }
+                else if (visibility == "Disabled" )
+                {
+                    return !visible;
+                }
+            
+           return false;
                    
         }
 

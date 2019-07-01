@@ -30,6 +30,10 @@ namespace SAM.Steps
         [When(@"the user clicks on an ""(.*)""")]
         public void GivenTheUserClicksOnAnObject(string objectText)
         {
+            if (objectText == "Object" )
+            {
+                objectText = ScenarioContext.Current["Element"].ToString();
+            }
 
             if (objectText != null)
             {
@@ -49,6 +53,12 @@ namespace SAM.Steps
         [Given(@"the user rename the object with ""(.*)""")]
         public void GivenTheUserTypeAText(string text)
         {
+
+            if (text == "Text")
+            {
+                text = ScenarioContext.Current["Text"].ToString();
+            }
+
             _insertFormObject.ChangeObjectText(text);
         }
 
@@ -59,6 +69,7 @@ namespace SAM.Steps
         }
 
         [When(@"the user closes the insert window")]
+        [Then(@"the user closes the insert window")]
         public void WhenTheUserClosesTheInsertWindow()
         {
             _insertFormObject.CloseInsertWindow();
