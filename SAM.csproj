@@ -191,6 +191,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Features\Framework\SelectingObjectWithMouseClick.feature.cs">
+      <DependentUpon>SelectingObjectWithMouseClick.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Features\Framework\SettingsTabRibbonIsDisplayed.feature.cs">
       <DependentUpon>SettingsTabRibbonIsDisplayed.feature</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -271,7 +276,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HomeTabRibbonIsDisplayed.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\SelectingObject.feature.cs">
+    <Compile Include="Features\Framework\SelectingObject.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SelectingObject.feature</DependentUpon>
@@ -294,6 +299,7 @@
     <Compile Include="Steps\InsertSteps.cs" />
     <Compile Include="Steps\RibbonEnableDisableSteps.cs" />
     <Compile Include="Steps\RibbonSteps.cs" />
+    <Compile Include="Steps\SelectingObjectSteps.cs" />
     <Compile Include="Steps\XMLParserSteps.cs" />
     <Compile Include="Utilities\Driver.cs" />
     <Compile Include="Features\calcs1.feature.cs">
@@ -398,6 +404,10 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SAMTabRibbonIsDisplayed.feature.cs</LastGenOutput>
     </None>
+    <None Include="Features\Framework\SelectingObjectWithMouseClick.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SelectingObjectWithMouseClick.feature.cs</LastGenOutput>
+    </None>
     <None Include="Features\Framework\SettingsTabRibbonIsDisplayed.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SettingsTabRibbonIsDisplayed.feature.cs</LastGenOutput>
@@ -466,7 +476,7 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>HomeTabRibbonIsDisplayed.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\SelectingObject.feature">
+    <None Include="Features\Framework\SelectingObject.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SelectingObject.feature.cs</LastGenOutput>
     </None>

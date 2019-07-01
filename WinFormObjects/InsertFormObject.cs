@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Appium.Windows;
+using OpenQA.Selenium.Interactions;
 using SAM.Base;
 using SAM.Utilities;
 using System;
@@ -23,6 +24,8 @@ namespace SAM.WinFormObjects
 
         WindowsElement cancelButton;
         WindowsElement Node1;
+        WindowsElement objectElement;
+        bool isSelected = true;
         string geomplaceholder => "geom placeholder";
 
 
@@ -141,6 +144,62 @@ namespace SAM.WinFormObjects
             OKButton.Click();
         }
 
+        public void MouseHoverOnObject(string formObject)
+        {
+            Actions action = new Actions(WinDriver.driver);
+            for(int i=1; i<20; i++)
+            {
+                string nameOfObject = "Name row " + i.ToString();
+                objectElement = WinDriver.driver.FindElementByName(nameOfObject);
+
+                try
+                {
+                    if (objectElement.Text == formObject)
+                    {
+                        WaitForElement.WaitForElementToLoad(objectElement);
+                        action.MoveToElement(objectElement).Perform();
+                        objectElement.Click();
+                        break;
+                    }
+                   
+                }
+                catch (Exception e)
+                {
+
+                    throw;
+                }
+            }
+        }
+
+        public bool SelectedObjectIsBold()
+        {
+            
+                bool isSelected = IsObjectSelected();
+                if (isSelected == true)
+                {
+                    return isSelected;
+                }
+                else
+                {
+                    return false;
+                }
+            
+        }
+
+        public bool IsObjectSelected()
+        {
+           var selectedObject =  objectElement.GetAttribute("HasKeybordFocusable");
+
+            if (selectedObject.Equals("true"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public void ChangeObjectText(string text)
         {
             editingControl = WinDriver.driver.FindElementByName("Editing control");
@@ -214,6 +273,7 @@ namespace SAM.WinFormObjects
 
         public void ClickOnObject(string objectText)
         {
+
             row1Element.Click();
         }
 
@@ -241,6 +301,7 @@ namespace SAM.WinFormObjects
             return false;
         }
 
+       
         public bool InsertObjectIsDisplayed(string objectText)
         {
             bool objectIsDisplayed = false;

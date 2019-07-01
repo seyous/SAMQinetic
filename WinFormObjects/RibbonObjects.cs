@@ -38,12 +38,18 @@ namespace SAM.WinFormObjects
                 try
                 {
                     WaitForElement.Wait();
-                    var allWindowHandles = WinDriver.driver.WindowHandles;
-                    WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
+                    System.Collections.ObjectModel.ReadOnlyCollection<string> allWindowHandles = WinDriver.driver.WindowHandles;
 
-                    WaitForElement.WaitForElementToLoad(insertRibbonButton);
-                    insertRibbonButton.Click();
-                    break;
+                   // var allWindowHandles = WinDriver.driver.WindowHandles;
+                    if (allWindowHandles.Count == 1)
+                    {
+                        WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
+
+                        WaitForElement.WaitForElementToLoad(insertRibbonButton);
+                        insertRibbonButton.Click();
+                        break;
+                    }
+                  
                 }
                 catch (Exception ex)
                 {
@@ -54,13 +60,14 @@ namespace SAM.WinFormObjects
 
         }
 
-        //WaitForElement.Wait();
-        //    var allWindowHandles = WinDriver.driver.WindowHandles;
-        //    WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
-        //    insertRibbonButton.Click();
-        //}
+    
+    //WaitForElement.Wait();
+    //    var allWindowHandles = WinDriver.driver.WindowHandles;
+    //    WinDriver.driver.SwitchTo().Window(allWindowHandles[0]);
+    //    insertRibbonButton.Click();
+    //}
 
-        public void ClickLayoutTab()
+    public void ClickLayoutTab()
         {
             WaitForElement.WaitForElementToLoad(layoutTab);
             var allWindowHandles = WinDriver.driver.WindowHandles;

@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace SAM.Features
+namespace SAM.Features.Framework
 {
     using TechTalk.SpecFlow;
     
@@ -69,81 +69,37 @@ namespace SAM.Features
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void FeatureBackground()
-        {
-#line 3
-#line 4
-testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 5
-testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 6
-testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 7
-testRunner.And("the user clicks on the Insert button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-        }
-        
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Hovering mouse on an Object")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void HoveringMouseOnAnObject()
+        [NUnit.Framework.DescriptionAttribute("Select an Object On Spacebar key")]
+        [NUnit.Framework.CategoryAttribute("SelectingObject")]
+        [NUnit.Framework.TestCaseAttribute("Open", null)]
+        public virtual void SelectAnObjectOnSpacebarKey(string @object, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Hovering mouse on an Object", null, new string[] {
-                        "mytag"});
-#line 10
+            string[] @__tags = new string[] {
+                    "SelectingObject"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select an Object On Spacebar key", null, @__tags);
+#line 6
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 3
-this.FeatureBackground();
+#line 7
+testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 8
+testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 9
+testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 10
+testRunner.And("the user clicks on the Insert button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
 testRunner.And("the user hover the mouse on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
-testRunner.Then("the user confirms the displayed buttons", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Select an Object On Click")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void SelectAnObjectOnClick()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select an Object On Click", null, new string[] {
-                        "mytag"});
-#line 15
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 3
-this.FeatureBackground();
-#line 16
-testRunner.And("the user click the object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 17
-testRunner.Then("the object is bold font", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 18
-testRunner.And("the user click the ok button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Select an Object On Spacebar key")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void SelectAnObjectOnSpacebarKey()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select an Object On Spacebar key", null, new string[] {
-                        "mytag"});
-#line 21
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 3
-this.FeatureBackground();
-#line 22
-testRunner.And("the user hover the mouse on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 23
 testRunner.And("the user press the \"spacebar\" on the keyboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 24
+#line 13
 testRunner.Then("the object is bold font", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 25
+#line 14
 testRunner.And("the user click the ok button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -151,23 +107,35 @@ testRunner.And("the user click the ok button", ((string)(null)), ((TechTalk.Spec
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Select an Object On Plus key")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void SelectAnObjectOnPlusKey()
+        [NUnit.Framework.CategoryAttribute("SelectingObject")]
+        [NUnit.Framework.TestCaseAttribute("Open", null)]
+        public virtual void SelectAnObjectOnPlusKey(string @object, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select an Object On Plus key", null, new string[] {
-                        "mytag"});
-#line 28
+            string[] @__tags = new string[] {
+                    "SelectingObject"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select an Object On Plus key", null, @__tags);
+#line 21
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 3
-this.FeatureBackground();
-#line 29
+#line 22
+testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 23
+testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 24
+testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 25
+testRunner.And("the user clicks on the Insert button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 26
 testRunner.And("the user hover the mouse on an object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 30
+#line 27
 testRunner.And("the user press the \"plus Key\" on the keyboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 31
+#line 28
 testRunner.Then("the object is bold font", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 32
+#line 29
 testRunner.And("the user click the ok button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -175,21 +143,32 @@ testRunner.And("the user click the ok button", ((string)(null)), ((TechTalk.Spec
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Select an Object On Edit")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void SelectAnObjectOnEdit()
+        [NUnit.Framework.CategoryAttribute("SelectingObject")]
+        [NUnit.Framework.TestCaseAttribute("Man Placeholder", null)]
+        public virtual void SelectAnObjectOnEdit(string @object, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select an Object On Edit", null, new string[] {
-                        "mytag"});
-#line 35
+            string[] @__tags = new string[] {
+                    "SelectingObject"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select an Object On Edit", null, @__tags);
+#line 36
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 3
-this.FeatureBackground();
-#line 36
-testRunner.And("the user enter the \"text\" in the search box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 37
-testRunner.Then("the \"text\" appear on the pane", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Given("a user opens SAM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 38
+testRunner.When("the warning message is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 39
+testRunner.Then("the user can click on the OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 40
+testRunner.And("the user clicks on the Insert buttonAnd the user enter the \"text\" in the search b" +
+                    "ox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 41
+testRunner.Then("the \"text\" appear on the pane", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 42
 testRunner.And("the user click the ok button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
